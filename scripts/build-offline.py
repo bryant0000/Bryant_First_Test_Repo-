@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parent.parent
 html=(root/'index.html').read_text()
 css=(root/'style.css').read_text()
 html=html.replace('<link rel="stylesheet" href="style.css">','<style>\n'+css+'\n</style>')
-for name in ['reference-data.js','engine.js','table.js','app.js']:
+for name in ['reference-data.js','engine.js','table.js','app.js','interaction.js']:
  source=(root/name).read_text()
  source=re.sub(r'</script',r'<\\/script',source,flags=re.I)
  html=html.replace(f'<script src="{name}"></script>','<script>\n'+source+'\n</script>')
