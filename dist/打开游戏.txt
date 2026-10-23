@@ -1,0 +1,6 @@
+现金流网页游戏离线版
+
+先解压压缩包，然后用 Chrome、Edge 或 Firefox 打开 cashflow-offline.html。
+不需要安装 Node.js、Python 或依赖，也不需要在聊天的可视化面板内打开。
+浏览器若禁止本地文件存储，游戏仍可运行，但无法跨刷新保留存档。
+角色、卡牌及版本差异见 SOURCES.md。

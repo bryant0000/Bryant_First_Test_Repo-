@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/dadish/cashflow",
+  "commit": "2edcdbc15785ac2141f3d1fe544b14e0de2775b4",
+  "sha256": {
+    "careers": "9a0277206b6ccfcacac5e5f08512bdadd409df9a45aef6819384d1e3bf4a5743",
+    "smalldeal": "ca0ef5ad221b2dd818ddd287bb0f36edb1045aa01d522e04466ae070a6e4f367",
+    "bigdeal": "35ef74361029e558b0efa7a4bf634c12a0af6fc7c42cf06367f9c9c095e9ea36",
+    "market": "6889122bd83a29a6563c0169baa92414b0609a5f420b7377764bba6f9d4efb29",
+    "doodads": "286120fa95bee018b3bea9748d593af14e67d609b8ea93e3737dbff3edf9446c",
+    "fasttrack": "a0a96e95c484c61f3215455e8d74364aebacc447cd2a716bf2b745e9d0548998",
+    "templates/game_screen": "1d57d6b54d069fe1954389734bc5e784ec45a4b6997a26503d7256ae50afd555",
+    "vocab_en_us": "e8d0d6210919d0b257f8ae2cf815dcd55b69341b455006f9d0b68554b8295bca"
+  },
+  "copied": "mechanical numeric facts, card category keys, geometric positions; no source code, card prose, audio or artwork"
+}
