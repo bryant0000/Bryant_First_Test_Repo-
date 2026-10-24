@@ -1,14 +1,23 @@
 {
   "name": "cashflow-classic-web",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Chinese CASHFLOW classic-style browser board game",
   "scripts": {
     "dev": "node scripts/serve.cjs",
     "start": "node scripts/serve.cjs",
-    "test": "node --test engine.test.cjs",
+    "test": "node --test engine.test.cjs reference.test.cjs reference-decks.test.cjs rooms.test.cjs",
     "build": "python3 scripts/build-offline.py",
-    "test:browser": "node scripts/interaction-smoke.cjs"
+    "test:browser": "node scripts/interaction-smoke.cjs",
+    "test:reference": "node --test reference.test.cjs reference-decks.test.cjs",
+    "release:check": "node scripts/check-release.cjs",
+    "reference:capture": "python3 scripts/capture-reference.py",
+    "release": "node scripts/release.cjs",
+    "test:reference:browser": "node scripts/reference-ui-smoke.cjs",
+    "reference:official": "python3 scripts/compare-official.py",
+    "test:online": "node --test rooms.test.cjs",
+    "test:online:browser": "node scripts/online-smoke.cjs",
+    "build:preview": "python3 scripts/build-preview.py"
   },
   "engines": {
     "node": ">=18"

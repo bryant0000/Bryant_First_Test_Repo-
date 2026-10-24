@@ -1,0 +1,225 @@
+{
+  "checked_at_utc": "2026-10-23T07:27:46.504446+00:00",
+  "method": "普通 HTTP 请求、公开 GitHub 仓库检索与未登录浏览器检查；没有绕过登录或订阅限制。HTTP 200 不等于文档或视频已读完。",
+  "links": [
+    {
+      "url": "https://www.richdad.com/",
+      "observed_status": 200,
+      "evidence_scope": "官方首页可读；没有取得经典规则正文",
+      "final_url": "https://richdad.com/",
+      "usable_for_complete_rules": false,
+      "response_sha256": "ec07adee13b127fc92f8608280cf5091de5c4722f0419b522c808a564405a4de"
+    },
+    {
+      "url": "https://www.richdad.com/classic-board-game-rules",
+      "observed_status": 404,
+      "evidence_scope": "旧规则路径已失效",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.richdad.com/products/cashflow-classic",
+      "observed_status": 404,
+      "evidence_scope": "旧产品路径已失效",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.richdad.com/cashflow/",
+      "observed_status": 403,
+      "evidence_scope": "当前请求遭拒绝；未取得正文",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.richdad.com/sitemap_index.xml",
+      "observed_status": 403,
+      "evidence_scope": "当前请求遭拒绝；未取得正文",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.richdad.com/wp-json/wp/v2/search?search=cashflow&per_page=20",
+      "observed_status": 403,
+      "evidence_scope": "当前请求遭拒绝；未取得正文",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.scribd.com/doc/78845529/Cashflow-101-Manual-Awaken-Your",
+      "observed_status": 200,
+      "evidence_scope": "16 页经典手册介绍页可读；实际浏览器只显示介绍和空白阅读区，未读取全文",
+      "document_text_observed": false,
+      "usable_for_complete_rules": false,
+      "response_sha256": "dcd5c9edb3a58ed8c7780662375d4aa642ac6138c27a3cc34127bcb4a45ea82e"
+    },
+    {
+      "url": "https://www.scribd.com/document/748086209/CASHFLOW-Board-Game-Instructions-2020",
+      "observed_status": 200,
+      "evidence_scope": "9 页 2020 版说明介绍页可读；实际浏览器只显示介绍和空白阅读区，未读取全文",
+      "document_text_observed": false,
+      "usable_for_complete_rules": false,
+      "response_sha256": "08bba0a018905fd570a44384c99c2a2e527643c3217326405606f84b476a0c67"
+    },
+    {
+      "url": "https://www.scribd.com/document/84035868/Guide-to-Cashflow-101-Training",
+      "observed_status": 200,
+      "evidence_scope": "培训材料介绍页；未据此认定经典版规则",
+      "document_text_observed": false,
+      "usable_for_complete_rules": false,
+      "response_sha256": "1201b2a9884f003d423fa1a5f554aa8fc2de880b14a993e35fa07273f2299546"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1qrJBzqE7d/",
+      "observed_status": 200,
+      "evidence_scope": "视频页面 HTML 壳；浏览器正文空白，未观看视频",
+      "video_observed": false,
+      "usable_for_complete_rules": false,
+      "response_sha256": "c709562370703ad8bf83faa3a8164f5ae759f560bd86acb91baa516539317647"
+    },
+    {
+      "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1qrJBzqE7d",
+      "observed_status": 412,
+      "evidence_scope": "视频元数据请求被拒绝",
+      "video_observed": false,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://boardgamegeek.com/boardgame/1552/cashflow-101/files",
+      "observed_status": 403,
+      "evidence_scope": "未读取文件列表或手册",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.bing.com/search?q=CASHFLOW+101+instructions+pdf+rulebook",
+      "observed_status": "proxy_tunnel_403",
+      "evidence_scope": "连接未建立；不是已验证的可用规则链接",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.google.com/search?q=CASHFLOW+101+rulebook+filetype%3Apdf",
+      "observed_status": "proxy_tunnel_403",
+      "evidence_scope": "连接未建立；不是已验证的可用规则链接",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://duckduckgo.com/html/?q=cashflow+101+instruction+manual+pdf",
+      "observed_status": "proxy_tunnel_403",
+      "evidence_scope": "连接未建立；不是已验证的可用规则链接",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.youtube.com/results?search_query=cashflow+101+how+to+play",
+      "observed_status": "proxy_tunnel_403",
+      "evidence_scope": "连接未建立；不是已验证的可用规则链接",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.ultraboardgames.com/cashflow/game-rules.php",
+      "observed_status": "proxy_tunnel_403",
+      "evidence_scope": "连接未建立；不是已验证的可用规则链接",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.ultraboardgames.com/cashflow-101/game-rules.php",
+      "observed_status": "proxy_tunnel_403",
+      "evidence_scope": "连接未建立；不是已验证的可用规则链接",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://gamerules.com/rules/cashflow/",
+      "observed_status": "proxy_tunnel_403",
+      "evidence_scope": "连接未建立；不是已验证的可用规则链接",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://www.wikihow.com/Play-Cashflow",
+      "observed_status": "proxy_tunnel_403",
+      "evidence_scope": "连接未建立；不是已验证的可用规则链接",
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/cashflow.js?v=1.3.0",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "043b9b59f5ec2e9f9543a67d203b6bb1bae520fc5180e7a4a5882e56c3e8ad4e",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/careers_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "0be777f57233eceffd4b28977a571491c022ed5fa78a2edb21e657465e1aa500",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/smalldeal_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "6980a0c23b51eff74766c6c86d63355a3684277c5fd4cee0089a6ce8b17c330c",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/bigdeal_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "67a56a2a48879f92a3794400d553860062a6bef22d380eca8be326a9b59968f1",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/doodads_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "45c641f4b03184bf2e3c6ffeddc79d80156a24104e99a7fa490ab63dd91e727b",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/market_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "0b87cf61ccff46e254b03a3c48956084e701337b046c203fd46062a3edcd9966",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/fasttrack_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "e40f04f22c4f048994234eb99ffffdd863b1915bb80d48038ddfa2ffb13c0112",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/vocab_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "005f23bee61107233ded58d7a87c00a1c3863da0b23360b20a9513463ced2c08",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/templates/game_screen_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "15d0698bbe4203a45867ea60f261cf46200b480c223262af5b4dc0b26b4e6174",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/templates/card_template_zh_cn.json",
+      "observed_status": 200,
+      "evidence_scope": "正常取得的参考站公开脚本／资源；可核对对应字段及回调，不能证明实体版或原站运行画面完全一致",
+      "response_sha256": "f4082bc7f0e5b26bf892b2394d03f65cd9a7e3ecad3037734b7d32a917685092",
+      "usable_for_component_audit": true,
+      "usable_for_complete_rules": false
+    }
+  ],
+  "rejected_photo_source": {
+    "url": "https://github.com/zweiqin/cash-flow",
+    "file": "static/资料/0大富翁卡牌分类/1份规则说明/1规则~1.jpg",
+    "sha256": "37bb7ba830a93ed7a6a0c629ea93257f0e8036d7a2e33bd2c1e9421f9831da9e",
+    "visually_inspected": true,
+    "reason": "照片显示人民币计价的财富流、客服职业及精力规则，与 CASHFLOW 101 不符；其 91 张素材不作为经典版证据。"
+  },
+  "complete_equivalence_established": false
+}

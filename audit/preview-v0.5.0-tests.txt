@@ -1,0 +1,8 @@
+v0.5.0 preview test results
+
+348 automated tests passed, 0 failed.
+Classic UI, legacy saves, and two-browser online suites passed.
+Extracted ZIP: Node server health and online game start passed.
+Bundled HTML over HTTP with API blocked: start, career, persistence and dice passed.
+Direct file:// opening was blocked by browser administrator policy; not verified.
+Complete original equivalence remains unverified.

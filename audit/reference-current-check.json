@@ -1,0 +1,66 @@
+{
+  "resources": [
+    {
+      "url": "https://richdad.aiserve.top/js/cashflow.js?v=1.3.0",
+      "file": "js__cashflow.js",
+      "bytes": 477376,
+      "sha256": "043b9b59f5ec2e9f9543a67d203b6bb1bae520fc5180e7a4a5882e56c3e8ad4e"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/careers_zh_cn.json",
+      "file": "js__assets__data__careers_zh_cn.json",
+      "bytes": 6258,
+      "sha256": "0be777f57233eceffd4b28977a571491c022ed5fa78a2edb21e657465e1aa500"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/smalldeal_zh_cn.json",
+      "file": "js__assets__data__smalldeal_zh_cn.json",
+      "bytes": 24897,
+      "sha256": "6980a0c23b51eff74766c6c86d63355a3684277c5fd4cee0089a6ce8b17c330c"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/bigdeal_zh_cn.json",
+      "file": "js__assets__data__bigdeal_zh_cn.json",
+      "bytes": 19748,
+      "sha256": "67a56a2a48879f92a3794400d553860062a6bef22d380eca8be326a9b59968f1"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/doodads_zh_cn.json",
+      "file": "js__assets__data__doodads_zh_cn.json",
+      "bytes": 4790,
+      "sha256": "45c641f4b03184bf2e3c6ffeddc79d80156a24104e99a7fa490ab63dd91e727b"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/market_zh_cn.json",
+      "file": "js__assets__data__market_zh_cn.json",
+      "bytes": 18851,
+      "sha256": "0b87cf61ccff46e254b03a3c48956084e701337b046c203fd46062a3edcd9966"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/fasttrack_zh_cn.json",
+      "file": "js__assets__data__fasttrack_zh_cn.json",
+      "bytes": 10586,
+      "sha256": "e40f04f22c4f048994234eb99ffffdd863b1915bb80d48038ddfa2ffb13c0112"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/vocab_zh_cn.json",
+      "file": "js__assets__data__vocab_zh_cn.json",
+      "bytes": 18645,
+      "sha256": "005f23bee61107233ded58d7a87c00a1c3863da0b23360b20a9513463ced2c08"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/templates/game_screen_zh_cn.json",
+      "file": "js__assets__data__templates__game_screen_zh_cn.json",
+      "bytes": 17195,
+      "sha256": "15d0698bbe4203a45867ea60f261cf46200b480c223262af5b4dc0b26b4e6174"
+    },
+    {
+      "url": "https://richdad.aiserve.top/js/assets/data/templates/card_template_zh_cn.json",
+      "file": "js__assets__data__templates__card_template_zh_cn.json",
+      "bytes": 7466,
+      "sha256": "f4082bc7f0e5b26bf892b2394d03f65cd9a7e3ecad3037734b7d32a917685092"
+    }
+  ],
+  "changed_since_pinned_evidence": [],
+  "authenticated_gameplay_observed": false
+}

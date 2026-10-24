@@ -1,0 +1,317 @@
+{
+  "observed_at": "2026-10-23T09:50:37.159123+00:00",
+  "origin": "https://cfclassic.richdad.com/",
+  "entry": "Normal public browser interface; own private capacity-one test room; no account credentials supplied",
+  "observed_roles": [
+    "Doctor (MD)",
+    "Nurse",
+    "Mechanic",
+    "Engineer"
+  ],
+  "screenshots": [
+    {
+      "step": 1,
+      "screen": "TitleScreen",
+      "local_capture": "/tmp/cashflow-observe-1.png",
+      "sha256": "f060fca5a0ddb27d630d8f383e1418a00658d6fe0d01667bb0c38dfda70d6458"
+    },
+    {
+      "step": 2,
+      "screen": "LobbyScreen",
+      "local_capture": "/tmp/cashflow-observe-2.png",
+      "sha256": "890ecfe24cbd81375ca5a1649c821afdca6923a0dae3ff2d8742304fbdb5b1b2"
+    },
+    {
+      "step": 3,
+      "screen": "RoomScreen",
+      "local_capture": "/tmp/cashflow-observe-3.png",
+      "sha256": "e0cfa8bbe00e770185e9fe3c1708006b5e55a1d0e2ffdc7cea0dee408d4b00b4"
+    },
+    {
+      "step": 6,
+      "screen": "WaitingScreen",
+      "local_capture": "/tmp/cashflow-observe-6.png",
+      "sha256": "a4f82413ca1b32826bde54eb991e715a60d39bb63ac95faa6ac7136c9a96496e"
+    },
+    {
+      "step": 8,
+      "screen": "DreamSelectCard",
+      "local_capture": "/tmp/cashflow-observe-8.png",
+      "sha256": "779666b1085f4b3d7cad1eff24e10201950820da1767f11675364e021c4c3fad"
+    },
+    {
+      "step": 9,
+      "screen": "StartTurnCard",
+      "local_capture": "/tmp/cashflow-observe-9.png",
+      "sha256": "a76f1a7f5aafa37e29b1dcad025c179d82bcfcd4aeb6d58e0fc2bf702bffc88f"
+    },
+    {
+      "step": 10,
+      "screen": "StatementElement",
+      "local_capture": "/tmp/cashflow-observe-10.png",
+      "sha256": "da7c9ab9d49c9eeb498244eee6dd52889790130642a86504f225449ba26155b1"
+    },
+    {
+      "step": 11,
+      "screen": "BorrowCardStartTurn",
+      "local_capture": "/tmp/cashflow-observe-11.png",
+      "sha256": "07aa30d698da4a5b8a7b3b1268cbbd4c6d2894afd2346fc77b11656c2294b7dc"
+    },
+    {
+      "step": 13,
+      "screen": "CharityCard",
+      "local_capture": "/tmp/cashflow-observe-13.png",
+      "sha256": "784bdd99d8bdc6d398f1f9c885e2f9c4fa8c594d47421a9cdf6b5e7644ccebb4"
+    },
+    {
+      "step": 14,
+      "screen": "EndCard",
+      "local_capture": "/tmp/cashflow-observe-14.png",
+      "sha256": "597b86288ef57cdfd965350d71886a954da52bb7020dd01fd984042973554787"
+    },
+    {
+      "step": 16,
+      "screen": "DealCard",
+      "local_capture": "/tmp/cashflow-observe-16.png",
+      "sha256": "010f81556ec05d703d9bd8e5de66afd1a00b5e7ca984671cf0d8253c5f17b468"
+    },
+    {
+      "step": 17,
+      "screen": "PropertySmallDealCard",
+      "local_capture": "/tmp/cashflow-observe-17.png",
+      "sha256": "d13b5829d9009ff6eebb51b41ec95602469a78efd0898e7d4aaeda5dd7e9894e"
+    },
+    {
+      "step": 18,
+      "screen": "LoanCard",
+      "local_capture": "/tmp/cashflow-observe-18.png",
+      "sha256": "26a6e15c75f567234759400683fcc142fed4d47ed3134c40584a8c4ee0ab657d"
+    },
+    {
+      "step": 21,
+      "screen": "StatementElement after purchase",
+      "local_capture": "/tmp/cashflow-observe-21.png",
+      "sha256": "4d82f61fc9e4a124c2ae2bf90817b2ac53a2af15585c96293859bb9ea161bf3a"
+    }
+  ],
+  "initial_finances": {
+    "cash": 400,
+    "salary": 13200,
+    "expenses": 8900,
+    "payday": 4300,
+    "education_loan_present": false
+  },
+  "observed_transactions": [
+    {
+      "action": "borrow 1000",
+      "cash": 1400,
+      "bank_balance": 1000,
+      "bank_monthly_payment": 100,
+      "payday": 4200
+    },
+    {
+      "action": "donate 1320",
+      "cash_inferred": 80,
+      "charity_turns": 3
+    },
+    {
+      "action": "following two-dice turn passes payday once",
+      "cash": 4280
+    },
+    {
+      "action": "buy condo with 5000 down payment; accept offered 1000 loan",
+      "returns_to_property_card": true,
+      "purchase_requires_second_click": true
+    },
+    {
+      "action": "confirm condo purchase",
+      "cash": 280,
+      "bank_balance": 2000,
+      "bank_monthly_payment": 200,
+      "asset_value": 50000,
+      "asset_mortgage": 45000,
+      "passive": 100,
+      "expenses": 9100,
+      "payday": 4200
+    }
+  ],
+  "statement_behavior": "Opens on decision cards; closes on dream/start/end card creation. User can toggle the sheet.",
+  "browser_session_closed": true,
+  "signed_in_account_observed": false,
+  "all_roles_played": false,
+  "complete_equivalence_established": false,
+  "additional_nurse_observation": {
+    "entry": "Own private single-player room through normal public UI",
+    "initial": {
+      "cash": 480,
+      "salary": 3100,
+      "expenses": 1950,
+      "payday": 1150
+    },
+    "repay_picker": {
+      "capture": "/tmp/cashflow-followup-12.png",
+      "personal_debts_highlighted": true,
+      "capture_sha256": "5aed73eb91487f983b9502c1d7c00afaf0133c33e54b15e4e3e90cee7c0bbaea"
+    },
+    "insufficient_repayment": {
+      "capture": "/tmp/cashflow-followup-13.png",
+      "retail_balance": 1000,
+      "cash": 480,
+      "pay_button_present": false,
+      "cancel_returns_to_picker": true,
+      "capture_sha256": "2971dcd99796c3d8679dd923b817d87f887fa98bed2b52d23db7dca91ade00eb"
+    },
+    "bank_repayment": {
+      "capture": "/tmp/cashflow-followup-22.png",
+      "cash": 1480,
+      "bank_balance": 1000,
+      "default_repay": 1000,
+      "capture_sha256": "38c06f7baedb493c56f464fa2da35377cc4d924ea59ddeca00d93fe3b8537bf5"
+    },
+    "after_borrow_2000_and_repay_retail": {
+      "capture": "/tmp/cashflow-followup-33.png",
+      "cash": 1480,
+      "bank_balance": 2000,
+      "expenses": 2100,
+      "payday": 1000,
+      "capture_sha256": "42a7a6edf9d6c53613563628cc98a726ad0539e57dd4084cea7ec636c1f5c9ae"
+    },
+    "stock_transaction": {
+      "symbol": "MYT4U",
+      "unit_price": 40,
+      "quantity": 10,
+      "cash_after_one_payday_and_purchase": 2080,
+      "quote_capture": "/tmp/cashflow-followup-36.png",
+      "buy_capture": "/tmp/cashflow-followup-37.png",
+      "statement_capture": "/tmp/cashflow-followup-44.png",
+      "quote_capture_sha256": "8ae50c770e3a7a790bba8e7125afb94d441600fc9e665a4d7b968a52a1d42680",
+      "buy_capture_sha256": "e70634bce7bafd620faebfe4caaf72c0a84587724a4102a0673a231f28d5c22e",
+      "statement_capture_sha256": "c68262fe2e9ce080e526260fe3a124ce13a4e8ef278d14cdf6f28956a497ee6f"
+    },
+    "baby": {
+      "before_ack_capture": "/tmp/cashflow-followup-47.png",
+      "after_ack_capture": "/tmp/cashflow-followup-53.png",
+      "children": 1,
+      "child_monthly_cost": 170,
+      "before_ack_capture_sha256": "8e932c8fee150b1eaf9aed581df6080d9197f0c14bc1f1b23378616d0fb35ea3",
+      "after_ack_capture_sha256": "bcd0ea7f1b174459d21921a603adbc3741ca5bdd8693382de7655791dc198b17"
+    },
+    "session_end": "Execution environment disconnected during observation; no claim of an explicit room exit."
+  },
+  "additional_runtime_observations": {
+    "mechanic_playthrough": {
+      "actions": 1200,
+      "turns": 203,
+      "normal_public_ui_only": true,
+      "account_credentials_supplied": false,
+      "screens_observed": [
+        "DreamSelectCard",
+        "StartTurnCard",
+        "BorrowCardStartTurn",
+        "CharityCard",
+        "EndCard",
+        "DoodadCard",
+        "DealCard",
+        "StockCard",
+        "MarketNoOpportunityCard",
+        "StockBuyCard",
+        "SpecialStockCard",
+        "StockSellCard",
+        "PropertySmallDealCard",
+        "BabyCard",
+        "PickLoanCard",
+        "PayOffLoanCard",
+        "DownsizeCard",
+        "SkipTurnCard",
+        "PropertyBigDealCard",
+        "SpecialDoodadCard",
+        "MarketCard",
+        "MarketSellCard"
+      ],
+      "scope": "Observed original screens, not a full visual equivalence verification",
+      "local_evidence": "/tmp/cashflow-official-playthrough/trace.jsonl",
+      "sha256": "f242a10933d315cdf528c64f30e4873d43f8ff68c36fb35f55376ff222891059"
+    },
+    "gold_settlement": {
+      "before_cash": 310400,
+      "after_cash": 311000,
+      "held_units": 10,
+      "quoted_unit_price": 600,
+      "actual_cash_delta": 600,
+      "classic_card_intent_total": 6000,
+      "implementation_retains_card_intent_pending_user_preference": true,
+      "local_evidence": "/tmp/cashflow-official-playthrough/gold-settlement.json",
+      "sha256": "503886badb9df53ec6adc0873a9944eecd9a60be0640d0fd8a63120e0785c8ee"
+    },
+    "stock_loan_quantity_reset": {
+      "career": "Mechanic",
+      "before_cash": 6330,
+      "shortfall_loan": 10000,
+      "after_cash": 16330,
+      "after_bank_debt": 15000,
+      "requested_shares": 1633,
+      "quote_price": 10,
+      "returned_visible_quantity": 1,
+      "purchase_automatically_settled": false,
+      "local_evidence": "/tmp/cashflow-stock-loan-proof/result.json",
+      "sha256": "2f7de2f1c0382f8797e6c26e7cd0a3d20642e5e62bd1b5dc195b5d8e2eb5634b"
+    },
+    "engineer_fasttrack": {
+      "observed_at_utc": "2026-10-24T06:44:08.028095+00:00",
+      "own_private_room": true,
+      "normal_public_ui_only": true,
+      "recorded_actions": 377,
+      "turns": 67,
+      "card_classes_observed": [
+        "DreamSelectCard",
+        "turnStart",
+        "StartTurnCard",
+        "BorrowCardStartTurn",
+        "rolling",
+        "DoodadCard",
+        "EndCard",
+        "MarketNoOpportunityCard",
+        "DealCard",
+        "StockCard",
+        "StockBuyCard",
+        "SpecialStockCard",
+        "BabyCard",
+        "PropertySmallDealCard",
+        "LoanCard",
+        "StockSellCard",
+        "CharityCard",
+        "DownsizeCard",
+        "SkipTurnCard",
+        "PickLoanCard",
+        "PayOffLoanCard",
+        "PropertyBigDealCard",
+        "EnterFastTrackCard",
+        "DreamCard",
+        "InvestmentCard",
+        "InvestmentRollCard"
+      ],
+      "entry_before": {
+        "cash": 13144,
+        "passive": 5610,
+        "expenses": 3900,
+        "pos": 18,
+        "fast": false
+      },
+      "entry_after": {
+        "cash": 561000,
+        "passive": 561000,
+        "pos": 42,
+        "fast": true
+      },
+      "risk_result": {
+        "visible_die": 4,
+        "required_die": 6,
+        "visible_reward": 0,
+        "acknowledgement_completed": false
+      },
+      "scope": "Entry, dream, business and failed-risk screens observed. Observer script stopped at risk-result screen after clicking the wrong button position; this is not a game failure. No victory, tax, divorce or lawsuit runtime proof from this session.",
+      "local_evidence": "/tmp/cashflow-official-fasttrack/trace.jsonl",
+      "sha256": "23dd9ae16ea2102d8cbea139b485acd19d761b7a70a207b6a4c0ed4c7267971b"
+    }
+  }
+}

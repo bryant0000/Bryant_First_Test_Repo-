@@ -1,4 +1,4 @@
-/* Optional browser regression: npm package playwright and Chromium are required. */
+/* Legacy-save browser regression: npm package playwright and Chromium are required. */
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 (async()=>{
@@ -6,8 +6,8 @@ const assert=require('node:assert/strict');
  const page=await browser.newPage({viewport:{width:1440,height:1050}}),errors=[],nativeDialogs=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>{nativeDialogs.push(d.type());d.dismiss()});
  const base=process.env.CASHFLOW_TEST_URL||'http://127.0.0.1:3000';
- await page.goto(base);await page.evaluate(()=>localStorage.clear());await page.reload();
- await page.locator('#start').click();await page.reload();await page.locator('#intro-dialog').waitFor({state:'visible'});
+ await page.goto(base);await page.evaluate(()=>localStorage.clear());await page.reload();await page.locator('#offline-mode').click();
+ await page.locator('#job').selectOption('0');await page.locator('#start').click();await page.evaluate(()=>{for(const p of game.players)Object.assign(p,E.create(p.jobId,p.dreamId));delete game.dreamSelection;game.ui.step='career';save();render()});await page.reload();await page.locator('#intro-dialog').waitFor({state:'visible'});
  assert.match(await page.locator('#intro-content').textContent(),/职业/);
  await page.locator('[data-ui="accept-career"]').click();await page.locator('[data-ui="pick-on-board"]').click();
  await page.locator('[data-space="fast:0"]').click();await page.locator('[data-ui="accept-dream"]').click();
@@ -40,9 +40,9 @@ const assert=require('node:assert/strict');
  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  await page.screenshot({path:'/tmp/cashflow-interaction-mobile.png',fullPage:true});
  await page.locator('#minimize-event').click();await page.locator('#new-game').click();await page.locator('#confirm-yes').click();
- await page.locator('#player-count').selectOption('2');await page.locator('#start').click();
+ await page.locator('#player-count').selectOption('2');await page.locator('#job').selectOption('0');await page.locator('#start').click();await page.evaluate(()=>{for(const p of game.players)Object.assign(p,E.create(p.jobId,p.dreamId));delete game.dreamSelection;game.ui.step='career';save();render()});
  for(let i=0;i<2;i++){await page.locator('[data-ui="accept-career"]').click();await page.locator('[data-ui="accept-dream"]').click()}
- await page.locator('#begin-turn').click();await page.evaluate(()=>{Math.random=()=>0;game.decks.doodads=[0]});
+ await page.locator('#begin-turn').click();await page.evaluate(()=>{state.pos=0;Math.random=()=>0;game.decks.doodads=[0]});
  await page.locator('#roll').click();await page.locator('#event-dialog').waitFor({state:'visible'});await page.locator('[data-action="dismiss"]').click();
  await page.locator('#end-turn').click();await page.locator('#turn-dialog').waitFor({state:'visible'});
  assert.match(await page.locator('#turn-heading').textContent(),/玩家 2/);
@@ -50,6 +50,6 @@ const assert=require('node:assert/strict');
  await page.locator('#dice-animation').waitFor({state:'visible'});await page.reload();await page.locator('#event-dialog').waitFor({state:'visible'});
  assert.equal(await page.evaluate(()=>state.turn),1);assert.equal(await page.evaluate(()=>state.pos),0);assert.equal(await page.evaluate(()=>state.pending.kind),'choose');
  assert.deepEqual(errors,[]);assert.deepEqual(nativeDialogs,[]);
- console.log('PASS: career and board dream selection, handoff, animated roll, event modals, loan without losing card, purchase cancel/confirm, audit receipt, custom partial repayment, refresh recovery, minimize/resume, mobile, multiplayer handoff, reload during movement; no browser/native-dialog errors');
+ console.log('PASS: legacy-save career and board dream selection, handoff, animated roll, event modals, loan without losing card, purchase cancel/confirm, audit receipt, custom partial repayment, refresh recovery, minimize/resume, mobile, multiplayer handoff, reload during movement; no browser/native-dialog errors');
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1)});

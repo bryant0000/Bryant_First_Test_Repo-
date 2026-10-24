@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-23T09:50:37.159123+00:00",
+  "official": {
+    "url": "https://cfclassic.richdad.com/",
+    "status": 200,
+    "normal_gameplay_reached": true,
+    "signed_in_account": false,
+    "credentials_entered": false,
+    "observed_roles": [
+      "Doctor (MD)"
+    ],
+    "evidence": "official-runtime.json"
+  },
+  "reference": {
+    "url": "https://richdad.aiserve.top/",
+    "status": 200,
+    "login_button_clicked": true,
+    "auth_origin": "https://auth.gbfeng.com",
+    "auth_path": "/login/oauth/authorize",
+    "observed_auth_result": "upstream timeout; origin returned HTTP 503",
+    "account_form_reached": false,
+    "logged_in": false
+  },
+  "configuration": {
+    "additional_runtime_dependencies_saved": [
+      "www.gstatic.com",
+      "cashflow-a13fb.firebaseio.com"
+    ],
+    "official_dependencies_runtime_observed_working": true,
+    "note": "Earlier tunnel failures are historical; official gameplay now works."
+  },
+  "authorization": "User explicitly authorized login and role-based gameplay observation; only an own single-player private test room was created."
+}

@@ -1,0 +1,64 @@
+{
+  "checked_at_utc": "2026-10-24T06:47:16.562595+00:00",
+  "unit_tests": {
+    "command": "npm test",
+    "passed": 348,
+    "failed": 0,
+    "scope": "Legacy rules, reference rules, independent numeric deck fixtures and server rooms; does not establish complete original equivalence"
+  },
+  "browser_checks": [
+    {
+      "command": "npm run test:reference:browser",
+      "status": "passed",
+      "scope": "Candidate desktop/mobile cards, loans, stock input/reset, payday, baby, fast-track dice and persistence; distinct dream/cashflow victory cards, reload, mobile quit and dedicated fast-track statement",
+      "local_log": "/tmp/cashflow-v050-test-1.log",
+      "log_sha256": "d545d7698c65d9c193a82be750e211d1118844ea6b6ccfc7d45f870fb34f0d29"
+    },
+    {
+      "command": "npm run test:browser",
+      "status": "passed",
+      "scope": "Legacy save interaction, movement, transactions and mobile",
+      "local_log": "/tmp/cashflow-v050-test-2.log",
+      "log_sha256": "9a64cd9ebeb50897d84a2cca99408527725e83a114e624b35e58860ef5709c38"
+    },
+    {
+      "command": "npm run test:online:browser",
+      "status": "passed",
+      "scope": "Two isolated browsers: private room, turn authority, chat, borrowing, temporary network failure on reload, same-session recovery, handoff and mobile exit; observer financial sheet remains open across other-player decision updates",
+      "local_log": "/tmp/cashflow-v050-test-3.log",
+      "log_sha256": "74fd7e447e56eb47641b188c09fa83e79015c391c719390fa4b922277a81ee78"
+    }
+  ],
+  "official_resource_comparison": {
+    "json_exact_matches": 9,
+    "json_compared": 9,
+    "callback_body_exact_matches": 29,
+    "callbacks_compared": 29
+  },
+  "normal_official_gameplay_observed": true,
+  "signed_in_account_observed": false,
+  "official_runtime_roles": [
+    "Doctor (MD)",
+    "Nurse",
+    "Mechanic",
+    "Engineer"
+  ],
+  "reference_runtime_screens_verified": 0,
+  "reference_runtime_screens_identified": 49,
+  "release_gate": {
+    "status": "blocked_as_expected",
+    "zip_unchanged": false,
+    "note": "Original-equivalence gate remains blocked; user requested a separately labelled 0.5.0 preview package."
+  },
+  "complete_equivalence_established": false,
+  "official_card_classes_observed": 29,
+  "delivery_version": "0.5.0-preview",
+  "preview_package_checks": {
+    "version": "0.5.0",
+    "unpacked_server_start": "passed",
+    "unpacked_online_game_start": "passed",
+    "bundled_html_with_api_blocked": "passed: career, start, save/reload and dice",
+    "direct_file_protocol": "not_verified: browser administrator policy blocks file:// navigation",
+    "errors_in_exercised_browser_paths": 0
+  }
+}

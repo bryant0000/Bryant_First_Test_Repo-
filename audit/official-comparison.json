@@ -1,0 +1,243 @@
+{
+  "publisher_origin": "https://cfclassic.richdad.com/",
+  "resources": [
+    {
+      "resource": "bigdeal.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "35ef74361029e558b0efa7a4bf634c12a0af6fc7c42cf06367f9c9c095e9ea36"
+    },
+    {
+      "resource": "careers.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "9a0277206b6ccfcacac5e5f08512bdadd409df9a45aef6819384d1e3bf4a5743"
+    },
+    {
+      "resource": "doodads.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "286120fa95bee018b3bea9748d593af14e67d609b8ea93e3737dbff3edf9446c"
+    },
+    {
+      "resource": "fasttrack.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "a0a96e95c484c61f3215455e8d74364aebacc447cd2a716bf2b745e9d0548998"
+    },
+    {
+      "resource": "market.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "6889122bd83a29a6563c0169baa92414b0609a5f420b7377764bba6f9d4efb29"
+    },
+    {
+      "resource": "smalldeal.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "ca0ef5ad221b2dd818ddd287bb0f36edb1045aa01d522e04466ae070a6e4f367"
+    },
+    {
+      "resource": "templates/card_template.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "b1e1cc5f6e1e7be27a26ad08bf33df41fa8ffb9417ddb00f323a417176bcd601"
+    },
+    {
+      "resource": "templates/game_screen.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "1d57d6b54d069fe1954389734bc5e784ec45a4b6997a26503d7256ae50afd555"
+    },
+    {
+      "resource": "vocab_en_us.json",
+      "same_json_as_pinned_mirror": true,
+      "official_sha256": "e8d0d6210919d0b257f8ae2cf815dcd55b69341b455006f9d0b68554b8295bca"
+    }
+  ],
+  "callbacks": [
+    {
+      "name": "onEnterFastTrackClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "12314d805acf10f8a97ba8a58b1ead271a05d07384f225d238424358200212dc"
+    },
+    {
+      "name": "onShowEndCard",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "d85a11dae2c4849ec56be2cfcb8cb06c1bd2acd5fef58b2ae587419ae2c09eea"
+    },
+    {
+      "name": "onAttemptDealPurchase",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "bea7f8290549656b8383b71f7b59617c791109c272b35df4795bdde09338ca92"
+    },
+    {
+      "name": "onAttemptInvestmentPurchase",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "78c44c451fe29f04626ab0fac990364227d8650d3456f5fdcdc183b20ae1c7b6"
+    },
+    {
+      "name": "onAttemptInvestmentChancePurchase",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "2ecd49cdff7924f5e720bb5dbf0b69254d7dac26aaf06d0e2a5172ccb396fdbe"
+    },
+    {
+      "name": "purchaseInvestment",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "c5ce784a93073c3644c0542ad4ef52fa1ccdac31e45323d07fa3f71b9250f13f"
+    },
+    {
+      "name": "onSellMarketCard",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "6d184a9804bbba4eacc66be3043b3749abec4f270b98257966d00ca413d2fedf"
+    },
+    {
+      "name": "onMarketMustClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "b665306701dbd26f9d79aa4ff329789e48f42fa7a526c805475580591225bdec"
+    },
+    {
+      "name": "attemptPayCash",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "d14d9c4ff1ab69c84fd696fb986731c3133964ab55796105c2c4121504ebdc4e"
+    },
+    {
+      "name": "offerLoan",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "d700110223381263d95f137350092ea6fd6d55f7a8567bd945539f4af980db66"
+    },
+    {
+      "name": "onLoanBorrowClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "99141323362e88d47516f3d5719606d258e44d335d7790ff06a5245894824a3a"
+    },
+    {
+      "name": "onLoanCancelClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "cf0ae02b7423c0f7604988320463e9fd49c4b3da481c162d752b699d58a62058"
+    },
+    {
+      "name": "onDownsizeClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "7399c592d10dc05ff64a6d76c69345ded2737dee880d13acfa121d40cf1c4e7e"
+    },
+    {
+      "name": "onDoodadLoanNeeded",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "ecc35352d80459a3b98d2ae3973d6af9b89ec27a44d2d06d577a085094331552"
+    },
+    {
+      "name": "onDonateClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "f40acf7f8b845283d7d64365e102b2781eab09dd463b74e1b7664327ac4bc0d6"
+    },
+    {
+      "name": "onDivorceClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "50d1070d83252af792a249d732c23f12c6436896d1c1044bebde2b12da04bfd1"
+    },
+    {
+      "name": "onTaxClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "0c7dae3f540175bf25b1cc4c8eb2c3d744cf48fbf644d0260af48b8c3ba14c8d"
+    },
+    {
+      "name": "onLawsuitClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "0c7dae3f540175bf25b1cc4c8eb2c3d744cf48fbf644d0260af48b8c3ba14c8d"
+    },
+    {
+      "name": "onAddChild",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "413534736bc6baebb8bd60700456d229e17045016433258efab63d2d294c2daf"
+    },
+    {
+      "name": "onSpecialStockCardClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "e1c481fb4facfee5bd12fad8cc9a18f12210bb38043eb24a27cda7e157ac530b"
+    },
+    {
+      "name": "stillBankruptCheck",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "9b0f024e9108cbd4cfe45c5bd994a088b635c46190edadf295c088043df68758"
+    },
+    {
+      "name": "onBankruptSellProperty",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "a9464279eef205c3b4d2f8d3a080d891c3e6e5d923fa117260e7487441ebe183"
+    },
+    {
+      "name": "onBankruptHalveClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "1d4503409b494dd05a96201ed7599417f901e1a5ad912b081d3bb1310184788d"
+    },
+    {
+      "name": "onBankruptCompleteClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "b12d6ff99151b8eabccbe06597157af659a5406b2cc4ef894882273249397bdc"
+    },
+    {
+      "name": "onBankruptLoseClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "2d792c8849d85ed7f9592975ba968ad147eeb66afd5c41e7d3783c659764f8c0"
+    },
+    {
+      "name": "onBankruptPayOffClicked",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "e0806769f5f9b20c6ef85105cedc997fe889c6fe0a65c38f38b794470995e6cb"
+    },
+    {
+      "name": "handleCardDrawn",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "9b68d7e680aa2ddcbafb337bb1500a007704576e0a86e6b378341ba0cba2828b"
+    },
+    {
+      "name": "addCardtoCardQueue",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "98281b58dca03d0c68dfa3b7343c12c9a89e4064196c7a7109b716967c70ee53"
+    },
+    {
+      "name": "_increaseDreamCountPromise",
+      "present": true,
+      "exact_function_body_match": true,
+      "official_body_sha256": "cde6d2dabf67e42693cb5dd33a5f1c50914a2d0ea23a9f61246966f298ea47f8"
+    }
+  ],
+  "class_text_comparison": {
+    "common": 89,
+    "changed_ignoring_whitespace": [
+      "AssetLoader",
+      "GameSession",
+      "Lobby",
+      "LobbyScreen",
+      "Main",
+      "RoomScreen",
+      "SettingsHelper",
+      "StatementElement",
+      "TitleScreen"
+    ],
+    "not_a_semantic_equivalence_proof": true
+  },
+  "authenticated_runtime_observed": false,
+  "complete_physical_or_visual_equivalence_proven": false
+}

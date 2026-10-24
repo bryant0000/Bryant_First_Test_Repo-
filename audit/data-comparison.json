@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "dataset": "smalldeal",
+      "live_count": 55,
+      "mirror_count": 55,
+      "mechanical_fields_match": true
+    },
+    {
+      "dataset": "bigdeal",
+      "live_count": 40,
+      "mirror_count": 40,
+      "mechanical_fields_match": true
+    },
+    {
+      "dataset": "market",
+      "live_count": 45,
+      "mirror_count": 45,
+      "mechanical_fields_match": true
+    },
+    {
+      "dataset": "doodads",
+      "live_count": 42,
+      "mirror_count": 42,
+      "mechanical_fields_match": true
+    },
+    {
+      "dataset": "careers",
+      "live_count": 12,
+      "mirror_count": 12,
+      "mechanical_fields_match": true
+    },
+    {
+      "dataset": "fasttrack_content",
+      "live_count": 41,
+      "mirror_count": 41,
+      "mechanical_fields_match": true
+    }
+  ],
+  "does_not_verify": "card prose, display text, full page layouts or live gameplay"
+}

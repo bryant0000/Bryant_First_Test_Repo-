@@ -1,0 +1,13 @@
+{
+  "version": "0.5.0",
+  "channel": "preview",
+  "complete_original_equivalence": false,
+  "features": [
+    "offline_same_device",
+    "server_authoritative_rooms",
+    "persistent_sessions",
+    "fast_track_statement",
+    "dream_and_cashflow_victories"
+  ],
+  "validation": "audit/validation-latest.json"
+}

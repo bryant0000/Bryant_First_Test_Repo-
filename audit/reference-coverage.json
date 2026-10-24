@@ -1,0 +1,644 @@
+{
+  "target": "CASHFLOW 101; official classic web runtime and richdad.aiserve.top",
+  "release_allowed": false,
+  "candidate_profile": "reference-web-2026-10-23",
+  "published_profile_unchanged": true,
+  "evidence_source_sha256": "043b9b59f5ec2e9f9543a67d203b6bb1bae520fc5180e7a4a5882e56c3e8ad4e",
+  "rules": [
+    {
+      "id": "start_position",
+      "source_anchor": "PlayerBlob.position",
+      "expected": 16,
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "fast_entry_confirmation",
+      "source_anchor": "onShowEndCard",
+      "expected": "explicit",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "fast_cash_and_position",
+      "source_anchor": "onEnterFastTrackClicked",
+      "expected": {
+        "cash": "raw passive * 100, replaces prior cash",
+        "position": 42
+      },
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "default_fast_dice",
+      "source_anchor": "StartTurnCard",
+      "expected": 1,
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "reverse_split",
+      "source_anchor": "PlayerData.specialStockEvent",
+      "expected": "floor(quantity / 2)",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "divorce_cash",
+      "source_anchor": "onDivorceClicked",
+      "expected": 0,
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "tv_financing",
+      "source_anchor": "onDoodadLoanNeeded",
+      "expected": "merge credit debt",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "boat_financing",
+      "source_anchor": "onDoodadLoanNeeded",
+      "expected": "aggregate boat debt",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "brother_sale",
+      "source_anchor": "onSellMarketCard",
+      "expected": "remove property, cash unchanged",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "debt_halves",
+      "source_anchor": "PlayerData.bankruptHalveDebts",
+      "expected": "exact half",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "dream_inflation",
+      "source_anchor": "_increaseDreamCountPromise",
+      "expected": "linear increment for other owners",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "fast_day_retained_cashflow",
+      "source_anchor": "GameSession moving branch; PlayerData.payday",
+      "expected": "fast passive + retained salary - retained expenses, as in reference code",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "escape_after_card_ack",
+      "source_anchor": "onShowEndCard",
+      "expected": "open event is acknowledged before entry confirmation",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "prepaid_investment_result",
+      "source_anchor": "onAttemptInvestmentPurchase; InvestmentRollCard",
+      "expected": "pay once; persist die; confirm separately",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "investment_failure_ownership",
+      "source_anchor": "InvestmentRollCard.onPassClicked",
+      "expected": "failed attempt does not own the space",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "investment_success_cost",
+      "source_anchor": "onAttemptInvestmentChancePurchase",
+      "expected": "success cost is zero after prepaid attempt",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "shared_card_queue",
+      "source_anchor": "handleCardDrawn; addCardtoCardQueue; turnStart",
+      "expected": "shared quotes and splits wait for recipient turn",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "queued_quote_buy_limit",
+      "source_anchor": "StockCard",
+      "expected": "ordinary queued quote is sell-only; any-stock may buy",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "queue_filter_and_movement",
+      "source_anchor": "turnStart; onShowEndCard",
+      "expected": "drop irrelevant/skip/fast cards; queue processing does not consume movement",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "mandatory_payment_confirmation",
+      "source_anchor": "attemptPayCash; onDownsizeClicked",
+      "expected": "card before debit; no skip count until payment",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "rounded_shortfall_loan",
+      "source_anchor": "offerLoan; onLoanBorrowClicked",
+      "expected": "ceil(shortfall/1000)*1000; return to previous card",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "loan_cancel_restore",
+      "source_anchor": "onLoanCancelClicked",
+      "expected": "return to the unchanged original card",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "optional_purchase_loan",
+      "source_anchor": "onAttemptDealPurchase",
+      "expected": "borrow then return to offer without automatic purchase",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "market_must_confirmation",
+      "source_anchor": "onMarketMustClicked; performMarketMustAction",
+      "expected": "no asset/income change until confirmation",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "single_maintenance_charge",
+      "source_anchor": "performMarketMustAction market_fee",
+      "expected": "once per matching event, not per asset",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "stock_transaction_subcards",
+      "source_anchor": "StockCard; StockBuyCard; StockSellCard",
+      "expected": "separate buy/sell cards; defaults 1/all; cancel restores quote",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "stock_lot_order",
+      "source_anchor": "PlayerData.sellStocks",
+      "expected": "consume lower unit cost lots first; then end quote",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "stock_loan_subcard_restore",
+      "source_anchor": "offerLoan; onLoanBorrowClicked",
+      "expected": "return to StockBuyCard with quantity reset to 1 after accepting or cancelling the shortfall loan",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs",
+      "runtime_evidence": "official-runtime.json: stock_loan_quantity_reset",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "negative_payday_bankruptcy",
+      "source_anchor": "moving; stillBankruptCheck",
+      "expected": "clamp to zero and restructure before landing action",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "bankruptcy_half_down_payment",
+      "source_anchor": "onBankruptSellProperty",
+      "expected": "exact half down payment, excludes securities",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "bankruptcy_result_and_recovery",
+      "source_anchor": "stillBankruptCheck; onBankruptHalveClicked; onBankruptCompleteClicked",
+      "expected": "strictly positive flow to recover, then skip 3 turns",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "bankruptcy_loss_handoff",
+      "source_anchor": "onBankruptLoseClicked",
+      "expected": "acknowledge loss then advance or finish table",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "baby_acknowledgement",
+      "source_anchor": "BabyCard; onAddChild",
+      "expected": "no financial mutation until acknowledged; cap 3",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "official_initial_cash_and_debts_v2",
+      "source_anchor": "PlayerBlob.createFromCareerData; live Doctor statement",
+      "expected": "cash equals savings only; education debt omitted; 12 careers checked",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "official_doctor_condo_sequence",
+      "source_anchor": "official-runtime.json",
+      "expected": "400 -> borrow -> 1400 -> charity -> 80 -> payday -> 4280 -> borrow -> 5280 -> purchase -> 280; payday 4200",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "repayment_picker",
+      "source_anchor": "PickLoanCard; onPayOffLoanCanceled",
+      "expected": "pick liability; cancel returns to picker; settlement returns to prior turn",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "bank_repayment_controls",
+      "source_anchor": "PayOffLoanCard.onPayClicked",
+      "expected": "default 1000; round to nearest 1000; clamp to debt and available cash",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "fast_entry_handoff",
+      "source_anchor": "onEnterFastTrackClicked",
+      "expected": "automatically end turn after entry",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "skip_turn_acknowledgement",
+      "source_anchor": "SkipTurnCard; onSkipTurnOkClicked",
+      "expected": "acknowledge and hand off without rolling or decrementing charity",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "random_career_with_replacement",
+      "source_anchor": "pickCareer",
+      "expected": "uniform random selection among all 12 careers; duplicates allowed",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "first_turn_dream_selection",
+      "source_anchor": "turnStart; onDreamSelected",
+      "expected": "each player chooses a dream on their first turn, before queued cards",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "rare_coin_units",
+      "source_anchor": "MarketSellCard; onSellMarketCard",
+      "expected": "sell all 8 coin units",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "automatic_loan_control_limit",
+      "source_anchor": "onLoanBorrowClicked; borrowCash",
+      "expected": "automatic shortfall loan is not capped by manual form maximum",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    },
+    {
+      "id": "negative_market_sale_timing",
+      "source_anchor": "onSellMarketCard; rolling",
+      "expected": "negative sale cash remains until next roll or banking action",
+      "status": "unit_verified",
+      "test_file": "reference.test.cjs"
+    }
+  ],
+  "runtime_screens": [
+    {
+      "id": "BoardElement",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "StatementElement",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "BabyCard",
+      "status": "reference_observed_difference",
+      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "BankruptCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "BankruptCompleteCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "BankruptHalveCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "BankruptLoseCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "BankruptPayCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "BankruptSellCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "CharityCard",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "DealCard",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "DivorceCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "DoodadCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "DownsizeCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "DreamCard",
+      "status": "reference_observed_difference",
+      "reason": "Observed in normal official Engineer game. Candidate functional regression exists; full visual equivalence not established.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "DreamSelectCard",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "EndCard",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "EnterFastTrackCard",
+      "status": "reference_observed_difference",
+      "reason": "Observed in normal official Engineer game. Candidate functional regression exists; full visual equivalence not established.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "EveryoneBankruptCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "InvestmentCard",
+      "status": "reference_observed_difference",
+      "reason": "Observed in normal official Engineer game. Candidate functional regression exists; full visual equivalence not established.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "InvestmentRollCard",
+      "status": "reference_observed_difference",
+      "reason": "Observed in normal official Engineer game. Candidate functional regression exists; full visual equivalence not established.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "LawsuitCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "LoanCard",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "MarketCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "MarketMustCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "MarketNoOpportunityCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "MarketSellCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "PayDayCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "PayOffLoanCard",
+      "status": "reference_observed_difference",
+      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "PickLoanCard",
+      "status": "reference_observed_difference",
+      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "PropertyBigDealCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "PropertySmallDealCard",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "SkipTurnCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "SpecialDoodadCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "SpecialStockCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "StartTurnCard",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "StockBuyCard",
+      "status": "reference_observed_difference",
+      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "StockCard",
+      "status": "reference_observed_difference",
+      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "StockSellCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "TaxCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "WinDreamCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "WinPassiveCard",
+      "status": "not_reference_compared",
+      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+    },
+    {
+      "id": "FooterWidget",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "HeaderWidget",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "GameScreen",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "LobbyScreen",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "RoomScreen",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "TitleScreen",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    },
+    {
+      "id": "WaitingScreen",
+      "status": "reference_observed_difference",
+      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "official_runtime_observed": true
+    }
+  ],
+  "blockers": [
+    {
+      "id": "canonical_physical_rulebook",
+      "status": "unverified",
+      "detail": "Official homepage now returns 200, old rule URL 404; Scribd classic/2020 entries return 200 but full document pages have not been observed. Physical photos examined belonged to Wealth Flow and were excluded."
+    },
+    {
+      "id": "live_reference_interactions",
+      "status": "partially_observed",
+      "detail": "Normal own-room play observed as Doctor, Nurse, Mechanic and Engineer. Engineer entered Fast Track after 62 turns; entry, dream, business and failed-risk screens observed. Original victory/tax/lawsuit/divorce branches still unobserved."
+    },
+    {
+      "id": "bilibili_reference_video",
+      "status": "unverified",
+      "detail": "Page returned HTML; metadata endpoint returned 412; video and complete subtitles not observed."
+    },
+    {
+      "id": "all_content_equivalence",
+      "status": "incomplete",
+      "detail": "All 182 deck mechanical records plus 41 dream/investment records projected independently from publisher data. Purchase/payment cases tested; Full prose/art remain unverified. Gold settlement discrepancy confirmed by normal live play; canonical behavior decision pending. 8PLEX typo only source-observed."
+    },
+    {
+      "id": "candidate_ui_integration",
+      "status": "partial",
+      "detail": "Source-led core cards and desktop layout, authoritative two-browser rooms, persistence, off-turn chat, presence and temporary network failure recovery tested. Full UI/art/text equality and all original branches remain incomplete."
+    }
+  ],
+  "development_new_game_profile": "reference-web-2026-10-23",
+  "legacy_save_profile_preserved": true,
+  "development_browser_checks": {
+    "test_file": "scripts/reference-ui-smoke.cjs",
+    "scope": "Own candidate paths, legacy saves and isolated two-browser room checks; not complete visual equivalence.",
+    "reference_equivalence_proven": false,
+    "latest_paths": [
+      "entry confirmation and reload",
+      "fast track dice and statement",
+      "risk result persistence and confirmation",
+      "legacy restore",
+      "queued stock quotes and splits",
+      "mandatory payment and loan cancel/reload/return",
+      "shared mandatory market confirmation",
+      "direct card purchase without extra checkout/receipt",
+      "mobile width",
+      "stock buy/sell subcards and cheapest-lot sale",
+      "bankruptcy financial recovery, three skips, loss and handoff",
+      "baby acknowledgement across reload"
+    ]
+  },
+  "latest_source_search": "source-search.json",
+  "official_runtime_evidence": "official-runtime.json"
+}

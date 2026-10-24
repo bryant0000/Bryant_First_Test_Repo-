@@ -1,0 +1,1449 @@
+{
+  "origin": "https://cfclassic.richdad.com/",
+  "scope": "Numeric and functional fields only; not a full-text, artwork or runtime equivalence proof.",
+  "decks": {
+    "small": {
+      "source_url": "https://cfclassic.richdad.com/cashflowjs/assets/data/smalldeal.json",
+      "sha256": "ca0ef5ad221b2dd818ddd287bb0f36edb1045aa01d522e04466ae070a6e4f367",
+      "cards": [
+        {
+          "type": "smalldeal_anystock",
+          "key": "CD",
+          "cost": 4000,
+          "cashflow": 20,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_anystock",
+          "key": "CD",
+          "cost": 5000,
+          "cashflow": 20,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_anystock",
+          "key": "2BIG",
+          "cost": 1200,
+          "cashflow": 10,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_anystock",
+          "key": "2BIG",
+          "cost": 1200,
+          "cashflow": 10,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_startup",
+          "key": "widget",
+          "cost": 3000,
+          "downpay": 3000,
+          "mortgage": 0,
+          "cashflow": 0
+        },
+        {
+          "type": "smalldeal_startup",
+          "key": "software",
+          "cost": 5000,
+          "downpay": 5000,
+          "mortgage": 0,
+          "cashflow": 0
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": -1,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": -2,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": -1,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": -2,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "ON2U",
+          "cost": 20,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "ON2U",
+          "cost": 5,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "ON2U",
+          "cost": 40,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "ON2U",
+          "cost": 10,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "ON2U",
+          "cost": 20,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "ON2U",
+          "cost": 30,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "ON2U",
+          "cost": 10,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "ON2U",
+          "cost": 30,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": 50,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": 40,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": 40,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": 30,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": 10,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": 10,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": 5,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "OK4U",
+          "cost": 1,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": 40,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": 30,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": 30,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": 20,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": 10,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": 5,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": 5,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "MYT4U",
+          "cost": 1,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "GRO4US",
+          "cost": 40,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "GRO4US",
+          "cost": 30,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "GRO4US",
+          "cost": 30,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "GRO4US",
+          "cost": 20,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_stock",
+          "key": "GRO4US",
+          "cost": 10,
+          "cashflow": 0,
+          "queue": "true"
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "misc",
+          "cost": 5000,
+          "downpay": 5000,
+          "mortgage": 0,
+          "cashflow": 0
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "10ACRES",
+          "cost": 5000,
+          "downpay": 5000,
+          "mortgage": 0,
+          "cashflow": 0
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "gold",
+          "cost": 3000,
+          "downpay": 3000,
+          "mortgage": 0,
+          "cashflow": 0,
+          "units": 10
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "coin",
+          "cost": 500,
+          "downpay": 500,
+          "mortgage": 0,
+          "cashflow": 0,
+          "units": 8
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "3/2HOUSE",
+          "cost": 45000,
+          "downpay": 2000,
+          "mortgage": 43000,
+          "cashflow": 250
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "3/2HOUSE",
+          "cost": 35000,
+          "downpay": 2000,
+          "mortgage": 33000,
+          "cashflow": 220
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "2/1CONDO",
+          "cost": 40000,
+          "downpay": 5000,
+          "mortgage": 35000,
+          "cashflow": 220
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "2/1CONDO",
+          "cost": 55000,
+          "downpay": 5000,
+          "mortgage": 50000,
+          "cashflow": 160
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "2/1CONDO",
+          "cost": 40000,
+          "downpay": 4000,
+          "mortgage": 36000,
+          "cashflow": 140
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "2/1CONDO",
+          "cost": 50000,
+          "downpay": 5000,
+          "mortgage": 45000,
+          "cashflow": 100
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "2/1CONDO",
+          "cost": 60000,
+          "downpay": 5000,
+          "mortgage": 55000,
+          "cashflow": -100
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "3/2HOUSE",
+          "cost": 50000,
+          "downpay": 4000,
+          "mortgage": 46000,
+          "cashflow": 200
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "3/2HOUSE",
+          "cost": 65000,
+          "downpay": 5000,
+          "mortgage": 60000,
+          "cashflow": 160
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "3/2HOUSE",
+          "cost": 50000,
+          "downpay": 3000,
+          "mortgage": 47000,
+          "cashflow": 100
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "3/2HOUSE",
+          "cost": 50000,
+          "downpay": 0,
+          "mortgage": 50000,
+          "cashflow": 100
+        },
+        {
+          "type": "smalldeal_property",
+          "key": "3/2HOUSE",
+          "cost": 50000,
+          "downpay": 0,
+          "mortgage": 50000,
+          "cashflow": -100
+        }
+      ]
+    },
+    "big": {
+      "source_url": "https://cfclassic.richdad.com/cashflowjs/assets/data/bigdeal.json",
+      "sha256": "35ef74361029e558b0efa7a4bf634c12a0af6fc7c42cf06367f9c9c095e9ea36",
+      "cards": [
+        {
+          "type": "bigdeal_property",
+          "key": "PARTNER",
+          "cost": 30000,
+          "downpay": 30000,
+          "mortgage": 0,
+          "cashflow": 1500
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PARTNER",
+          "cost": 30000,
+          "downpay": 30000,
+          "mortgage": 0,
+          "cashflow": 1000
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PARTNER",
+          "cost": 25000,
+          "downpay": 25000,
+          "mortgage": 0,
+          "cashflow": 1000
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PARTNER",
+          "cost": 20000,
+          "downpay": 20000,
+          "mortgage": 0,
+          "cashflow": 800
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PHONE",
+          "cost": 200000,
+          "downpay": 40000,
+          "mortgage": 160000,
+          "cashflow": 2700
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "LAUNDRY",
+          "cost": 150000,
+          "downpay": 30000,
+          "mortgage": 120000,
+          "cashflow": 2500
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "CARWASH",
+          "cost": 125000,
+          "downpay": 25000,
+          "mortgage": 100000,
+          "cashflow": 1800
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "ARCADE",
+          "cost": 100000,
+          "downpay": 20000,
+          "mortgage": 80000,
+          "cashflow": 1600
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PIZZA",
+          "cost": 500000,
+          "downpay": 100000,
+          "mortgage": 400000,
+          "cashflow": 5000
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "CARWASH",
+          "cost": 350000,
+          "downpay": 50000,
+          "mortgage": 300000,
+          "cashflow": 1500
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "BED",
+          "cost": 150000,
+          "downpay": 30000,
+          "mortgage": 120000,
+          "cashflow": 1000
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "MALL",
+          "cost": 50000,
+          "downpay": 50000,
+          "mortgage": 0,
+          "cashflow": 800
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "20ACRES",
+          "cost": 20000,
+          "downpay": 20000,
+          "mortgage": 0,
+          "cashflow": 0
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "3/2HOUSE",
+          "cost": 70000,
+          "downpay": 20000,
+          "mortgage": 50000,
+          "cashflow": 500
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "3/2HOUSE",
+          "cost": 67000,
+          "downpay": 12000,
+          "mortgage": 55000,
+          "cashflow": 400
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "3/2HOUSE",
+          "cost": 75000,
+          "downpay": 7000,
+          "mortgage": 68000,
+          "cashflow": 300
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "3/2HOUSE",
+          "cost": 70000,
+          "downpay": 9000,
+          "mortgage": 61000,
+          "cashflow": 300
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "3/2HOUSE",
+          "cost": 65000,
+          "downpay": 8000,
+          "mortgage": 57000,
+          "cashflow": 300
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "3/2HOUSE",
+          "cost": 65000,
+          "downpay": 7000,
+          "mortgage": 58000,
+          "cashflow": 150
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "3/2HOUSE",
+          "cost": 125000,
+          "downpay": 20000,
+          "mortgage": 105000,
+          "cashflow": -100
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "3/2HOUSE",
+          "cost": 115000,
+          "downpay": 10000,
+          "mortgage": 105000,
+          "cashflow": -100
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "APTHOUSE",
+          "cost": 575000,
+          "downpay": 75000,
+          "mortgage": 500000,
+          "cashflow": 3400,
+          "units": "24"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "APTHOUSE",
+          "cost": 350000,
+          "downpay": 50000,
+          "mortgage": 300000,
+          "cashflow": 2400,
+          "units": "12"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "APTHOUSE",
+          "cost": 550000,
+          "downpay": 50000,
+          "mortgage": 500000,
+          "cashflow": 2800,
+          "units": "24"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "APTHOUSE",
+          "cost": 1200000,
+          "downpay": 200000,
+          "mortgage": 1000000,
+          "cashflow": 11000,
+          "units": "60"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 60000,
+          "downpay": 12000,
+          "mortgage": 48000,
+          "cashflow": 400,
+          "units": "2"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 45000,
+          "downpay": 8000,
+          "mortgage": 37000,
+          "cashflow": 320,
+          "units": "2"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 60000,
+          "downpay": 6000,
+          "mortgage": 54000,
+          "cashflow": 300,
+          "units": "2"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 50000,
+          "downpay": 8000,
+          "mortgage": 42000,
+          "cashflow": 240,
+          "units": "2"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 70000,
+          "downpay": 7000,
+          "mortgage": 63000,
+          "cashflow": 140,
+          "units": "2"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 140000,
+          "downpay": 32000,
+          "mortgage": 108000,
+          "cashflow": 2000,
+          "units": "4"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 100000,
+          "downpay": 20000,
+          "mortgage": 80000,
+          "cashflow": 800,
+          "units": "4"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 80000,
+          "downpay": 16000,
+          "mortgage": 64000,
+          "cashflow": 750,
+          "units": "4"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 125000,
+          "downpay": 15000,
+          "mortgage": 110000,
+          "cashflow": 600,
+          "units": "4"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 90000,
+          "downpay": 15000,
+          "mortgage": 75000,
+          "cashflow": 500,
+          "units": "4"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 80000,
+          "downpay": 20000,
+          "mortgage": 60000,
+          "cashflow": 400,
+          "units": "4"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 220000,
+          "downpay": 40000,
+          "mortgage": 180000,
+          "cashflow": 1700,
+          "units": "8"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 160000,
+          "downpay": 32000,
+          "mortgage": 128000,
+          "cashflow": 1700,
+          "units": "8"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 200000,
+          "downpay": 40000,
+          "mortgage": 160000,
+          "cashflow": 1600,
+          "units": "8"
+        },
+        {
+          "type": "bigdeal_property",
+          "key": "PLEX",
+          "cost": 240000,
+          "downpay": 40000,
+          "mortgage": 200000,
+          "cashflow": 950,
+          "units": "8"
+        }
+      ]
+    },
+    "market": {
+      "source_url": "https://cfclassic.richdad.com/cashflowjs/assets/data/market.json",
+      "sha256": "6889122bd83a29a6563c0169baa92414b0609a5f420b7377764bba6f9d4efb29",
+      "cards": [
+        {
+          "type": "market_sell",
+          "key": "2/1CONDO",
+          "cost": 65000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "2/1CONDO",
+          "cost": 55000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "2/1CONDO",
+          "cost": 55000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "2/1CONDO",
+          "cost": 45000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "3/2HOUSE",
+          "cost": 135000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "3/2HOUSE",
+          "cost": 135000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "3/2HOUSE",
+          "cost": 110000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "3/2HOUSE",
+          "cost": 100000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "3/2HOUSE",
+          "cost": 100000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "3/2HOUSE",
+          "cost": 90000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "3/2HOUSE",
+          "cost": 65000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 40000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 40000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 35000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 35000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 35000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 30000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 30000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 30000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 25000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "PLEX",
+          "cost": 25000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "APTHOUSE",
+          "cost": 45000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "APTHOUSE",
+          "cost": 40000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "APTHOUSE",
+          "cost": 30000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "APTHOUSE",
+          "cost": 25000,
+          "queue": "true"
+        },
+        {
+          "type": "market_startup",
+          "key": "250",
+          "cost": 0,
+          "queue": "true"
+        },
+        {
+          "type": "market_startup",
+          "key": "400",
+          "cost": 0,
+          "queue": "true"
+        },
+        {
+          "type": "market_lose",
+          "key": "3/2HOUSE",
+          "cost": 0
+        },
+        {
+          "type": "market_selladd",
+          "key": "3/2HOUSE",
+          "cost": 50000
+        },
+        {
+          "type": "market_sellmultiply",
+          "key": "PARTNER",
+          "cost": 3,
+          "queue": "true"
+        },
+        {
+          "type": "market_sellmultiply",
+          "key": "PARTNER",
+          "cost": 2,
+          "queue": "true"
+        },
+        {
+          "type": "market_sellmultiply",
+          "key": "PARTNER",
+          "cost": 2,
+          "queue": "true"
+        },
+        {
+          "type": "market_fee",
+          "key": "rental",
+          "cost": 500
+        },
+        {
+          "type": "market_fee",
+          "key": "rental",
+          "cost": 1000
+        },
+        {
+          "type": "market_fee",
+          "key": "8PLEX",
+          "cost": 2000
+        },
+        {
+          "type": "market_sell",
+          "key": "coin",
+          "cost": 5000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "gold",
+          "cost": 600,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "widget",
+          "cost": 50000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "software",
+          "cost": 100000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "BED",
+          "cost": 250000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "CARWASH",
+          "cost": 250000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "MALL",
+          "cost": 100000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "10ACRES",
+          "cost": 150000,
+          "queue": "true"
+        },
+        {
+          "type": "market_sell",
+          "key": "20ACRES",
+          "cost": 200000,
+          "queue": "true"
+        },
+        {
+          "type": "market_brother",
+          "key": "3/2HOUSE",
+          "cost": 500
+        }
+      ]
+    },
+    "doodads": {
+      "source_url": "https://cfclassic.richdad.com/cashflowjs/assets/data/doodads.json",
+      "sha256": "286120fa95bee018b3bea9748d593af14e67d609b8ea93e3737dbff3edf9446c",
+      "cards": [
+        {
+          "type": "doodad",
+          "cost": 40
+        },
+        {
+          "type": "doodad",
+          "cost": 200
+        },
+        {
+          "type": "doodad",
+          "cost": 350
+        },
+        {
+          "type": "doodad",
+          "cost": 600
+        },
+        {
+          "type": "doodad",
+          "cost": 500
+        },
+        {
+          "type": "doodad",
+          "cost": 100
+        },
+        {
+          "type": "doodad",
+          "cost": 100
+        },
+        {
+          "type": "doodad",
+          "cost": 10
+        },
+        {
+          "type": "doodad",
+          "cost": 100
+        },
+        {
+          "type": "doodad",
+          "cost": 50
+        },
+        {
+          "type": "doodad",
+          "cost": 150
+        },
+        {
+          "type": "doodad",
+          "cost": 80
+        },
+        {
+          "type": "doodad",
+          "cost": 80
+        },
+        {
+          "type": "doodad",
+          "cost": 100
+        },
+        {
+          "type": "doodad",
+          "cost": 300
+        },
+        {
+          "type": "doodad",
+          "cost": 200
+        },
+        {
+          "type": "doodad",
+          "cost": 700
+        },
+        {
+          "type": "doodad",
+          "cost": 300
+        },
+        {
+          "type": "doodad",
+          "cost": 80
+        },
+        {
+          "type": "doodad",
+          "cost": 200
+        },
+        {
+          "type": "doodad",
+          "cost": 2000
+        },
+        {
+          "type": "doodad",
+          "cost": 100
+        },
+        {
+          "type": "doodad",
+          "cost": 120
+        },
+        {
+          "type": "doodad",
+          "cost": 250
+        },
+        {
+          "type": "doodad",
+          "cost": 220
+        },
+        {
+          "type": "doodad",
+          "cost": 250
+        },
+        {
+          "type": "doodad",
+          "cost": 180
+        },
+        {
+          "type": "doodad",
+          "cost": 20
+        },
+        {
+          "type": "doodad",
+          "cost": 100
+        },
+        {
+          "type": "doodad",
+          "cost": 150
+        },
+        {
+          "type": "doodad",
+          "cost": 150
+        },
+        {
+          "type": "doodad",
+          "cost": 200
+        },
+        {
+          "type": "doodad",
+          "cost": 350
+        },
+        {
+          "type": "doodad",
+          "cost": 100
+        },
+        {
+          "type": "doodad",
+          "cost": 450
+        },
+        {
+          "type": "doodad",
+          "cost": 1500,
+          "child": "has"
+        },
+        {
+          "type": "doodad",
+          "cost": 100,
+          "child": "has"
+        },
+        {
+          "type": "doodad",
+          "cost": 2000,
+          "child": "has"
+        },
+        {
+          "type": "doodad",
+          "cost": 2000,
+          "child": "has"
+        },
+        {
+          "type": "doodad",
+          "cost": 50,
+          "child": "per"
+        },
+        {
+          "type": "specialDoodad",
+          "cost": 4000,
+          "payment": 120
+        },
+        {
+          "type": "specialDoodad",
+          "cost": 18000,
+          "payment": 340
+        }
+      ]
+    }
+  },
+  "fasttrack": {
+    "source_url": "https://cfclassic.richdad.com/cashflowjs/assets/data/fasttrack.json",
+    "sha256": "a0a96e95c484c61f3215455e8d74364aebacc447cd2a716bf2b745e9d0548998",
+    "spaces": [
+      {
+        "id": 23,
+        "type": "investment",
+        "cost": 25000,
+        "reward": 500000,
+        "rollmin": 6,
+        "stock": "true"
+      },
+      {
+        "id": 22,
+        "type": "dream",
+        "cost": 200000
+      },
+      {
+        "id": 20,
+        "type": "dream",
+        "cost": 225000
+      },
+      {
+        "id": 19,
+        "type": "investment",
+        "cost": 200000,
+        "cashflow": 8000
+      },
+      {
+        "id": 18,
+        "type": "dream",
+        "cost": 100000
+      },
+      {
+        "id": 17,
+        "type": "investment",
+        "cost": 300000,
+        "cashflow": 75000,
+        "rollmin": 4
+      },
+      {
+        "id": 16,
+        "type": "dream",
+        "cost": 150000
+      },
+      {
+        "id": 15,
+        "type": "investment",
+        "cost": 150000,
+        "cashflow": 6000
+      },
+      {
+        "id": 14,
+        "type": "dream",
+        "cost": 175000
+      },
+      {
+        "id": 13,
+        "type": "investment",
+        "cost": 250000,
+        "cashflow": 10000
+      },
+      {
+        "id": 12,
+        "type": "dream",
+        "cost": 125000
+      },
+      {
+        "id": 11,
+        "type": "investment",
+        "cost": 300000,
+        "cashflow": 10000
+      },
+      {
+        "id": 10,
+        "type": "dream",
+        "cost": 225000
+      },
+      {
+        "id": 8,
+        "type": "dream",
+        "cost": 100000
+      },
+      {
+        "id": 7,
+        "type": "investment",
+        "cost": 150000,
+        "cashflow": 25000,
+        "rollmin": 3
+      },
+      {
+        "id": 6,
+        "type": "dream",
+        "cost": 125000
+      },
+      {
+        "id": 4,
+        "type": "investment",
+        "cost": 150000,
+        "cashflow": 5000
+      },
+      {
+        "id": 3,
+        "type": "dream",
+        "cost": 150000
+      },
+      {
+        "id": 2,
+        "type": "investment",
+        "cost": 200000,
+        "cashflow": 10000
+      },
+      {
+        "id": 0,
+        "type": "dream",
+        "cost": 125000
+      },
+      {
+        "id": 47,
+        "type": "investment",
+        "cost": 120000,
+        "cashflow": 5000
+      },
+      {
+        "id": 46,
+        "type": "dream",
+        "cost": 150000
+      },
+      {
+        "id": 45,
+        "type": "investment",
+        "cost": 300000,
+        "cashflow": 9500
+      },
+      {
+        "id": 44,
+        "type": "dream",
+        "cost": 200000
+      },
+      {
+        "id": 43,
+        "type": "investment",
+        "cost": 300000,
+        "cashflow": 14000
+      },
+      {
+        "id": 42,
+        "type": "dream",
+        "cost": 250000
+      },
+      {
+        "id": 40,
+        "type": "dream",
+        "cost": 100000
+      },
+      {
+        "id": 39,
+        "type": "investment",
+        "cost": 225000,
+        "cashflow": 50000,
+        "rollmin": 4
+      },
+      {
+        "id": 38,
+        "type": "dream",
+        "cost": 150000
+      },
+      {
+        "id": 36,
+        "type": "dream",
+        "cost": 100000
+      },
+      {
+        "id": 35,
+        "type": "investment",
+        "cost": 100000,
+        "cashflow": 3000
+      },
+      {
+        "id": 34,
+        "type": "dream",
+        "cost": 200000
+      },
+      {
+        "id": 33,
+        "type": "investment",
+        "cost": 50000,
+        "reward": 500000,
+        "rollmin": 5,
+        "stock": "true"
+      },
+      {
+        "id": 32,
+        "type": "dream",
+        "cost": 100000
+      },
+      {
+        "id": 31,
+        "type": "investment",
+        "cost": 200000,
+        "cashflow": 6000
+      },
+      {
+        "id": 30,
+        "type": "dream",
+        "cost": 175000
+      },
+      {
+        "id": 29,
+        "type": "investment",
+        "cost": 225000,
+        "cashflow": 7000
+      },
+      {
+        "id": 28,
+        "type": "dream",
+        "cost": 150000
+      },
+      {
+        "id": 27,
+        "type": "investment",
+        "cost": 300000,
+        "cashflow": 8000
+      },
+      {
+        "id": 26,
+        "type": "dream",
+        "cost": 250000
+      },
+      {
+        "id": 24,
+        "type": "dream",
+        "cost": 125000
+      }
+    ]
+  }
+}
