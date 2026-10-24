@@ -1,0 +1,29 @@
+/* Geometry and hit targets from normal official screenshots at a 1280px viewport.
+   This checks selected functional layout states, not equality of original artwork. */
+const{chromium}=require('playwright'),assert=require('node:assert/strict');
+(async()=>{const b=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE||'/usr/bin/chromium',args:['--no-sandbox']});try{
+ const p=await b.newPage({viewport:{width:1280,height:960},reducedMotion:'reduce'}),errors=[];p.on('pageerror',e=>errors.push(e.message));if(process.env.CASHFLOW_EMBEDDED_ONLY==='1'){await p.route('**/assets/**',r=>r.abort());await p.route('**/api/**',r=>r.abort())}await p.goto(process.env.CASHFLOW_TEST_URL||'http://127.0.0.1:3000');await p.evaluate(()=>localStorage.clear());await p.reload();await p.locator('#offline-mode').click();assert.ok((await p.evaluate(()=>ReferenceArt.ready)).every(Boolean),'reference images loaded');if(process.env.CASHFLOW_EMBEDDED_ONLY==='1')assert.ok(await p.evaluate(()=>Object.values(ClassicArt.images).every(i=>i.url.startsWith('blob:'))));
+ const modes=['dream','start','choose','property','stockQuote','stockBuy','borrow','loan','repay','payment','baby','risk','end'];
+ for(const mode of modes){
+  await p.evaluate(mode=>{game=T.create([{jobId:3,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE,chooseDreamsOnTurn:mode==='dream'});state=T.current(game);state.cash=10000;game.rolled=!['dream','start','borrow','repay'].includes(mode);
+   const stock={type:'stock',name:'MYT4U 股票',key:'MYT4U',symbol:'MYT4U',price:5,dividend:0};
+   if(mode==='choose')state.pending={kind:'choose',title:'选择机会',text:'选择小买卖或大买卖。'};
+   if(mode==='property')state.pending={kind:'deal',title:'三卧室两卫住宅',text:'根据价格、首付和每月现金流决定是否购买。',offer:D.small.find(a=>a.type==='property'&&a.down===5000)};
+   if(mode==='stockQuote'||mode==='stockBuy'){state.pending={kind:'deal',title:stock.name,offer:stock};if(mode==='stockBuy')E.openStock(state,'buy')}
+   if(mode==='borrow')E.openBorrowReview(state);
+   if(mode==='repay'){E.borrow(state,2000);E.openDebtPicker(state);E.openDebtReview(state,'bank')}
+   if(mode==='loan')state.pending={kind:'loanOffer',title:'银行差额贷款',loan:1000,previous:{kind:'payment',cost:11000}};
+   if(mode==='payment')state.pending={kind:'payment',title:'额外支出',cost:2000};
+   if(mode==='baby')state.pending={kind:'baby',title:'家庭添丁',atLimit:false};
+   if(mode==='risk'){state.stage='fast';state.fastBase=561000;state.pending={kind:'investmentRoll',title:'风险投资结果',die:4,rollmin:6,paid:50000,cost:0,reward:500000,position:23}}
+   save();render();},mode);
+  const board=await p.locator('#board').boundingBox();assert.equal(Math.round(board.width),922,mode+' original board width');assert.equal(Math.round(board.height),610,mode+' original board height');assert.equal(await p.locator('#board .board-space').count(),72);
+  const id=mode==='dream'?'intro-dialog':mode==='start'?'turn-dialog':'event-dialog';const rect=await p.locator('#'+id).boundingBox();assert.equal(Math.round(rect.x),788,mode+' card x');assert.equal(Math.round(rect.y),125,mode+' card y');assert.equal(Math.round(rect.width),344,mode+' card width');assert.equal(Math.round(rect.height),380,mode+' card height');
+  const buttons=mode==='dream'?p.locator('[data-ui="accept-dream"]'):mode==='start'?p.locator('#begin-turn'):mode==='end'?p.locator('#end-turn'):p.locator('#event .reference-card-actions button');
+  assert.ok(await buttons.count(),mode+' actionable');for(const button of await buttons.all()){const r=await button.boundingBox();assert.ok(r,mode+' visible');assert.equal(Math.round(r.y),462,mode+' action row');assert.ok(await button.evaluate(e=>{const r=e.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return e===hit||e.contains(hit)}),mode+' button not covered')}
+  if(!['dream','start','end'].includes(mode)){const sheet=await p.locator('#finance-dialog').boundingBox();assert.equal(Math.round(sheet.x),134,mode+' sheet x');assert.equal(Math.round(sheet.width),644,mode+' sheet width')}
+  if(mode==='stockBuy'){assert.match(await p.locator('#event').textContent(),/常见交易区间.*5.*30/);assert.equal(await p.locator('#stock-total').textContent(),'$5');await p.locator('[data-action="stock-plus"]').click();assert.equal(await p.locator('#quantity').inputValue(),'2');assert.equal(await p.locator('#stock-total').textContent(),'$10');await p.locator('[data-action="confirm-stock"]').click();assert.equal(await p.evaluate(()=>state.cash),9990)}
+  if(mode==='borrow'){await p.locator('[data-reference-step="1000"]').click();assert.equal(await p.locator('#borrow-review-amount').inputValue(),'2000');assert.equal(await p.locator('#borrow-review-payment').textContent(),'$200');await p.setViewportSize({width:1200,height:900});await p.setViewportSize({width:1280,height:960});assert.equal(await p.locator('[data-reference-step]').count(),2)}
+ }
+ await p.setViewportSize({width:390,height:844});await p.evaluate(()=>{game=T.create([{jobId:0,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE,chooseDreamsOnTurn:true});state=T.current(game);save();render()});assert.equal(await p.locator('#event-dialog').evaluate(e=>e.open),false);assert.equal(await p.locator('#turn-dialog').evaluate(e=>e.open),false);await p.locator('[data-ui="dream-next"]').click();await p.locator('[data-ui="accept-dream"]').click();assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);console.log('PASS: 13 classic card layouts: reference card and statement bounds, fixed action row and uncovered hit targets, stock totals/arrows/purchase, borrow arrows/resize, mobile dream choice; no browser errors. Original artwork/text equality not established.');
+ }finally{await b.close()}})().catch(e=>{console.error(e);process.exitCode=1});

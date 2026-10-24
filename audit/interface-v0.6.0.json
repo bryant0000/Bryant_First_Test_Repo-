@@ -1,0 +1,44 @@
+{
+  "version": "0.6.0",
+  "reference": "https://cfclassic.richdad.com/",
+  "source_art_manifest": "assets/reference/SOURCES.json",
+  "unmodified_original_png_atlases": 5,
+  "original_board_size": [
+    922,
+    610
+  ],
+  "tested_card_bounds_at_1280_viewport": {
+    "x": 788,
+    "y": 125,
+    "width": 344,
+    "height": 380,
+    "action_row_y": 462
+  },
+  "tested_statement_bounds": {
+    "x": 134,
+    "width": 644
+  },
+  "card_cases": [
+    "dream",
+    "start",
+    "choose",
+    "property",
+    "stockQuote",
+    "stockBuy",
+    "borrow",
+    "loan",
+    "repay",
+    "payment",
+    "baby",
+    "risk",
+    "end"
+  ],
+  "functional_layout_test": "scripts/classic-layout-smoke.cjs",
+  "full_pixel_equivalence_established": false,
+  "remaining_differences": [
+    "Chinese text and some card content",
+    "responsive mobile layout",
+    "complete lobby and waiting-room pixel comparison",
+    "all special screens, animations and all original font metrics"
+  ]
+}

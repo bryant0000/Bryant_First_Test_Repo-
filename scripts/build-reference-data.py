@@ -2,7 +2,7 @@
 Usage: python3 scripts/build-reference-data.py /path/to/dadish-cashflow
 Does not execute any third-party code or copy card prose or artwork.
 """
-import json, pathlib, sys, hashlib
+import json, pathlib, sys, hashlib, re
 root=pathlib.Path(__file__).resolve().parent.parent
 source=pathlib.Path(sys.argv[1]); data=source/'src/assets/data'
 def read(name):return json.loads((data/(name+'.json')).read_text())
@@ -20,7 +20,10 @@ def offer(x,index,deck):
  result={'sourceId':f'{deck}.{index}','anyoneBuy':x['type']=='smalldeal_anystock','name':keynames[key],'key':key,'type':typ,'units':int(x.get('units',1))}
  if stock:
   if x['cost']<0:result.update(type='split',factor=2 if x['cost']==-1 else .5)
-  else:result.update(symbol=key,price=x['cost'],dividend=x.get('cashflow',0))
+  else:
+   result.update(symbol=key,price=x['cost'],dividend=x.get('cashflow',0))
+   bounds=re.findall(r'\$([\d,]+)',x.get('traderange',''))
+   if len(bounds)==2:result.update(rangeMin=int(bounds[0].replace(',','')),rangeMax=int(bounds[1].replace(',','')))
  else:result.update(down=x['downpay'],value=x['cost'],debt=x['mortgage'],income=x['cashflow'])
  return result
 small=[offer(x,i,'small') for i,x in enumerate(cards('smalldeal'))]
@@ -33,7 +36,7 @@ doodads=[{'sourceId':f'doodad.{i}','name':doodad_names[i],'cost':x['cost'],'chil
 ft_names={0:'儿童投资学校',2:'暖通空调服务',3:'帆船比赛',4:'卡车配件工厂',6:'戛纳电影节',7:'收购金矿',8:'蒙大拿湖畔钓鱼小屋',10:'以你命名的公园',11:'炸鸡连锁店',12:'竞选市长',13:'美容院',14:'支持信仰事业',15:'汽车维修店',16:'阿尔卑斯直升机滑雪',17:'俄罗斯石油项目',18:'与总统共进晚餐',19:'T 恤连锁店',20:'癌症与艾滋病研究中心',22:'游览世界七大奇迹',23:'软件公司上市',24:'保护海洋哺乳动物',26:'私人飞机旅行',27:'60 户公寓楼',28:'环球高尔夫之旅',29:'披萨连锁店',30:'儿童图书馆',31:'200 间迷你仓库',32:'南太平洋海岛假期',33:'生物科技公司上市',34:'创业者和平服务团',35:'干洗店',36:'地中海邮轮旅行',38:'城市迷你农场',39:'厨具电视直销业务',40:'非洲摄影之旅',42:'购买森林',43:'家庭餐厅连锁',44:'职业球队贵宾包厢',45:'汉堡连锁店',46:'亚洲古城之旅',47:'便利店连锁'}
 fast=[None]*48
 for x in read('fasttrack')['fasttrack']['spaces']:
- fast[x['id']]={'type':'dream' if x['type']=='dream' else 'business','name':ft_names[x['id']],'cost':x['cost'],'income':x.get('cashflow',0),'rollmin':x.get('rollmin',0),'reward':x.get('reward',0)}
+ fast[x['id']]={'type':'dream' if x['type']=='dream' else 'business','name':ft_names[x['id']],'cost':x['cost'],'income':x.get('cashflow',0),'rollmin':x.get('rollmin',0),'reward':x.get('reward',0),'artKey':x.get('icon')}
 for i,typ,name in [(1,'charity','慈善'),(5,'payday','现金流日'),(9,'tax','税务审计'),(21,'payday','现金流日'),(25,'divorce','离婚'),(37,'payday','现金流日'),(41,'lawsuit','诉讼')]:fast[i]={'type':typ,'name':name}
 template=read('templates/game_screen')['template'];rr=[None]*24;positions={'rat':[None]*24,'fast':[None]*48}
 for key,x in template.items():
@@ -41,7 +44,7 @@ for key,x in template.items():
  prefix,kind,number=key.split('_');index=int(number);stage='rat' if prefix=='rr' else 'fast'
  positions[stage][index]={'x':round((float(x['x'])-52.15)/922*100,3),'y':round((float(x['y'])-86)/610*100,3),'w':round(float(x['width'])/922*100,3),'h':round(float(x['height'])/610*100,3)}
  if stage=='rat':rr[index]={'deal':'opportunity','downsize':'downsized'}.get(kind,kind)
-dreams=[{'name':x['name'],'cost':x['cost'],'position':i,'icon':'☆'} for i,x in enumerate(fast) if x['type']=='dream']
+dreams=[{'name':x['name'],'cost':x['cost'],'position':i,'icon':'☆','artKey':x.get('artKey')} for i,x in enumerate(fast) if x['type']=='dream']
 result={'revision':'classic-research-v3','jobs':jobs,'track':rr,'small':small,'big':big,'market':market,'doodads':doodads,'fast':fast,'dreams':dreams,'positions':positions}
 assert all(rr) and all(fast) and all(positions['rat']) and all(positions['fast'])
 (root/'reference-data.js').write_text('/* Numeric rule facts and original Chinese labels. Sources: SOURCES.md. */\n(function(r){const data='+json.dumps(result,ensure_ascii=False,separators=(',',':'))+';if(typeof module!=="undefined"&&module.exports)module.exports=data;else r.ClassicData=data;})(globalThis);\n')

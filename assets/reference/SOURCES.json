@@ -1,0 +1,32 @@
+[
+  {
+    "file": "assets/reference/board.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/board.png",
+    "sha256": "a4f1a7cd765b4c573c3cbb10f2d544e5f2a678a44a08a4fb989add109b652403",
+    "scope": "Unmodified public reference image, not original artwork of this project"
+  },
+  {
+    "file": "assets/reference/background_01.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/background_01.png",
+    "sha256": "7b5d0c8e6c5c94b4477c34e5cfb87a3c385f057f552a23d66a691e1a7d5addb3",
+    "scope": "Unmodified public reference image, not original artwork of this project"
+  },
+  {
+    "file": "assets/reference/ui.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/ui.png",
+    "sha256": "e855a5cd338b5410046bec7bb84984c76cf321096542125ac40d4dd791d478ac",
+    "scope": "Unmodified public reference image, not original artwork of this project"
+  },
+  {
+    "file": "assets/reference/statement.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/statement.png",
+    "sha256": "b4a00a6030dc6f9fd655c014d580e33a44d4c02faa1e483a383035ae80745e0a",
+    "scope": "Unmodified public reference image, not original artwork of this project"
+  },
+  {
+    "file": "assets/reference/fasttrack.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/fasttrack.png",
+    "sha256": "7b411cb23bcee2994f9cc0d87d774f7f6f2b12900e99b18ffd39ca412f65ea13",
+    "scope": "Unmodified public reference image, not original artwork of this project"
+  }
+]

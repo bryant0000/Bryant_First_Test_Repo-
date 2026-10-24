@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.6.0",
   "channel": "preview",
   "complete_original_equivalence": false,
   "features": [
@@ -7,7 +7,10 @@
     "server_authoritative_rooms",
     "persistent_sessions",
     "fast_track_statement",
-    "dream_and_cashflow_victories"
+    "dream_and_cashflow_victories",
+    "reference_visual_assets",
+    "fixed_card_action_strip",
+    "direct_financial_row_selection"
   ],
   "validation": "audit/validation-latest.json"
 }

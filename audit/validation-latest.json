@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-24T06:47:16.562595+00:00",
+  "checked_at_utc": "2026-10-24T07:33:23.062178+00:00",
   "unit_tests": {
     "command": "npm test",
     "passed": 348,
@@ -11,22 +11,29 @@
       "command": "npm run test:reference:browser",
       "status": "passed",
       "scope": "Candidate desktop/mobile cards, loans, stock input/reset, payday, baby, fast-track dice and persistence; distinct dream/cashflow victory cards, reload, mobile quit and dedicated fast-track statement",
-      "local_log": "/tmp/cashflow-v050-test-1.log",
-      "log_sha256": "d545d7698c65d9c193a82be750e211d1118844ea6b6ccfc7d45f870fb34f0d29"
+      "local_log": "/tmp/cashflow-ui060-final-0.log",
+      "log_sha256": "91e4a37d67300b1d8683aeff61fbfc4fb0d2f88ece0cab1d55db5efb2b1340ad"
     },
     {
-      "command": "npm run test:browser",
+      "command": "npm run test:layout:browser",
+      "scope": "13 card layouts, original board bounds, unobstructed actions and actual stock/borrow controls",
       "status": "passed",
-      "scope": "Legacy save interaction, movement, transactions and mobile",
-      "local_log": "/tmp/cashflow-v050-test-2.log",
-      "log_sha256": "9a64cd9ebeb50897d84a2cca99408527725e83a114e624b35e58860ef5709c38"
+      "local_log": "/tmp/cashflow-ui060-final-1.log",
+      "log_sha256": "cc1db1e1db967e6d58159aa60ab1c8d1404b398db2ba1a2720c3fa9ea6eaad73"
     },
     {
       "command": "npm run test:online:browser",
       "status": "passed",
       "scope": "Two isolated browsers: private room, turn authority, chat, borrowing, temporary network failure on reload, same-session recovery, handoff and mobile exit; observer financial sheet remains open across other-player decision updates",
-      "local_log": "/tmp/cashflow-v050-test-3.log",
-      "log_sha256": "74fd7e447e56eb47641b188c09fa83e79015c391c719390fa4b922277a81ee78"
+      "local_log": "/tmp/cashflow-ui060-final-2.log",
+      "log_sha256": "d85811cb67f2bc73145de8418b3658f380897799007dccc2da8a91df8cd80748"
+    },
+    {
+      "command": "npm run test:browser",
+      "status": "passed",
+      "scope": "Legacy save interaction, movement, transactions and mobile",
+      "local_log": "/tmp/cashflow-ui060-final-3.log",
+      "log_sha256": "2b3dfca23af23e8b20700183e5f6939902ee18243702028a4834e06a0e8bff72"
     }
   ],
   "official_resource_comparison": {
@@ -48,17 +55,19 @@
   "release_gate": {
     "status": "blocked_as_expected",
     "zip_unchanged": false,
-    "note": "Original-equivalence gate remains blocked; user requested a separately labelled 0.5.0 preview package."
+    "note": "0.6.0 interface preview is tested; complete original-equivalence gate remains blocked."
   },
   "complete_equivalence_established": false,
   "official_card_classes_observed": 29,
-  "delivery_version": "0.5.0-preview",
+  "delivery_version": "0.6.0-preview",
   "preview_package_checks": {
-    "version": "0.5.0",
-    "unpacked_server_start": "passed",
-    "unpacked_online_game_start": "passed",
-    "bundled_html_with_api_blocked": "passed: career, start, save/reload and dice",
-    "direct_file_protocol": "not_verified: browser administrator policy blocks file:// navigation",
-    "errors_in_exercised_browser_paths": 0
+    "version": "0.6.0",
+    "unpacked_server_online_start": "passed",
+    "all_reference_image_atlases_loaded": "passed",
+    "embedded_images_without_asset_or_api_requests": "passed",
+    "bundled_html_stock_controls_purchase_and_restore": "passed",
+    "mobile_financial_sheet_after_resize": "passed",
+    "direct_file_protocol": "not_verified: administrator policy blocks file://",
+    "scope": "Stage preview, not full pixel equivalence"
   }
 }

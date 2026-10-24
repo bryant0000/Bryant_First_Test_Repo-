@@ -240,7 +240,7 @@ const assert=require('node:assert/strict');
  await page.locator('#turn-repay').click();
  assert.equal(await page.evaluate(()=>state.pending.kind),'debtPicker');
  assert.equal(await page.locator('#finance-dialog').evaluate(e=>e.open&&!e.matches(':modal')),true);
- assert.equal(await page.locator('.repay-selectable [data-repay]').count(),4);
+ assert.equal(await page.locator('#loan-table [data-repay]').count(),4);
  await page.locator('[data-repay="retail"]').click();
  assert.equal(await page.locator('[data-action="confirm-debt"]').count(),0);
  assert.match(await page.locator('#event').textContent(),/现金不足/);

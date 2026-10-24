@@ -24,15 +24,15 @@ node scripts/serve.cjs --host 0.0.0.0 --port 3000
 官网黄金出售存在金额差异，本版按 10 单位 × 600 = 6,000 结算。
 本包是阶段测试版，不是已验收的完整原版复刻。详见 VERSION.json、audit/README.md。
 
-测试：348 项自动测试和三套浏览器回归通过；解压后的服务启动与联机开局通过。
+测试：348 项自动测试和四套浏览器回归通过；解压后的服务启动与联机开局通过。
 单文件已在关闭接口的本地 HTTP 测试中验证开局、存档恢复及掷骰；
 测试环境的浏览器策略禁止 file://，未验证直接双击 HTML 的入口。
 '''
 (out/'开始游戏.txt').write_text(notes)
-manifest={'version':version,'channel':'preview','complete_original_equivalence':False,'features':['offline_same_device','server_authoritative_rooms','persistent_sessions','fast_track_statement','dream_and_cashflow_victories'],'validation':'audit/validation-latest.json'}
+manifest={'version':version,'channel':'preview','complete_original_equivalence':False,'features':['offline_same_device','server_authoritative_rooms','persistent_sessions','fast_track_statement','dream_and_cashflow_victories','reference_visual_assets','fixed_card_action_strip','direct_financial_row_selection'],'validation':'audit/validation-latest.json'}
 (out/'VERSION.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 files=[p for p in root.iterdir() if p.is_file() and (p.suffix in {'.js','.cjs','.css','.html','.md'} or p.name in {'package.json','.gitignore','reference-manifest.json'})]
-for folder in ['scripts','audit']:
+for folder in ['scripts','audit','assets']:
  files.extend(p for p in (root/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
 package=out/f'cashflow-preview-v{version}.zip'
 with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
