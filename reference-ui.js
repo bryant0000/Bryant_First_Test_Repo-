@@ -11,11 +11,11 @@ function sheet(){
  const t=E.ratTotals(p),job=E.jobs[p.jobId],stocks=p.assets.filter(a=>a.type==='stock'),properties=p.assets.filter(a=>a.type!=='stock');
  const blank=n=>Array.from({length:Math.max(0,n)},()=>'<div class="classic-ledger-blank" aria-hidden="true"></div>').join('');
  const lines=(items,label,value)=>items.map(a=>row(esc(label(a)),value(a))).join('');
- $('income-table').innerHTML=row(esc(job.name)+'工资',job.salary)+'<h4>利息 / 分红</h4>'+lines(stocks,a=>a.symbol||a.name,a=>a.income)+blank(2-stocks.length)+'<h4>房地产 / 事业</h4>'+lines(properties,a=>a.name,a=>a.income)+blank(3-properties.length);
+ $('income-table').innerHTML=row(esc(job.name)+'工资',job.salary)+'<h4>利息 / 分红</h4>'+lines(stocks,a=>a.symbol||a.name,a=>a.income)+blank(1-stocks.length)+'<h4>房地产 / 事业</h4>'+lines(properties,a=>a.name,a=>a.income)+blank(2-properties.length);
  const labels={home:'住房抵押贷款月供',car:'汽车贷款月供',credit:'信用卡月供',retail:'零售债务月供',bank:'银行借款月供'};
- const ordered=['home','car','credit','retail'];$('expense-table').innerHTML=row('税金',job.tax)+ordered.flatMap(id=>p.loans.filter(l=>l.id===id).map(l=>row(labels[id]||esc(l.name),l.payment))).join('')+row('其他生活支出',job.other)+p.loans.filter(l=>!ordered.includes(l.id)).map(l=>row(labels[l.id]||esc(l.name)+'月供',l.payment)).join('')+(p.kids?row('子女支出 · '+p.kids+' 人',p.kids*job.childCost):'');
+ const ordered=['home','car','credit','retail'];$('expense-table').innerHTML=row('税金',job.tax)+ordered.flatMap(id=>p.loans.filter(l=>l.id===id).map(l=>row(labels[id]||esc(l.name),l.payment))).join('')+row('其他生活支出',job.other)+p.loans.filter(l=>!ordered.includes(l.id)).map(l=>row(labels[l.id]||esc(l.name)+'月供',l.payment)).join('')+(p.kids?row('子女支出 · '+p.kids+' 人',p.kids*job.childCost):'')+blank(7-(2+p.loans.length+(p.kids?1:0)));
  const assetRow=a=>{const q=E.quote(p,a),tag=q?'button':'div',attrs=q?` type="button" data-sell="${a.id}"`:'';return `<${tag}${attrs} class="classic-ledger-row ${q?'classic-ledger-selectable':''}"><span>${esc(a.symbol||a.name)}${a.type==='stock'?' · '+a.quantity+' 份':''}</span><b>${money(a.type==='stock'?a.cost/a.quantity:a.cost)}</b></${tag}>`};
- $('asset-table').innerHTML='<h4>股票 / 基金 / 存单 <span>每份成本</span></h4>'+stocks.map(assetRow).join('')+blank(4-stocks.length)+'<h4>房地产 / 事业 <span>成本</span></h4>'+properties.map(assetRow).join('')+blank(3-properties.length);
+ $('asset-table').innerHTML='<h4>股票 / 基金 / 存单 <span>每份成本</span></h4>'+stocks.map(assetRow).join('')+blank(3-stocks.length)+'<h4>房地产 / 事业 <span>成本</span></h4>'+properties.map(assetRow).join('')+blank(3-properties.length);
  const selecting=['debtPicker','insolvent'].includes(p.pending?.kind);$('loan-table').innerHTML=p.loans.map(l=>{const tag=selecting?'button':'div';return `<${tag}${selecting?` type="button" data-repay="${l.id}"`:''} class="classic-ledger-row ${selecting?'classic-ledger-selectable':''}"><span>${esc(l.name)}</span><b>${money(l.balance)}</b></${tag}>`}).join('');
  $('ref-property-debts').innerHTML='<h4>房地产 / 事业 <span>贷款余额</span></h4>'+lines(properties,a=>a.name,a=>a.debt)+blank(3-properties.length);
 }
@@ -35,6 +35,7 @@ function present(){if(!game||!state||!E.isReference(state))return;sheet();const 
   const offer=e.offer,range=offer.rangeMin!==undefined?offer:D.small.find(a=>a.key===offer.key&&a.rangeMin!==undefined);const facts=$('event').querySelector('.deal-numbers');
   facts.innerHTML=`<div><span>每份价格</span><b>${money(offer.price)}</b></div><div><span>每份现金流</span><b>${money(offer.dividend||0)}</b></div>${range?`<div><span>常见交易区间</span><b>${money(range.rangeMin)} 至 ${money(range.rangeMax)}</b></div>`:''}<div><span>持有份数</span><b>${E.stockHeld(state,offer.key)}</b></div>`;
  }
+ if(e?.kind==='deal'&&e.offer.type!=='stock'){const a=e.offer,facts=$('event').querySelector('.deal-numbers');if(facts)facts.innerHTML=`<div><span>价格</span><b>${money(a.value)}</b></div><div><span>现金流</span><b>${money(a.income)}</b></div><div><span>首付</span><b>${money(a.down)}</b></div>`;}
  if($('stock-total'))$('stock-total').closest('.deal-numbers').classList.add('reference-stock-total');
  if(e?.kind==='borrowReview'&&!$('event').querySelector('[data-reference-step]')){
   const input=$('borrow-review-amount');input.closest('label').classList.add('reference-amount-input');input.setAttribute('inputmode','numeric');

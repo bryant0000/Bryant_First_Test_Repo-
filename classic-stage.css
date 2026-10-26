@@ -214,3 +214,29 @@ body.classic-shell #online-panel #room-create-form #create-room{left:539.3px}bod
 #reference-fast-sheet .fast-income-row span,#reference-fast-sheet .fast-income-row b{padding:0 8px;border:0}#reference-fast-sheet .fast-income-row b{text-align:center}
 #reference-fast-sheet .classic-fast-income{position:absolute;left:106px;top:632.95px;width:523.05px;text-align:right;font-size:24px;font-weight:700}
 #reference-fast-sheet .classic-fast-cash{position:absolute;left:106px;top:664.95px;width:523.05px;text-align:right;font-size:34px;font-weight:700}
+/* Original ledger rules belong to the text columns; spacer columns stay clear. */
+.reference-ui #reference-sheet .finance-row,.reference-ui #reference-sheet .classic-ledger-row{border-bottom:0}
+.reference-ui #reference-sheet .finance-row>span,.reference-ui #reference-sheet .finance-row>b,.reference-ui #reference-sheet .classic-ledger-row>span,.reference-ui #reference-sheet .classic-ledger-row>b{height:23px;border-bottom:1px solid #0008}
+.reference-ui #reference-sheet .classic-ledger-blank{position:relative;border:0;height:23px}
+.reference-ui #reference-sheet .classic-ledger-blank::before,.reference-ui #reference-sheet .classic-ledger-blank::after{content:'';position:absolute;bottom:0;left:6%;width:59%;border-bottom:1px solid #0008}
+.reference-ui #reference-sheet .classic-ledger-blank::after{left:73%;width:25%}
+.reference-ui #reference-sheet h4{position:relative;border:0;padding-left:18.36px}
+.reference-ui #reference-sheet h4::after{content:'';position:absolute;left:6%;right:2%;top:0;bottom:0;border-top:1px solid #000;border-bottom:1px solid #000;pointer-events:none}
+.reference-ui #reference-sheet h4 span{position:absolute;left:73%;top:0;width:25%;text-align:center}
+.reference-ui #reference-sheet #loan-table .classic-ledger-row{font-weight:700}
+.reference-ui #reference-sheet .classic-ledger-heading{position:relative}
+.reference-ui #reference-sheet .classic-ledger-heading::after{content:'';position:absolute;left:6%;right:2%;bottom:0;border-bottom:1px solid #000}
+.reference-ui #ref-financial-summary .finance-row>span,.reference-ui #ref-financial-summary .finance-row>b{border:0}
+.reference-ui #income-table,.reference-ui #asset-table{scrollbar-width:thin}
+.reference-ui #players-bar .player-chip{position:absolute;top:0}
+.reference-ui .player-chip>.classic-player-bg{left:6.05px}
+.reference-ui #game-dialogs>#confirm-dialog.reference-quit{position:absolute;inset:0 auto auto 0;width:1024px;height:130px;min-height:0;max-height:none;padding:0;margin:0;border:0;overflow:visible;pointer-events:none;background:transparent;box-shadow:none;color:var(--player-color);z-index:60}
+.reference-ui #confirm-dialog.reference-quit>small,.reference-ui #confirm-dialog.reference-quit #confirm-body,.reference-ui #confirm-dialog.reference-quit #confirm-input-label,.reference-ui #confirm-dialog.reference-quit #confirm-error{display:none!important}
+.reference-ui #confirm-dialog.reference-quit #confirm-heading{position:absolute;left:666.05px;top:19.3px;width:333.95px;height:33.5px;padding:0;margin:0;text-align:center;font:700 16px/19px Helvetica,Arial,sans-serif;color:var(--player-color)}
+.reference-ui #confirm-dialog.reference-quit .confirm-actions{display:contents}
+.reference-ui #confirm-dialog.reference-quit #confirm-yes,.reference-ui #confirm-dialog.reference-quit #confirm-no{position:absolute;left:674px;top:49.9px;width:109.5px;height:43.5px;margin:0;padding:10px 0 0;border:0;border-radius:0;box-shadow:none;background:transparent;color:var(--player-color);font:700 20px/24px Helvetica,Arial,sans-serif;pointer-events:auto}
+.reference-ui #confirm-dialog.reference-quit #confirm-no{left:891.5px}
+.reference-ui #event-dialog #event h3{margin:0 0 10px;font:700 16px/16px Helvetica,Arial,sans-serif;color:var(--player-color)}
+.reference-ui #players-bar .classic-player-name{color:var(--player-color)!important}
+.reference-ui:has(#confirm-dialog.reference-quit[open]) .stage-tools{visibility:hidden}
+.reference-ui #asset-table>h4:first-child::after{border-top:0}

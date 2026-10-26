@@ -1,0 +1,56 @@
+{
+  "source_url": "https://cfclassic.richdad.com/",
+  "source_capture": "normal private room, StartTurnCard with quit drawer open",
+  "source_png_sha256": "cda43a399359ce087d8355cddade57c39346c14d7a1f8c15e30ae00b3c098ea1",
+  "viewport": [
+    1280,
+    960
+  ],
+  "stage_origin": [
+    128,
+    25
+  ],
+  "scope": "Artwork regions only; excludes text, complete screens, event branches and animations.",
+  "regions": [
+    {
+      "name": "board",
+      "stage_rectangle": [
+        72,
+        115,
+        560,
+        210
+      ],
+      "rgba_sha256": "286b748acecfe731c3abebfe45b9b552301b5e21596859c53e78e1c9712bdae7"
+    },
+    {
+      "name": "wood",
+      "stage_rectangle": [
+        72,
+        710,
+        540,
+        55
+      ],
+      "rgba_sha256": "ab14690966141a0581ff6ea097a6e6ee6a06ea566e3f4c6aa44ab10679fef7fa"
+    },
+    {
+      "name": "paper",
+      "stage_rectangle": [
+        682,
+        105,
+        310,
+        20
+      ],
+      "rgba_sha256": "5a535680b3a668cbfc5301d23c1a2d829269a6bfa6e948f5ca5255c33fabedf9"
+    },
+    {
+      "name": "quit",
+      "stage_rectangle": [
+        792,
+        58,
+        80,
+        32
+      ],
+      "rgba_sha256": "cae908e38cff43d337dc2782bbabf71cec396285e3089cb8adbacee8c5d8e0e6"
+    }
+  ]
+}
