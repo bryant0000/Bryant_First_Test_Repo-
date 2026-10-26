@@ -4,3 +4,6 @@ globalThis.ClassicLayout={"card":{"borrow":{"x":229.0,"y":278.0,"width":90.0,"he
 ClassicLayout.playerOrigins=[4.5,148.65,293.5,438,581.15,724.5];
 
 ClassicLayout.tools={mute:{x:935.95,y:10},menu:{x:974.15,y:10}};
+
+// Single-die anchor and bounds are from game_screen v84. Multiple dice share this center.
+ClassicLayout.dice={x:483.3,y:436.2,width:64,height:59,gap:12};

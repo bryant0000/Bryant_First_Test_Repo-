@@ -44,19 +44,24 @@ const crypto=require('node:crypto');
    await page.locator('[data-turn-dice="'+count+'"]').click();
    await page.waitForSelector('#original-scene-art[data-dice-rolling="true"]',{state:'attached'});
    assert.equal(await page.locator('#finance-dialog').evaluate(e=>e.open),true);
-   const rollingFace=await page.evaluate(count=>{const x=Math.round(837-(count*44-8)/2+5);return Array.from(document.getElementById('original-scene-art').getContext('2d').getImageData(x,545,1,1).data)},count);
-   assert.deepEqual(rollingFace,[255,248,232,255],'dice remain visible beside the open statement');
+   assert.equal(await page.locator('#original-scene-art').getAttribute('data-dice-origin'),'483.3,436.2','dice keep original anchor while the statement is open');
    await page.waitForFunction(()=>!CashflowUI.moving());
    const result=await page.evaluate(()=>({dice:state.lastDice,values:document.getElementById('original-scene-art').dataset.diceValues,rolling:document.getElementById('original-scene-art').dataset.diceRolling}));
    assert.equal(result.dice.length,count);assert.equal(result.values,result.dice.join(','));assert.equal(result.rolling,'false');
    if(await page.locator('#finance-dialog').evaluate(e=>e.open))await page.locator('#statement-edge-tab').click();
-   const face=await page.evaluate(count=>{const x=Math.round(497-(count*44-8)/2+5);return Array.from(document.getElementById('original-scene-art').getContext('2d').getImageData(x,402,1,1).data)},count);
-   assert.deepEqual(face,[255,248,232,255],'dice face is actually drawn');
+   const rendered=await page.evaluate(({count,frames})=>{
+    const value=state.lastDice[0],f=frames['die'+value],left=483.3-(count-1)*76/2,top=436.2;
+    const expected=document.createElement('canvas');expected.width=1024;expected.height=768;const ctx=expected.getContext('2d');
+    ctx.setTransform(64/f[2],0,0,59/f[3],left,top);ctx.drawImage(ReferenceArt.images.dice,f[0],f[1],f[2],f[3],-f[5],-f[6],f[2],f[3]);
+    const rect=[Math.round(left+18),Math.round(top+18),24,18];
+    return {actual:Array.from(document.getElementById('original-scene-art').getContext('2d').getImageData(...rect).data),expected:Array.from(ctx.getImageData(...rect).data)};
+   },{count,frames:require('../audit/dice-layout-fixtures.json').frames});
+   assert.deepEqual(rendered.actual,rendered.expected,'original dice bitmap is actually drawn at the template anchor');
    if(count===3)await page.screenshot({path:'/tmp/cashflow-v063-three-dice.png'});
   }
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.locator('main').evaluate(e=>e.getBoundingClientRect().width),1024);
   assert.deepEqual(errors,[]);
-  console.log('PASS 12 profession drawers repaint on click and close; statement rows do not overlap; fast/rat/legacy sheets are exclusive; 1/2/3 dice animate and retain actual results; phone fixed stage; font rejection does not stop renderer.');
+  console.log('PASS 12 profession drawers repaint on click and close; statement rows do not overlap; fast/rat/legacy sheets are exclusive; 1/2/3 original atlas dice animate, retain actual results and keep their template anchor; phone fixed stage; font rejection does not stop renderer.');
  }finally{await browser.close()}
 })().catch(error=>{console.error(error);process.exitCode=1});

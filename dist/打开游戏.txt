@@ -1,4 +1,4 @@
-现金流网页游戏 v0.6.3 测试版（尚未完成原版一致性验收）
+现金流网页游戏 v0.6.4 测试版（尚未完成原版一致性验收）
 
 先解压压缩包，然后用 Chrome、Edge 或 Firefox 打开 cashflow-offline.html。
 不需要安装 Node.js、Python 或依赖，也不需要在聊天的可视化面板内打开。

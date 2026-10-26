@@ -31,7 +31,7 @@ node scripts/serve.cjs --host 0.0.0.0 --port 3000
 测试环境的浏览器策略禁止 file://，未验证直接双击 HTML 的入口。
 '''
 (out/'开始游戏.txt').write_text(notes)
-manifest={'version':version,'channel':'preview','complete_original_equivalence':False,'features':['offline_same_device','server_authoritative_rooms','persistent_sessions','fast_track_statement','dream_and_cashflow_victories','reference_visual_assets','fixed_card_action_strip','direct_financial_row_selection'],'validation':'audit/validation-latest.json'}
+manifest={'version':version,'channel':'preview','complete_original_equivalence':False,'features':['offline_same_device','server_authoritative_rooms','persistent_sessions','fast_track_statement','dream_and_cashflow_victories','reference_visual_assets','fixed_card_action_strip','direct_financial_row_selection','original_dice_atlas','full_board_inspection','bounded_amount_fields'],'validation':'audit/validation-latest.json'}
 (out/'VERSION.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 files=[p for p in root.iterdir() if p.is_file() and (p.suffix in {'.js','.cjs','.css','.html','.md'} or p.name in {'package.json','.gitignore','reference-manifest.json'})]
 for folder in ['scripts','audit','assets']:

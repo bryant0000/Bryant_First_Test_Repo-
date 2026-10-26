@@ -220,5 +220,11 @@
     "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/tax_audit_land.mp3",
     "sha256": "65e5ef4d342a87f273fa81b64c3efcbc010dd5f63ba0205e811793b1635f99dd",
     "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/dice.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/dice.png",
+    "sha256": "9b491fca770ca2cadcb0143d2ff4daac2e1e85b457c09a9fdc76603f52f968e7",
+    "scope": "Unmodified original wood dice atlas; frames from public dice.json"
   }
 ]

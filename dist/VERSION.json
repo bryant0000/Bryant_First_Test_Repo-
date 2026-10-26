@@ -1,5 +1,5 @@
 {
-  "version": "0.6.3",
+  "version": "0.6.4",
   "channel": "preview",
   "complete_original_equivalence": false,
   "features": [
@@ -10,7 +10,10 @@
     "dream_and_cashflow_victories",
     "reference_visual_assets",
     "fixed_card_action_strip",
-    "direct_financial_row_selection"
+    "direct_financial_row_selection",
+    "original_dice_atlas",
+    "full_board_inspection",
+    "bounded_amount_fields"
   ],
   "validation": "audit/validation-latest.json"
 }

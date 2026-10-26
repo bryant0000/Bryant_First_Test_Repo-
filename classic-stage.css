@@ -290,3 +290,14 @@ body.native-scene-ready.classic-shell.classic-title-open main{background-color:#
 .reference-ui #finance-dialog:not(.reference-fast-active) #reference-fast-sheet{display:none}
 /* The Chinese heading is wider than the source's short English label. */
 .reference-ui #reference-fast-sheet .classic-fast-win{left:50px;width:200px;font:700 28px/34px Helvetica,Arial,'Microsoft YaHei',sans-serif}
+/* Chinese stock captions occupy a full row; currency gets a separate bounded row. */
+.reference-ui #event .reference-stock-total{left:207px!important;top:149.325px!important;width:93px;height:48px;overflow:hidden;white-space:normal}
+.reference-ui #event .reference-stock-total>span{display:block!important;width:93px;white-space:nowrap;font:700 16px/19px Helvetica,Arial,sans-serif}
+.reference-ui #event .reference-stock-total>b{position:static;display:block;left:auto;top:auto;width:93px;max-width:93px;margin-top:4px;white-space:nowrap;overflow:hidden;font:700 14px/18px Helvetica,Arial,sans-serif}
+#reference-sheet[hidden],#reference-fast-sheet[hidden]{display:none!important}
+.native-scene-ready.reference-ui .classic-fast-income,.native-scene-ready.reference-ui .classic-fast-cash{visibility:hidden}
+.reference-ui .classic-fast-target{white-space:nowrap;overflow:hidden}
+.reference-ui .classic-fast-current>span,.reference-ui .classic-fast-current>b{display:block;width:118px;white-space:nowrap;overflow:hidden;font:inherit}
+#toggle-board-view{display:none}
+.reference-ui .stage-tools #toggle-board-view{display:block;position:absolute;left:850px;top:55px;width:150px;height:28px;margin:0;padding:0;border:1px solid #a48a68;border-radius:3px;background:#fff2d4;color:#775478;font:700 14px/26px Helvetica,Arial,sans-serif;pointer-events:auto}
+.classic-board-view #statement-edge-tab,.classic-board-view #classic-footer{visibility:hidden}
