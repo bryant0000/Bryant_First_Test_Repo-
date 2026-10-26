@@ -6,7 +6,7 @@ const assert=require('node:assert/strict');
  const page=await browser.newPage({viewport:{width:1440,height:1050}}),errors=[],nativeDialogs=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>{nativeDialogs.push(d.type());d.dismiss()});
  const base=process.env.CASHFLOW_TEST_URL||'http://127.0.0.1:3000';
- await page.goto(base);await page.evaluate(()=>localStorage.clear());await page.reload();await page.locator('#offline-mode').click();
+ await page.goto(base);await page.evaluate(()=>localStorage.clear());await page.reload();await page.evaluate(()=>{$('offline-mode').click();ClassicStage.enter()});
  await page.locator('#job').selectOption('0');await page.locator('#start').click();await page.evaluate(()=>{for(const p of game.players)Object.assign(p,E.create(p.jobId,p.dreamId));delete game.dreamSelection;game.ui.step='career';save();render()});await page.reload();await page.locator('#intro-dialog').waitFor({state:'visible'});
  assert.match(await page.locator('#intro-content').textContent(),/职业/);
  await page.locator('[data-ui="accept-career"]').click();await page.locator('[data-ui="pick-on-board"]').click();

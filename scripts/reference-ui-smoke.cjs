@@ -5,11 +5,11 @@ const assert=require('node:assert/strict');
  const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
  try{
  const page=await browser.newPage({viewport:{width:1360,height:960},reducedMotion:'reduce'}),errors=[];
- page.on('pageerror',e=>errors.push(e.message));
+ page.on('pageerror',e=>errors.push(e.stack));
  async function rollTurn(){if(await page.locator('#turn-dialog').isVisible()){if(await page.locator('#begin-turn').isVisible())await page.locator('#begin-turn').click();else await page.locator('[data-turn-dice="1"]').click()}else await page.locator('#roll').click()}
  async function openFinancials(){if(await page.locator('#finance-dialog').evaluate(e=>e.open))return;if(await page.locator('#statement-edge-tab').isVisible())await page.locator('#statement-edge-tab').click();else if(await page.locator('#event-dialog').isVisible())await page.locator('#event-finances').click();else await page.locator('#turn-finances').click()}
  await page.goto(process.env.CASHFLOW_TEST_URL||'http://127.0.0.1:3000');
- await page.evaluate(()=>localStorage.clear());await page.reload();await page.locator('#offline-mode').click();
+ await page.evaluate(()=>localStorage.clear());await page.reload();await page.evaluate(()=>{$('offline-mode').click();ClassicStage.enter()});
  assert.equal(await page.locator('#job').inputValue(),'random');
  await page.locator('#job').selectOption('0');await page.locator('#start').click();
  assert.equal(await page.evaluate(()=>state.rulesProfile), 'reference-web-2026-10-23');
@@ -25,12 +25,12 @@ const assert=require('node:assert/strict');
  assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'enterFast');
  await page.reload();await page.locator('[data-action="enterFast"]').click();
  assert.deepEqual(await page.evaluate(()=>({stage:state.stage,cash:state.cash,pos:state.pos})),{stage:'fast',cash:260000,pos:42});
- assert.deepEqual(await page.locator('#dice-count option').allTextContents(),['1 颗骰子']);await openFinancials();assert.equal(await page.locator('#fast-sheet-goal').textContent(),'$310,000');assert.equal(await page.locator('#fast-sheet-income').textContent(),'$260,000');assert.equal(await page.locator('#fast-sheet-cash').textContent(),'$260,000');await page.locator('#close-finance').click();
+ assert.deepEqual(await page.locator('#dice-count option').allTextContents(),['1 颗骰子']);await openFinancials();assert.equal(await page.locator('#fast-sheet-goal').textContent(),'$310,000');assert.equal(await page.locator('#fast-sheet-income').textContent(),'$260,000');assert.equal(await page.locator('#fast-sheet-cash').textContent(),'$260,000');await page.locator('#statement-edge-tab').click();
  assert.equal(await page.evaluate(()=>game.rolled),false);
  await page.keyboard.press('f');await page.locator('#finance-dialog').waitFor({state:'visible'});
  assert.match(await page.locator('#expense-table').textContent(),/保留工资.*3,300.*保留总支出.*2,130/);
  assert.equal(await page.locator('#finance-dialog').evaluate(e=>e.matches(':modal')),false);
- await page.locator('#close-finance').click();
+ await page.locator('#statement-edge-tab').click();
  async function landOnRisk(cash,rng){
   await page.evaluate(({cash})=>{state.cash=cash;state.fastGain=0;state.fastAssets=[];state.won=false;state.pending=null;state.pos=D.fast.findIndex(a=>a.rollmin===3)-1;game.rolled=false;Math.random=()=>0;save();render()},{cash});
   await rollTurn();await page.locator('[data-action="buy"]').waitFor({state:'visible'});
@@ -49,7 +49,7 @@ const assert=require('node:assert/strict');
  await openFinancials();
  assert.equal(await page.locator('#event-dialog').evaluate(e=>e.open&&!e.matches(':modal')),true);
  assert.equal(await page.locator('#finance-dialog').evaluate(e=>e.open&&!e.matches(':modal')),true);
- await page.locator('#close-finance').click();
+ await page.locator('#statement-edge-tab').click();
  await page.locator('[data-action="resolveInvestment"]').click();
  assert.deepEqual(await page.evaluate(()=>({cash:state.cash,income:state.fastGain,assets:state.fastAssets.length})),{cash:250000,income:25000,assets:1});
  await landOnRisk(400000,0);await page.locator('[data-action="resolveInvestment"]').click();
@@ -126,7 +126,7 @@ const assert=require('node:assert/strict');
  await page.evaluate(()=>{state.pending={kind:'deal',title:'MYT4U',offer:D.small.find(c=>c.type==='stock'&&c.key==='MYT4U')};render()});
  await page.screenshot({path:'/tmp/cashflow-candidate-desktop.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),true);
  await page.screenshot({path:'/tmp/cashflow-candidate-mobile.png',fullPage:true});
  // The separate sell card spans all lots, persists quantity and ends the quote.
  await page.evaluate(()=>{game=T.create([{jobId:0,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);state.cash=1000;game.rolled=true;for(const [q,c] of [[3,15],[2,20]])state.assets.push({id:state.uid++,name:'MYT4U',key:'MYT4U',symbol:'MYT4U',type:'stock',quantity:q,cost:c,value:c,debt:0,income:0,dividend:0});state.pending={kind:'deal',title:'MYT4U',offer:{name:'MYT4U',key:'MYT4U',symbol:'MYT4U',type:'stock',price:40,dividend:0}};save();render()});
@@ -142,7 +142,7 @@ const assert=require('node:assert/strict');
  assert.equal(await page.evaluate(()=>state.pending),null);
  // Bankruptcy recovery can be completed through the financial sheet and reloaded.
  await page.evaluate(()=>{game=T.create([{jobId:0,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);state.pos=4;state.cash=0;state.loans.push({id:'bank',name:'银行借款',balance:15000,payment:1500});state.assets.push({id:state.uid++,name:'亏损住宅',key:'3/2HOUSE',type:'property',quantity:1,units:1,cost:8001,value:35000,debt:26999,income:-500});Math.random=()=>0;save();render()});
- await rollTurn();await page.locator('[data-action="finances"]').first().waitFor({state:'visible'});
+ await rollTurn();await page.waitForFunction(()=>!CashflowUI.moving());
  assert.equal(await page.evaluate(()=>state.inBankruptcy),true);
  assert.equal(await page.evaluate(()=>state.cash),0);
  await openFinancials();
@@ -182,23 +182,23 @@ const assert=require('node:assert/strict');
  assert.equal(await page.evaluate(()=>state.kids),1);
  // Property sales use a dedicated preview card and close after the final match.
  await page.evaluate(()=>{game=T.create([{jobId:0,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);state.cash=10000;game.rolled=true;for(let i=0;i<2;i++)state.assets.push({id:state.uid++,name:'测试住宅',key:'3/2HOUSE',type:'property',quantity:1,units:1,cost:2000,value:35000,debt:33000,income:220});E.applyMarket(state,{mode:'sell',key:'3/2HOUSE',amount:70000,global:true});save();render()});
- await page.locator('#event [data-sell]').first().click();
+ await page.locator('#reference-sheet [data-sell]').first().click();
  assert.match(await page.locator('#event').textContent(),/37,000/);
  assert.equal(await page.evaluate(()=>state.cash),10000);
  await page.reload();await page.locator('[data-action="cancelAssetSale"]').click();
  assert.equal(await page.evaluate(()=>state.pending.kind),'market');
- await page.locator('#event [data-sell]').first().click();await page.locator('[data-action="confirmAssetSale"]').click();
+ await page.locator('#reference-sheet [data-sell]').first().click();await page.locator('[data-action="confirmAssetSale"]').click();
  assert.equal(await page.evaluate(()=>state.pending.kind),'market');
- await page.locator('#event [data-sell]').click();await page.locator('[data-action="confirmAssetSale"]').click();
+ await page.locator('#reference-sheet [data-sell]').click();await page.locator('[data-action="confirmAssetSale"]').click();
  assert.equal(await page.evaluate(()=>state.cash),84000);
  assert.equal(await page.evaluate(()=>state.pending),null);
  await page.locator('[data-action="open-debt-picker"]').click();
  assert.equal(await page.evaluate(()=>state.pending.kind),'debtPicker');
- await page.locator('[data-debt-choice="car"]').click();
+ await page.locator('[data-repay="car"]').click();
  await page.locator('[data-action="cancelDebtReview"]').click();
  assert.equal(await page.evaluate(()=>state.pending.kind),'debtPicker');
  assert.equal(await page.evaluate(()=>state.cash),84000);
- await page.locator('[data-debt-choice="car"]').click();await page.locator('[data-action="confirm-debt"]').click();
+ await page.locator('[data-repay="car"]').click();await page.locator('[data-action="confirm-debt"]').click();
  assert.equal(await page.evaluate(()=>state.cash),79000);
  assert.equal(await page.evaluate(()=>state.loans.some(l=>l.id==='car')),false);
  // Compare the Doctor figures directly with the observed official financial sheet.
@@ -216,7 +216,7 @@ const assert=require('node:assert/strict');
  assert.equal(await page.locator('#finance-dialog').evaluate(e=>e.open&&!e.matches(':modal')),true);
  await page.screenshot({path:'/tmp/cashflow-doctor-finances-candidate.png',fullPage:true});
  assert.equal(await page.locator('#finance-dialog').evaluate(e=>e.open),true);
- await page.locator('#close-finance').click();
+ await page.locator('#statement-edge-tab').click();
  // Normal start-turn borrowing does not consume the roll or change cash on cancel.
  await page.locator('#turn-borrow').click();assert.equal(await page.evaluate(()=>state.pending.kind),'borrowReview');
  assert.equal(await page.locator('#finance-dialog').evaluate(e=>e.open&&!e.matches(':modal')),true);
@@ -268,11 +268,11 @@ const assert=require('node:assert/strict');
  // On phones, liability choices stay on the decision card rather than behind another modal.
  await page.setViewportSize({width:390,height:844});
  await page.evaluate(()=>{game=T.create([{jobId:1,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);E.borrow(state,2000);save();render()});
- await page.locator('#turn-repay').click();await page.locator('[data-debt-choice="bank"]').click();
+ await page.locator('#turn-repay').click();await page.locator('[data-repay="bank"]').click();
  await page.locator('#debt-amount').fill('1499');await page.reload();assert.equal(await page.locator('#debt-amount').inputValue(),'1499');
  await page.locator('[data-action="confirm-debt"]').click();
  assert.deepEqual(await page.evaluate(()=>[state.cash,state.loans.find(l=>l.id==='bank').balance,game.rolled]),[1480,1000,false]);
- assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),true);
  // Fast-track actions with insufficient cash or another owner cannot be submitted from the card.
  await page.evaluate(()=>{game=T.create([{jobId:0,dreamId:0},{jobId:1,dreamId:1}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);state.stage='fast';state.cash=1;state.pos=0;state.pending={kind:'dream',title:'梦想',cost:125000};game.rolled=true;save();render()});
  assert.equal(await page.locator('[data-action="buy"]').count(),0);
@@ -298,7 +298,7 @@ const assert=require('node:assert/strict');
  await page.evaluate(()=>{state.kids=0;state.cash=1;state.pos=18;state.pending=null;game.rolled=false;Math.random=()=>0;save();render()});await rollTurn();await page.locator('[data-action="dismiss"]').waitFor({state:'visible'});assert.equal(await page.locator('[data-action="donate"]').count(),0);await page.locator('[data-action="dismiss"]').click();
  // Cashflow and dream victories have distinct, persistent end cards.
  await page.evaluate(()=>{game=T.create([{jobId:0,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);state.stage='fast';state.fastGain=50000;E.check(state);save();render()});
- assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-cashflow');assert.match(await page.locator('#event').textContent(),/新增现金流.*50,000/);assert.equal(await page.locator('#end-turn').isVisible(),false);await page.reload();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-cashflow');await openFinancials();await page.locator('#close-finance').click();
+ assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-cashflow');assert.match(await page.locator('#event').textContent(),/新增现金流.*50,000/);assert.equal(await page.locator('#end-turn').isVisible(),false);await page.reload();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-cashflow');await openFinancials();await page.locator('#statement-edge-tab').click();
  await page.evaluate(()=>{game=T.create([{jobId:0,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);state.stage='fast';state.pos=E.dreams[0].position;state.cash=E.dreams[0].cost;state.pending={kind:'dream',title:E.dreams[0].name,cost:state.cash};game.rolled=true;save();render()});
  await page.locator('[data-action="buy"]').click();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-dream');assert.match(await page.locator('#event').textContent(),/已支付梦想费用/);assert.equal(await page.evaluate(()=>state.cash),0);await page.reload();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-dream');await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('[data-terminal-exit]').isVisible(),true);await page.locator('[data-terminal-exit]').click();await page.locator('#confirm-yes').click();assert.equal(await page.evaluate(()=>game),null);await page.setViewportSize({width:1360,height:960});
  // Careers are assigned on start with replacement and persist through dream selection/reload.

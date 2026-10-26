@@ -31,7 +31,7 @@ function present(){if(!game||!state||!E.isReference(state))return;sheet();const 
  let queued=dialog.querySelector('.reference-queue');if(!queued){queued=document.createElement('div');queued.className='reference-queue';dialog.append(queued)}queued.classList.toggle('hidden',!e?.queued);queued.textContent='共享机会';
  dialog.dataset.cardKind=e?.kind||'end';if($('event').querySelector('.asset-row')&&!$('event').querySelector('.reference-asset-hint')){const hint=document.createElement('p');hint.className='reference-asset-hint';hint.textContent='在财务表中点选高亮资产，查看出售金额。';$('event').append(hint)}
  for(const b of $('event').querySelectorAll('[data-action]')){const a=b.dataset.action;if(labels[a]){b.setAttribute('aria-label',b.textContent);b.textContent=a==='confirm-stock'&&e?.mode==='sell'?'卖出':a==='buy'&&e?.kind==='dream'?'购买梦想':labels[a]}}
- if(e?.kind==='stockTrade'){
+ if(e?.kind==='stockTrade'||e?.kind==='deal'&&e.offer.type==='stock'){
   const offer=e.offer,range=offer.rangeMin!==undefined?offer:D.small.find(a=>a.key===offer.key&&a.rangeMin!==undefined);const facts=$('event').querySelector('.deal-numbers');
   facts.innerHTML=`<div><span>每份价格</span><b>${money(offer.price)}</b></div><div><span>每份现金流</span><b>${money(offer.dividend||0)}</b></div>${range?`<div><span>常见交易区间</span><b>${money(range.rangeMin)} 至 ${money(range.rangeMax)}</b></div>`:''}<div><span>持有份数</span><b>${E.stockHeld(state,offer.key)}</b></div>`;
  }

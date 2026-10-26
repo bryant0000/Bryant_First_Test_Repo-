@@ -28,5 +28,29 @@
     "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/fasttrack.png",
     "sha256": "7b411cb23bcee2994f9cc0d87d774f7f6f2b12900e99b18ffd39ca412f65ea13",
     "scope": "Unmodified public reference image, not original artwork of this project"
+  },
+  {
+    "file": "assets/reference/loadingscreen.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/loadingscreen.png",
+    "sha256": "be6a3959f5a5036928bfc2a5498bdcb2b96b54f49e7de92e981db194f4dee068",
+    "scope": "Unmodified public reference visual resource"
+  },
+  {
+    "file": "assets/reference/chat.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/chat.png",
+    "sha256": "afe3a1a795f9dd58fe3d04fa4860524fbc4200060e36a99d7d1bd7cb30701a6c",
+    "scope": "Unmodified public reference visual resource"
+  },
+  {
+    "file": "assets/reference/GrantAvenue-Regular.otf",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/fonts/GrantAvenue-Regular.otf",
+    "sha256": "d839599fce1695f5aaaa697add51d4a1b680d584784de20f6501c786f9de59d9",
+    "scope": "Unmodified public reference visual resource"
+  },
+  {
+    "file": "assets/reference/ui2.png",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/ui2.png",
+    "sha256": "c9375b49342ba9129a32eaf3e9d0635fe8d4751076f9866181572070d358eeba",
+    "scope": "Unmodified public reference visual resource"
   }
 ]

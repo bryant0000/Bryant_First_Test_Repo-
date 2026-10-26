@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node scripts/serve.cjs",
     "start": "node scripts/serve.cjs",
-    "test": "node --test engine.test.cjs reference.test.cjs reference-decks.test.cjs rooms.test.cjs",
+    "test": "node --test engine.test.cjs reference.test.cjs reference-decks.test.cjs rooms.test.cjs local-rooms.test.cjs",
     "build": "python3 scripts/build-offline.py",
     "test:browser": "node scripts/interaction-smoke.cjs",
     "test:reference": "node --test reference.test.cjs reference-decks.test.cjs",
@@ -18,7 +18,8 @@
     "test:online": "node --test rooms.test.cjs",
     "test:online:browser": "node scripts/online-smoke.cjs",
     "build:preview": "python3 scripts/build-preview.py",
-    "test:layout:browser": "node scripts/classic-layout-smoke.cjs"
+    "test:layout:browser": "node scripts/classic-layout-smoke.cjs",
+    "test:standalone:browser": "node scripts/standalone-smoke.cjs"
   },
   "engines": {
     "node": ">=18"
