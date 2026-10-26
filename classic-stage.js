@@ -3,7 +3,7 @@
 'use strict';
 let entered=!!game||document.body.classList.contains('online-session');
 const original=ClassicLayout,art=ReferenceArt;
-const title=document.createElement('button');title.id='classic-title';title.type='button';title.setAttribute('aria-label','点击任意位置继续');title.innerHTML=art.sprite('loadingscreen','loadingscreen',1024,768)+'<span class="classic-title-version">v0.6.0</span><span class="classic-title-continue">点击任意位置继续</span>';document.querySelector('main').append(title);
+const title=document.createElement('button');title.id='classic-title';title.type='button';title.setAttribute('aria-label','点击任意位置继续');title.innerHTML=art.sprite('loadingscreen','loadingscreen',1024,768)+'<span class="classic-title-version">v0.6.1</span><span class="classic-title-continue">点击任意位置继续</span>';document.querySelector('main').append(title);
 const sheet=document.createElement('div');sheet.className='classic-menu-sheet';sheet.setAttribute('aria-hidden','true');sheet.innerHTML=art.sprite('ui2','main_sheet',673,586);$('online-panel').prepend(sheet);
 const roomHeading=document.createElement('h3');roomHeading.className='classic-room-list-heading';roomHeading.textContent='房间';$('room-browser').append(roomHeading);
 const rows=document.createElement('div');rows.className='classic-lobby-rows';rows.append($('show-room-create'),$('room-list'));$('room-browser').append(rows);
