@@ -335,13 +335,14 @@
     {
       "id": "BabyCard",
       "status": "reference_observed_difference",
-      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "BankruptCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "BankruptCompleteCard",
@@ -350,13 +351,15 @@
     },
     {
       "id": "BankruptHalveCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "BankruptLoseCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "BankruptPayCard",
@@ -365,19 +368,20 @@
     },
     {
       "id": "BankruptSellCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "CharityCard",
       "status": "reference_observed_difference",
-      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "DealCard",
       "status": "reference_observed_difference",
-      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
@@ -387,53 +391,56 @@
     },
     {
       "id": "DoodadCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "DownsizeCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "DreamCard",
       "status": "reference_observed_difference",
-      "reason": "Observed in normal official Engineer game. Candidate functional regression exists; full visual equivalence not established.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "DreamSelectCard",
       "status": "reference_observed_difference",
-      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "EndCard",
       "status": "reference_observed_difference",
-      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "EnterFastTrackCard",
       "status": "reference_observed_difference",
-      "reason": "Observed in normal official Engineer game. Candidate functional regression exists; full visual equivalence not established.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "EveryoneBankruptCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "InvestmentCard",
       "status": "reference_observed_difference",
-      "reason": "Observed in normal official Engineer game. Candidate functional regression exists; full visual equivalence not established.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "InvestmentRollCard",
       "status": "reference_observed_difference",
-      "reason": "Observed in normal official Engineer game. Candidate functional regression exists; full visual equivalence not established.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
@@ -449,8 +456,9 @@
     },
     {
       "id": "MarketCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "MarketMustCard",
@@ -459,8 +467,9 @@
     },
     {
       "id": "MarketNoOpportunityCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "MarketSellCard",
@@ -475,30 +484,32 @@
     {
       "id": "PayOffLoanCard",
       "status": "reference_observed_difference",
-      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "PickLoanCard",
       "status": "reference_observed_difference",
-      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "PropertyBigDealCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "PropertySmallDealCard",
       "status": "reference_observed_difference",
-      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "SkipTurnCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "SpecialDoodadCard",
@@ -507,36 +518,39 @@
     },
     {
       "id": "SpecialStockCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "StartTurnCard",
       "status": "reference_observed_difference",
-      "reason": "Official normal gameplay observed; candidate visuals and complete interaction branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "StockBuyCard",
       "status": "reference_observed_difference",
-      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "StockCard",
       "status": "reference_observed_difference",
-      "reason": "Normal official Nurse gameplay observed; source-led behavior implemented; artwork/full text and complete screen branches are not equivalent.",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
       "official_runtime_observed": true
     },
     {
       "id": "StockSellCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "TaxCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "WinDreamCard",
@@ -545,8 +559,9 @@
     },
     {
       "id": "WinPassiveCard",
-      "status": "not_reference_compared",
-      "reason": "Not yet exercised in the official runtime; public source inspection alone does not verify this screen."
+      "status": "reference_observed_difference",
+      "reason": "Observed in own normal private room; source control contracts and candidate tested. Full localized text and all visual branches have not been established as identical.",
+      "official_runtime_observed": true
     },
     {
       "id": "FooterWidget",
@@ -600,7 +615,7 @@
     {
       "id": "live_reference_interactions",
       "status": "partially_observed",
-      "detail": "Normal own-room play observed as Doctor, Nurse, Mechanic and Engineer. Engineer entered Fast Track after 62 turns; entry, dream, business and failed-risk screens observed. Original victory/tax/lawsuit/divorce branches still unobserved."
+      "detail": "Cash-flow victory, tax and complete bankruptcy/loss path now observed through normal private rooms. Dream victory, divorce, lawsuit and every layout variant remain outside completed live comparison."
     },
     {
       "id": "bilibili_reference_video",

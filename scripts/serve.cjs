@@ -10,7 +10,7 @@ function option(name,fallback){const i=args.indexOf('--'+name);return i<0?fallba
 const port=Number(option('port',process.env.PORT||3000));
 const host=option('host','0.0.0.0');
 if(!Number.isInteger(port)||port<1||port>65535){console.error('Invalid port');process.exit(1)}
-const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.cjs':'text/plain; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.md':'text/plain; charset=utf-8','.zip':'application/zip','.svg':'image/svg+xml','.png':'image/png'};
+const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.cjs':'text/plain; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.md':'text/plain; charset=utf-8','.zip':'application/zip','.svg':'image/svg+xml','.png':'image/png','.mp3':'audio/mpeg','.otf':'font/otf'};
 const server=http.createServer(async(req,res)=>{
  if(await handleRooms(req,res))return;
  if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{'Allow':'GET, HEAD'});res.end();return}

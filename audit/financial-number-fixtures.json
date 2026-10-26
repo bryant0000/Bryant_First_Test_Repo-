@@ -1,0 +1,57 @@
+{
+  "source_url": "https://cfclassic.richdad.com/",
+  "source_capture": "Own Truck Driver room, PayOffLoanCard; selected regions contain financial numbers only",
+  "source_png_sha256": "bf65964d04a6b2e6a0d739339bcb9c8ee0b8a3f269e8f13e8133920390f65a65",
+  "regions": [
+    {
+      "name": "cash",
+      "stage_rectangle": [
+        582,
+        362,
+        55,
+        29
+      ],
+      "rgba_sha256": "4a9c6996808288a42c3eb87cfc04d807b29c71295c846c8e9a2b44b51674f742"
+    },
+    {
+      "name": "income",
+      "stage_rectangle": [
+        572,
+        395,
+        68,
+        30
+      ],
+      "rgba_sha256": "4e7e9495e1058493f3ffba1679930bedce55e94a963069e7a1451c2f7f948a05"
+    },
+    {
+      "name": "expenses",
+      "stage_rectangle": [
+        572,
+        425,
+        68,
+        26
+      ],
+      "rgba_sha256": "20303321ea86e85d6b89f61f94bc6089d5538969175b338ce40e747076b86fa7"
+    },
+    {
+      "name": "payday",
+      "stage_rectangle": [
+        602,
+        459,
+        35,
+        21
+      ],
+      "rgba_sha256": "b8d13cbb358ee4b89d9d5ffa65eb3c3d0fab47ef22101b4e709a5a85b68b245f"
+    },
+    {
+      "name": "sound_and_exit_icons",
+      "stage_rectangle": [
+        932,
+        10,
+        80,
+        35
+      ],
+      "rgba_sha256": "c687f7a3a24d4042f130eb1b269e2b905e8f2a2a7e973fc0f8b0b7790865239f"
+    }
+  ]
+}

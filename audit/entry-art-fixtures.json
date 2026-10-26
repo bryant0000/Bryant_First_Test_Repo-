@@ -1,0 +1,69 @@
+{
+  "source_url": "https://cfclassic.richdad.com/",
+  "scope": "Original title and menu artwork, independent actual source screenshots; localized text excluded",
+  "regions": [
+    {
+      "name": "title",
+      "source_capture": "1-title.png",
+      "source_png_sha256": "239c27af3d3a6ef0e5c4f59f98aa885219f7d46dd5cb5ee734431e894ce71acd",
+      "stage_rectangle": [
+        0,
+        60,
+        1024,
+        640
+      ],
+      "rgba_sha256": "b03df3b43815f4e7e0797ab25a433c7d1bf2c38d692f9bf2effaa7364f0f8ad7",
+      "source_file": "reference-captures/title.png",
+      "maximum_channel_error": 1,
+      "tolerance_reason": "Transparent original title atlas over CSS #303030 has at most one channel-level rasterization difference in this browser. Positions and complete 1024 by 640 artwork region remain compared."
+    },
+    {
+      "name": "create_sheet_edge",
+      "source_capture": "3-create.png",
+      "source_png_sha256": "e0cfa8bbe00e770185e9fe3c1708006b5e55a1d0e2ffdc7cea0dee408d4b00b4",
+      "stage_rectangle": [
+        175,
+        165,
+        24,
+        470
+      ],
+      "rgba_sha256": "cbee237a9cf505258a21cf043cf376ea6eac7e885be09c5eb805cbb795d0069f"
+    },
+    {
+      "name": "create_frame_one",
+      "source_capture": "3-create.png",
+      "source_png_sha256": "e0cfa8bbe00e770185e9fe3c1708006b5e55a1d0e2ffdc7cea0dee408d4b00b4",
+      "stage_rectangle": [
+        232,
+        376,
+        85,
+        141
+      ],
+      "rgba_sha256": "4ff77c55c3c30b9c58cd408d9f2498043bb44d2f0e9e7eabf2b175f242ac621b"
+    },
+    {
+      "name": "create_frame_two",
+      "source_capture": "3-create.png",
+      "source_png_sha256": "e0cfa8bbe00e770185e9fe3c1708006b5e55a1d0e2ffdc7cea0dee408d4b00b4",
+      "stage_rectangle": [
+        328,
+        376,
+        85,
+        141
+      ],
+      "rgba_sha256": "51f7dca1f0e7d111429a17ea22378afc4109dbeafb192e01a66c6041db3a6444"
+    },
+    {
+      "name": "waiting_frame_one",
+      "source_capture": "4-waiting.png",
+      "source_png_sha256": "a4f82413ca1b32826bde54eb991e715a60d39bb63ac95faa6ac7136c9a96496e",
+      "stage_rectangle": [
+        232,
+        376,
+        85,
+        141
+      ],
+      "rgba_sha256": "4ff77c55c3c30b9c58cd408d9f2498043bb44d2f0e9e7eabf2b175f242ac621b"
+    }
+  ]
+}

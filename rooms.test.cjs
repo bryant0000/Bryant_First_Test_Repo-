@@ -30,3 +30,5 @@ test('a winning purchase persists its reason, freezes further settlement and sti
  const snapshot=JSON.stringify(store.read(a.id,b.token));for(const action of ['buy','roll','end'])await assert.rejects(store.command(a.id,a.token,'action',{version:v.version,action,args:action==='roll'?[1]:[]}),/本局已经结束/);assert.equal(JSON.stringify(store.read(a.id,b.token)),snapshot);
  await store.command(a.id,b.token,'leave',{version:v.version});v=store.read(a.id,a.token);assert.equal(v.game.players[0].won,true);await store.command(a.id,a.token,'leave',{version:v.version});assert.equal(store.list().length,0);
 });
+
+test('host leaving the waiting screen closes the room for guests',async()=>{const{store,a,b}=await pair();assert.deepEqual(await store.command(a.id,a.token,'leave',{version:2}),{left:true});assert.equal(store.list().length,0);assert.throws(()=>store.read(a.id,b.token),/不存在/)});

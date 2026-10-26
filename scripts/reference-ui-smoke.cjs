@@ -42,7 +42,7 @@ const assert=require('node:assert/strict');
  await landOnRisk(400000,.5);
  assert.equal(await page.evaluate(()=>state.cash),250000);
  assert.equal(await page.evaluate(()=>state.fastAssets.length),0);
- assert.match(await page.locator('#event').textContent(),/4.*成功/);
+ assert.match(await page.locator('#event').textContent(),/掷骰结果4新增现金流\$25,000/);
  await page.reload();await page.locator('[data-action="resolveInvestment"]').waitFor({state:'visible'});
  assert.equal(await page.evaluate(()=>state.pending.die),4);
  assert.equal(await page.locator('[data-action="dismiss"]').count(),0);
@@ -300,7 +300,7 @@ const assert=require('node:assert/strict');
  await page.evaluate(()=>{game=T.create([{jobId:0,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);state.stage='fast';state.fastGain=50000;E.check(state);save();render()});
  assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-cashflow');assert.match(await page.locator('#event').textContent(),/新增现金流.*50,000/);assert.equal(await page.locator('#end-turn').isVisible(),false);await page.reload();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-cashflow');await openFinancials();await page.locator('#statement-edge-tab').click();
  await page.evaluate(()=>{game=T.create([{jobId:0,dreamId:0}],{rulesProfile:E.REFERENCE_PROFILE});state=T.current(game);state.stage='fast';state.pos=E.dreams[0].position;state.cash=E.dreams[0].cost;state.pending={kind:'dream',title:E.dreams[0].name,cost:state.cash};game.rolled=true;save();render()});
- await page.locator('[data-action="buy"]').click();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-dream');assert.match(await page.locator('#event').textContent(),/已支付梦想费用/);assert.equal(await page.evaluate(()=>state.cash),0);await page.reload();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-dream');await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('[data-terminal-exit]').isVisible(),true);await page.locator('[data-terminal-exit]').click();await page.locator('#confirm-yes').click();assert.equal(await page.evaluate(()=>game),null);await page.setViewportSize({width:1360,height:960});
+ await page.locator('[data-action="buy"]').click();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-dream');assert.match(await page.locator('#event').textContent(),/已支付梦想费用/);assert.equal(await page.evaluate(()=>state.cash),0);await page.reload();assert.equal(await page.locator('#event-dialog').getAttribute('data-kind'),'win-dream');await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('[data-terminal-exit]').isVisible(),true);await page.locator('[data-terminal-exit]').click();assert.equal(await page.evaluate(()=>game),null);await page.setViewportSize({width:1360,height:960});
  // Careers are assigned on start with replacement and persist through dream selection/reload.
  await page.evaluate(()=>{game=null;state=null;save();render();Math.random=()=>.999});
  await page.locator('#player-count').selectOption('2');await page.locator('#job').selectOption('0');await page.locator('#job-1').selectOption('1');

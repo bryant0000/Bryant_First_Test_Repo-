@@ -18,7 +18,7 @@ class LocalRooms{
   if(parts[1]==='join'){if(existing.password!==String(body?.password||''))fail('房间密码不正确',403);return{...this.view(existing),token:existing.token}}
   if(token!==existing.token)fail('房间会话已失效',401);if(parts.length===1)return this.view(existing);
   const r=copy(existing),op=parts[1];if(op!=='chat'&&body?.version!==r.version)fail('房间状态已更新，请重试',409);
-  if(op==='leave')return{left:true};
+  if(op==='leave'){if(!r.game){delete this.rooms[r.id];this.save()}return{left:true}}
   if(op==='chat'){const message=String(body.message||'').trim();if(!r.game||!message||message.length>256)fail('请输入 1 至 256 字的消息');this.log(r,r.seats[r.game.active].name,message,'chat')}
   else if(op==='rename'){if(r.game)fail('开始后不能改名');r.seats[0].name=String(body.name||'玩家 1').slice(0,8)}
   else if(op==='ready'){if(r.game)fail('游戏已经开始');r.seats[0].ready=body.ready===true}

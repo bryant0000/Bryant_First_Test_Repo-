@@ -52,5 +52,173 @@
     "source": "https://cfclassic.richdad.com/cashflowjs/assets/img/ui2.png",
     "sha256": "c9375b49342ba9129a32eaf3e9d0635fe8d4751076f9866181572070d358eeba",
     "scope": "Unmodified public reference visual resource"
+  },
+  {
+    "file": "assets/reference/audio/baby_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/baby_land.mp3",
+    "sha256": "5ccd26011a3e6fb5e2904d58029e7fea8b53a61fe940914570356fa685b8c679",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/bigdeal_smalldeal.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/bigdeal_smalldeal.mp3",
+    "sha256": "5075b99a467e974136c4c3a5bd002acb1475d96dbe78eefb3786c2c4d92a010c",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/bot_to_open.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/bot_to_open.mp3",
+    "sha256": "7b830d7155c7df18a9ea511724e4da4f6ffebcf1660e9df5bbf0469dc6cb7083",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/button_push.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/button_push.mp3",
+    "sha256": "2556eb8b6a7ba5e76cc743ebd01c442bf5232cda564f62a5258e8fd7463fba6d",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/cashflow_day_land_v1.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/cashflow_day_land_v1.mp3",
+    "sha256": "a64a47a2ff3cf9ec0e6506f8e2e3d0d282bc5e9122dfd003b6258e0d7edb17e1",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/cashflow_day_land_v2.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/cashflow_day_land_v2.mp3",
+    "sha256": "e8fa68e1207c1a2d2c5de8c919b59145f510f1d7945ed104df3f31c962115cc8",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/charity_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/charity_land.mp3",
+    "sha256": "da6f8a17d6cd1731665c7d0f4939fe1eb44c564a512d269833227c58475d1bbb",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/dice_roll.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/dice_roll.mp3",
+    "sha256": "46d9a2c4e54a23d0f36bfcd438758e3e0f517a31aa307e1e99baf34c9e093652",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/divorce_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/divorce_land.mp3",
+    "sha256": "c0a334faa3d743d878ce061b84775f45ac75c6cc67f5228d8dbd6d59c4b1ddaf",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/doodad_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/doodad_land.mp3",
+    "sha256": "2eaadd5c0ad737bd0c510238293870162d77a46cae1ee510832c8a18ad4d7f4d",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/downsized_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/downsized_land.mp3",
+    "sha256": "7fc93c68a5ff1c96af4ecf399c6eeb48acba2084f4f837840b02da2f7f64916c",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/financial_statments_in.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/financial_statments_in.mp3",
+    "sha256": "4438fe0be23bf392797fcabfa7a768e5c8cca2557a6a1c583230cc70b4d5544e",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/financial_statments_out.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/financial_statments_out.mp3",
+    "sha256": "0d1279efb86a2c503952cc197495579705448db3f1b4c0768c3895fa431486a3",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/human_to_bot.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/human_to_bot.mp3",
+    "sha256": "535a55c4b9a94d85acdb9c6abc4205b416683981d6ef698b4af314496bebda87",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/lawsuit_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/lawsuit_land.mp3",
+    "sha256": "ceed1ca1e90607206eb62af43fbc4088ce772f12af6de3169b45c1f941bdc2c0",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/leave_rat_race_enter_fast_track.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/leave_rat_race_enter_fast_track.mp3",
+    "sha256": "9868a7af711974aff56c95a0bb77bc0ab2ed8afd0ac5ff80ff2ef70789feda2c",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/market_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/market_land.mp3",
+    "sha256": "94483650cd9298a7dac5aebd966145042f8562bac19450f66de3addc9ebad796",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/next_player.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/next_player.mp3",
+    "sha256": "c32259a4e3ad83f3d50348a1a1b7e6ba39dd4e359d4fd83754c84bdf6edf611e",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/online.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/online.mp3",
+    "sha256": "b528422b0cdae6afb3513723ff19e5a8a8ecdf1f8cfd08badd10619a0bda6f30",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/open_to_human_v1.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/open_to_human_v1.mp3",
+    "sha256": "50f9f06f26e42a90a81f8870bb692851f30d22f578becc12e2de5457c0d25da7",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/open_to_human_v2.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/open_to_human_v2.mp3",
+    "sha256": "6db11eb0c3194b8aa10fb7fc056bda0174120902a718055b0326142fd33aa67d",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/pass_and_play.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/pass_and_play.mp3",
+    "sha256": "6450e7243d8959ed82fda38c72a35819ae3acd069a4ddb8d449622166b447ae3",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/payday_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/payday_land.mp3",
+    "sha256": "fd86c031bd96a382a3aad6f8ee8e6ea184280031afa4bbfd2458033a572d4822",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/piece_movement_v1.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/piece_movement_v1.mp3",
+    "sha256": "389cdb82e3cf512e5c614558b0381b352d1157e596303cfd4ebd58304edce5b2",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/piece_movement_v2.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/piece_movement_v2.mp3",
+    "sha256": "dd8c453e1b16d5eadd2e310aef0c8622170c47900ee69ca4f3d94677c7a15279",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/piece_movement_v3.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/piece_movement_v3.mp3",
+    "sha256": "3dba0a1e4815d9de4ffcf9a7bafa42b0fbe435790635d7166ab4fcbd14bc6a22",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/press_to_begin.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/press_to_begin.mp3",
+    "sha256": "025df911321b38d27da6eeb4db4ee0026620e293bc10e3671b9f8d0994f7f128",
+    "scope": "Unmodified public reference audio"
+  },
+  {
+    "file": "assets/reference/audio/tax_audit_land.mp3",
+    "source": "https://cfclassic.richdad.com/cashflowjs/assets/audio/tax_audit_land.mp3",
+    "sha256": "65e5ef4d342a87f273fa81b64c3efcbc010dd5f63ba0205e811793b1635f99dd",
+    "scope": "Unmodified public reference audio"
   }
 ]

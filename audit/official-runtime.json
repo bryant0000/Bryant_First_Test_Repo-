@@ -6,7 +6,10 @@
     "Doctor (MD)",
     "Nurse",
     "Mechanic",
-    "Engineer"
+    "Engineer",
+    "Truck Driver",
+    "Janitor",
+    "Lawyer"
   ],
   "screenshots": [
     {
@@ -312,6 +315,67 @@
       "scope": "Entry, dream, business and failed-risk screens observed. Observer script stopped at risk-result screen after clicking the wrong button position; this is not a game failure. No victory, tax, divorce or lawsuit runtime proof from this session.",
       "local_evidence": "/tmp/cashflow-official-fasttrack/trace.jsonl",
       "sha256": "23dd9ae16ea2102d8cbea139b485acd19d761b7a70a207b6a4c0ed4c7267971b"
+    }
+  },
+  "ui_completion_observations": {
+    "cashflow-fasttrack-rich-role": {
+      "scope": "Own normal private room. 37 roll clicks, 39 start-card visits; cash-flow victory, tax and risk observed. All actions used normal UI; no game-state writes or future-deck reads.",
+      "role": "Lawyer",
+      "loop_samples": 206,
+      "observed_card_types": [
+        "DreamSelectCard",
+        "StartTurnCard",
+        "BorrowCardStartTurn",
+        "CharityCard",
+        "EndCard",
+        "DealCard",
+        "PropertySmallDealCard",
+        "StockCard",
+        "StockBuyCard",
+        "StockSellCard",
+        "PickLoanCard",
+        "PayOffLoanCard",
+        "MarketNoOpportunityCard",
+        "PropertyBigDealCard",
+        "DoodadCard",
+        "EnterFastTrackCard",
+        "InvestmentCard",
+        "DreamCard",
+        "TaxCard",
+        "InvestmentRollCard",
+        "WinPassiveCard"
+      ],
+      "local_evidence": "/tmp/cashflow-fasttrack-rich-role/trace.jsonl",
+      "sha256": "fd31f1d31ece0e08d4e3c826c7fc3d8ee3840e0ce8a9e9ebbb2560570aca233f"
+    },
+    "cashflow-bankruptcy-study": {
+      "scope": "Own normal private room; regular borrowing, play and highlighted asset sale led to bankruptcy, debt halving, loss and all-player game-over. Loop iterations include polling and are not a count of turns.",
+      "role": "Lawyer",
+      "loop_samples": 362,
+      "observed_card_types": [
+        "DreamSelectCard",
+        "StartTurnCard",
+        "BorrowCardStartTurn",
+        "EndCard",
+        "DealCard",
+        "StockCard",
+        "PropertySmallDealCard",
+        "MarketNoOpportunityCard",
+        "BabyCard",
+        "DoodadCard",
+        "SpecialStockCard",
+        "DownsizeCard",
+        "SkipTurnCard",
+        "BankruptCard",
+        "MarketCard",
+        "CharityCard",
+        "BankruptSellCard",
+        "BankruptHalveCard",
+        "BankruptLoseCard",
+        "EveryoneBankruptCard"
+      ],
+      "local_evidence": "/tmp/cashflow-bankruptcy-study/trace.jsonl",
+      "sha256": "24b05dc91b002dd00d3845c1b7e5f67cc8a58bc5f3466f730d7717f255611a26"
     }
   }
 }

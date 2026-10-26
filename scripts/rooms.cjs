@@ -31,6 +31,7 @@ class Rooms{
    if(seat!==r.host)fail('只有房主可以开始游戏',403);if(r.game)fail('游戏已经开始');const present=r.seats.filter(s=>!s.left&&!s.away);if(present.length!==r.capacity||present.some(s=>!s.ready))fail('等待所有玩家加入并准备');
    r.seats=present;r.host=r.seats.findIndex(s=>same(s.tokenHash,hash(token)));r.game=T.create(r.seats.map(s=>({name:s.name,jobId:s.jobId,dreamId:0})),{rulesProfile:E.REFERENCE_PROFILE,chooseDreamsOnTurn:true});this.appendLog(r,'系统','游戏开始','action');
   }else if(operation==='leave'){
+   if(!r.game&&seat===r.host){this.rooms.delete(id);await this.persist();return {left:true}}
    r.seats[seat].left=true;if(r.game)this.appendLog(r,r.seats[seat].name,'离开房间','action');if(!r.seats.some(s=>!s.left)){this.rooms.delete(id);await this.persist();return {left:true}}
    if(r.host===seat)r.host=r.seats.findIndex(s=>!s.left);
    if(r.game){r.game.players[seat].inactive=true;if(r.game.active===seat&&!r.game.over&&!r.game.players.some(p=>p.won)){r.game.ui=null;r.game.players[seat].pending=null;r.game.rolled=true;if(r.seats.some(s=>!s.left&&!s.away))T.end(r.game);else{r.game.active=r.seats.findIndex(s=>!s.left);r.game.rolled=false;T.prepareTurn(r.game)}}}

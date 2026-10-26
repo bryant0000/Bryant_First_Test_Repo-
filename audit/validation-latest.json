@@ -1,46 +1,195 @@
 {
-  "checked_at_utc": "2026-10-24T07:33:23.062178+00:00",
+  "checked_at_utc": "2026-10-26T06:57:01Z",
+  "delivery_version": "0.6.2-preview",
   "unit_tests": {
     "command": "npm test",
-    "passed": 348,
+    "passed": 353,
     "failed": 0,
-    "scope": "Legacy rules, reference rules, independent numeric deck fixtures and server rooms; does not establish complete original equivalence"
+    "log": "audit/test-logs/2026-10-26/unit.log"
   },
   "browser_checks": [
     {
-      "command": "npm run test:reference:browser",
+      "command": "node scripts/reference-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
       "status": "passed",
-      "scope": "Candidate desktop/mobile cards, loans, stock input/reset, payday, baby, fast-track dice and persistence; distinct dream/cashflow victory cards, reload, mobile quit and dedicated fast-track statement",
-      "local_log": "/tmp/cashflow-ui060-final-0.log",
-      "log_sha256": "91e4a37d67300b1d8683aeff61fbfc4fb0d2f88ece0cab1d55db5efb2b1340ad"
+      "log": "audit/test-logs/2026-10-26/online-reference-ui-smoke.log",
+      "log_sha256": "8f575a73f68858aacdd57c9ecd4ad153cadc1e56c9276fe786de529c8391d324"
     },
     {
-      "command": "npm run test:layout:browser",
-      "scope": "13 card layouts, original board bounds, unobstructed actions and actual stock/borrow controls",
+      "command": "node scripts/interaction-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
       "status": "passed",
-      "local_log": "/tmp/cashflow-ui060-final-1.log",
+      "log": "audit/test-logs/2026-10-26/online-interaction-smoke.log",
+      "log_sha256": "77842f0a59285b0a277bcce2cb1dc9029941667a122a5ff12e17183ca38e58b6"
+    },
+    {
+      "command": "node scripts/online-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/online-online-smoke.log",
+      "log_sha256": "736c4efec2a89ebea180f8cfdffdf27f03a27d227b2d5ab10054732ce3854a12"
+    },
+    {
+      "command": "node scripts/classic-layout-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/online-classic-layout-smoke.log",
       "log_sha256": "cc1db1e1db967e6d58159aa60ab1c8d1404b398db2ba1a2720c3fa9ea6eaad73"
     },
     {
-      "command": "npm run test:online:browser",
+      "command": "node scripts/classic-visual-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
       "status": "passed",
-      "scope": "Two isolated browsers: private room, turn authority, chat, borrowing, temporary network failure on reload, same-session recovery, handoff and mobile exit; observer financial sheet remains open across other-player decision updates",
-      "local_log": "/tmp/cashflow-ui060-final-2.log",
-      "log_sha256": "d85811cb67f2bc73145de8418b3658f380897799007dccc2da8a91df8cd80748"
+      "log": "audit/test-logs/2026-10-26/online-classic-visual-smoke.log",
+      "log_sha256": "50807412a7d42103660b23f114fe89ed02a709a3e80bd4b5cdd9ca3b87afd694"
     },
     {
-      "command": "npm run test:browser",
+      "command": "node scripts/card-contract-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
       "status": "passed",
-      "scope": "Legacy save interaction, movement, transactions and mobile",
-      "local_log": "/tmp/cashflow-ui060-final-3.log",
-      "log_sha256": "2b3dfca23af23e8b20700183e5f6939902ee18243702028a4834e06a0e8bff72"
+      "log": "audit/test-logs/2026-10-26/online-card-contract-smoke.log",
+      "log_sha256": "df8d4c439784730dce4320ca6be27eef9215b406e35cf52df8f0eb40fd878c90"
+    },
+    {
+      "command": "node scripts/terminal-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/online-terminal-ui-smoke.log",
+      "log_sha256": "fa93224564a3074ebb9868ca87d63b81e6c79cde6f80dc01e4289546a164ce94"
+    },
+    {
+      "command": "node scripts/classic-sound-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/online-classic-sound-smoke.log",
+      "log_sha256": "1c3f7b87b6bfc7ac9550ec2cb01f640cba2db8c638dba15c7cdec72f77215ed9"
+    },
+    {
+      "command": "node scripts/entry-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/online-entry-ui-smoke.log",
+      "log_sha256": "a45995378af87c9b0587a28627af70259a8304fd89289465910dcc7c7fa1d719"
+    },
+    {
+      "command": "node scripts/entry-art-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/online-entry-art-smoke.log",
+      "log_sha256": "9c6864357eeb68f04d58a592fcc50ab3e0aaac6fea500661b78703e9623bfbe6"
+    },
+    {
+      "command": "node scripts/observer-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3041"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/online-observer-ui-smoke.log",
+      "log_sha256": "f9dce6397968b90cfcb16e617ef5fb7eee644b0403fae0d5b9b0341b2c60111e"
+    },
+    {
+      "command": "node scripts/standalone-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3033/cashflow-offline.html"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/offline-standalone-smoke.log",
+      "log_sha256": "4abb716f817838701b08bf451c3ba2536a176e171cc68cddc95a78ce367daf4d"
+    },
+    {
+      "command": "node scripts/classic-layout-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3033/cashflow-offline.html",
+        "CASHFLOW_EMBEDDED_ONLY": "1"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/offline-classic-layout-smoke.log",
+      "log_sha256": "cc1db1e1db967e6d58159aa60ab1c8d1404b398db2ba1a2720c3fa9ea6eaad73"
+    },
+    {
+      "command": "node scripts/classic-visual-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3033/cashflow-offline.html"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/offline-classic-visual-smoke.log",
+      "log_sha256": "50807412a7d42103660b23f114fe89ed02a709a3e80bd4b5cdd9ca3b87afd694"
+    },
+    {
+      "command": "node scripts/card-contract-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3033/cashflow-offline.html"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/offline-card-contract-smoke.log",
+      "log_sha256": "df8d4c439784730dce4320ca6be27eef9215b406e35cf52df8f0eb40fd878c90"
+    },
+    {
+      "command": "node scripts/terminal-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3033/cashflow-offline.html"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/offline-terminal-ui-smoke.log",
+      "log_sha256": "fa93224564a3074ebb9868ca87d63b81e6c79cde6f80dc01e4289546a164ce94"
+    },
+    {
+      "command": "node scripts/classic-sound-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3033/cashflow-offline.html"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/offline-classic-sound-smoke.log",
+      "log_sha256": "1c3f7b87b6bfc7ac9550ec2cb01f640cba2db8c638dba15c7cdec72f77215ed9"
+    },
+    {
+      "command": "node scripts/entry-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3033/cashflow-offline.html",
+        "CASHFLOW_LOCAL_ONLY": "1"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/offline-entry-ui-smoke.log",
+      "log_sha256": "5a0a1d5b5e5d3fac02b7f29cc77fcec9f609a19c7cdbd038adddf5d3b74eac72"
+    },
+    {
+      "command": "node scripts/entry-art-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3033/cashflow-offline.html"
+      },
+      "status": "passed",
+      "log": "audit/test-logs/2026-10-26/offline-entry-art-smoke.log",
+      "log_sha256": "9c6864357eeb68f04d58a592fcc50ab3e0aaac6fea500661b78703e9623bfbe6"
     }
   ],
-  "official_resource_comparison": {
-    "json_exact_matches": 9,
-    "json_compared": 9,
-    "callback_body_exact_matches": 29,
-    "callbacks_compared": 29
+  "browser_check_count": 19,
+  "offline_artifact": {
+    "local_build": "/tmp/cashflow-user-test/cashflow-offline.html",
+    "sha256": "56012a3c321e85a49bc0e8cc8757a9e5b96f137b33136e9d899cfcad65638047",
+    "external_requests": "blocked during standalone workflow test",
+    "direct_file_protocol": "not_verified: administrator policy blocks file://",
+    "final_artifact_workflow_log": "audit/test-logs/2026-10-26/offline-final-artifact.log",
+    "final_artifact_workflow_log_sha256": "4abb716f817838701b08bf451c3ba2536a176e171cc68cddc95a78ce367daf4d"
   },
   "normal_official_gameplay_observed": true,
   "signed_in_account_observed": false,
@@ -48,26 +197,25 @@
     "Doctor (MD)",
     "Nurse",
     "Mechanic",
-    "Engineer"
+    "Engineer",
+    "Truck Driver",
+    "Janitor",
+    "Lawyer"
   ],
   "reference_runtime_screens_verified": 0,
   "reference_runtime_screens_identified": 49,
+  "reference_runtime_screens_observed": 40,
+  "visual_fixture_scope": "Selected source screenshot regions; title region permits maximum one channel-level difference; localized prose excluded",
   "release_gate": {
     "status": "blocked_as_expected",
-    "zip_unchanged": false,
-    "note": "0.6.0 interface preview is tested; complete original-equivalence gate remains blocked."
+    "note": "Selected interface tests passed; complete original-equivalence remains unestablished"
   },
   "complete_equivalence_established": false,
-  "official_card_classes_observed": 29,
-  "delivery_version": "0.6.0-preview",
   "preview_package_checks": {
-    "version": "0.6.0",
-    "unpacked_server_online_start": "passed",
-    "all_reference_image_atlases_loaded": "passed",
-    "embedded_images_without_asset_or_api_requests": "passed",
-    "bundled_html_stock_controls_purchase_and_restore": "passed",
-    "mobile_financial_sheet_after_resize": "passed",
-    "direct_file_protocol": "not_verified: administrator policy blocks file://",
-    "scope": "Stage preview, not full pixel equivalence"
+    "independently_unpacked_node_server": "passed",
+    "two_browser_online_workflow": "passed",
+    "log": "audit/test-logs/2026-10-26/unpacked-online.log",
+    "log_sha256": "736c4efec2a89ebea180f8cfdffdf27f03a27d227b2d5ab10054732ce3854a12",
+    "packaged_offline_html_matched_verified_artifact": true
   }
 }

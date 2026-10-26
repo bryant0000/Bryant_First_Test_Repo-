@@ -1,0 +1,36 @@
+{
+  "source_url": "https://cfclassic.richdad.com/",
+  "source_capture": "Own normal StartTurnCard; original ButtonElement scaling, not fetchSprite scale",
+  "regions": [
+    {
+      "name": "roll_button_edge",
+      "stage_rectangle": [
+        672,
+        436,
+        104,
+        8
+      ],
+      "rgba_sha256": "b6b8f68d4a14461f406b4ae801328c6325efbe699acf4e88bfb9b29fa619f8bd"
+    },
+    {
+      "name": "repay_button_edge",
+      "stage_rectangle": [
+        693,
+        378,
+        85,
+        4
+      ],
+      "rgba_sha256": "2c210b35ec8d4d8079cb727b965e3a3ccb1fa5f251527cf5637fe39dc90773b6"
+    },
+    {
+      "name": "borrow_button_edge",
+      "stage_rectangle": [
+        887,
+        378,
+        85,
+        4
+      ],
+      "rgba_sha256": "98fb531f2d23de6c2d9cb5442f432313a021c853b0b4fbb0bdf8261ca31662d2"
+    }
+  ]
+}

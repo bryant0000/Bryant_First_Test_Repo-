@@ -10,11 +10,14 @@ html=html.replace('<link rel="stylesheet" href="classic-stage.css">','')
 font=root/'assets/reference/GrantAvenue-Regular.otf'
 if font.exists():css=css.replace('assets/reference/GrantAvenue-Regular.otf','data:font/otf;base64,'+base64.b64encode(font.read_bytes()).decode())
 html=html.replace('<link rel="stylesheet" href="style.css">','<style>\n'+css+'\n</style>')
-for name in ['reference-data.js','reference-layout-data.js','reference-art-data.js','engine.js','table.js','local-rooms.js','app.js','online.js','interaction.js','reference-ui.js','reference-art.js','classic-stage.js','scene-canvas.js','classic-log.js']:
+for name in ['reference-data.js','reference-layout-data.js','reference-art-data.js','reference-audio-data.js','engine.js','table.js','local-rooms.js','app.js','online.js','interaction.js','reference-ui.js','reference-art.js','classic-stage.js','scene-canvas.js','classic-sound.js','classic-log.js']:
  source=(root/name).read_text()
  if name=='reference-art-data.js':
   for asset in (root/'assets/reference').glob('*.png'):
    source=source.replace(str(asset.relative_to(root)),'data:image/png;base64,'+base64.b64encode(asset.read_bytes()).decode())
+ if name=='reference-audio-data.js':
+  for asset in (root/'assets/reference/audio').glob('*.mp3'):
+   source=source.replace(str(asset.relative_to(root)),'data:audio/mpeg;base64,'+base64.b64encode(asset.read_bytes()).decode())
  source=re.sub(r'</script',r'<\\/script',source,flags=re.I)
  html=html.replace(f'<script src="{name}"></script>','<script>\n'+source+'\n</script>')
 # Contextual explanations are visible even when this file is opened from the ZIP.

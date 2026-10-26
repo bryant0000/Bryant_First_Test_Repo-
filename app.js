@@ -1,5 +1,5 @@
 'use strict';
-const E=Cashflow,T=CashflowTable,D=E.data,KEY='cashflow-classic-table-v3',$=id=>document.getElementById(id),money=n=>(n<0?'−':'')+'$'+Math.abs(n).toLocaleString('en-US',{maximumFractionDigits:2});
+const E=Cashflow,T=CashflowTable,D=E.data,KEY='cashflow-classic-table-v3',$=id=>document.getElementById(id),money=n=>(n<0?(state&&E.isReference(state)?'$-':'−$'):'$')+Math.abs(n).toLocaleString('en-US',{maximumFractionDigits:2});
 let game=null,state=null,activeTab='board',timer;
 let boardPreview=null;
 function visualPosition(p){return boardPreview&&boardPreview.player===p?boardPreview:{stage:p.stage,pos:p.pos}}
@@ -65,7 +65,7 @@ function showEvent(){const e=state.pending;const ended=state.won||state.bankrupt
  else if(e.kind==='insolvent')html+='<div class="event-buttons">'+button('管理资产和贷款','finances')+(state.restructuring?button('债务减免（清算后可用）','relief','secondary'):'')+button('宣布破产','bankrupt','dismiss')+'</div>';
  else if(e.kind==='market'){html+=salesHTML(state)||'<p>你没有匹配的资产。多人对局中其他玩家仍可响应此报价。</p>';html+='<div class="event-buttons">'+button('结束市场事件','dismiss','dismiss')+'</div>'}
  else html+='<div class="event-buttons">'+button('继续旅程 →','dismiss')+'</div>';
- }if(!ended)html+='<button class="text-button event-link" data-action="finances">财务报表 / 银行操作 ↗</button>';$('event').innerHTML=html;marketResponses();
+ }if(!ended)html+='<button class="text-button event-link" data-action="finances">财务报表 / 银行操作 ↗</button>';if(state.won&&E.isReference(state)){const win=state.winReason==='cashflow'||!state.winReason&&state.fastGain>=50000;html='<h3>'+esc(state.name)+(win?' 赢得财务自由！':' 梦想成真！')+'</h3><p>'+(win?'新增现金流达到 '+money(state.fastGain)+'，已达成获胜目标。':'已支付梦想费用，实现了开局选定的梦想。')+'</p><div class="event-buttons"><button class="primary" data-terminal-exit>退出</button></div>';}if(state.bankrupt&&game.over&&E.isReference(state))html='<h3>所有玩家均已出局</h3><div class="event-buttons"><button class="primary" data-terminal-exit>退出</button></div>';$('event').innerHTML=html;marketResponses();
 }
 function marketResponses(){if(E.isReference(state)){$('market-responses').innerHTML='';return}const e=state.pending,allowed=e&&(e.kind==='deal'&&e.offer.type==='stock'||e.kind==='market'&&e.card.global);$('market-responses').innerHTML='';if(!allowed||game.players.length===1)return;let html='<h4>其他玩家响应</h4><p class="muted">结束当前报价前完成响应，使用报价玩家自己的资产和现金。</p>';game.players.forEach((p,i)=>{if(i===game.active||p.stage!=='rat'||p.bankrupt)return;const temporary={...p,pending:e},assets=p.assets.filter(a=>E.quote(temporary,a));if(!assets.length&&!(e.kind==='deal'&&e.offer.anyoneBuy))return;html+=`<div class="response-row"><b>${esc(p.name)} · ${money(p.cash)}</b>${assets.map(a=>`<button class="secondary" data-response="${i}" data-response-action="sell" data-asset="${a.id}">出售 ${esc(a.name)}</button>`).join('')}${e.kind==='deal'&&e.offer.anyoneBuy?`<button class="secondary" data-response="${i}" data-response-action="buy">按报价买入</button>`:''}</div>`});$('market-responses').innerHTML=html}
 function row(label,n,total=false){return `<div class="finance-row ${total?'total':''}"><span>${label}</span><b>${money(n)}</b></div>`}
