@@ -1,0 +1,1 @@
+PASS standalone: title, local lobby/create/name/start/dream, banking, save/reload, roll/event/end, chat, fixed phone stage; no network dependencies or browser errors.

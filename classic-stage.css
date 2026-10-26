@@ -284,3 +284,9 @@ body.classic-shell #online-panel #room-create-form .classic-create-instructions,
 .classic-shell.classic-title-open #online-panel{visibility:hidden;pointer-events:none}
 
 body.native-scene-ready.classic-shell.classic-title-open main{background-color:#303030!important}
+
+/* Only the active statement is visible; old rat-race labels must not leak into fast track. */
+.reference-ui #finance-dialog:not(.reference-sheet-active) #reference-sheet{display:none}
+.reference-ui #finance-dialog:not(.reference-fast-active) #reference-fast-sheet{display:none}
+/* The Chinese heading is wider than the source's short English label. */
+.reference-ui #reference-fast-sheet .classic-fast-win{left:50px;width:200px;font:700 28px/34px Helvetica,Arial,'Microsoft YaHei',sans-serif}

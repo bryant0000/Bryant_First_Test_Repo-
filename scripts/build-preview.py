@@ -8,7 +8,8 @@ out=root/'dist'
 notes=f'''现金流网页游戏 v{version} 测试版
 
 快速开始（无需安装）：
-解压后，用 Chrome 或 Edge 打开 cashflow-offline.html。
+解压后，用 Chrome 或 Edge 打开 index.html 或 cashflow-offline.html。
+两个入口均已内嵌字体、图片和脚本，直接双击不需要本地服务。
 支持单人及同屏轮流，浏览器保存进度。
 
 不同设备联机：
@@ -37,7 +38,10 @@ for folder in ['scripts','audit','assets']:
  files.extend(p for p in (root/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
 package=out/f'cashflow-preview-v{version}.zip'
 with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:
- for p in sorted(files):z.write(p,p.relative_to(root))
+ for p in sorted(files):
+  if p==root/'index.html':
+   z.writestr('index.html',(out/'cashflow-offline.html').read_text().replace('data-standalone="true"','data-standalone="auto"'))
+  else:z.write(p,p.relative_to(root))
  for name in ['cashflow-offline.html','开始游戏.txt','VERSION.json']:z.write(out/name,name)
 sha=hashlib.sha256(package.read_bytes()).hexdigest()
 (out/(package.name+'.sha256')).write_text(sha+'  '+package.name+'\n')

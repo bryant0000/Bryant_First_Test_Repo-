@@ -1,6 +1,6 @@
 {
   "name": "cashflow-classic-web",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "private": true,
   "description": "Chinese CASHFLOW classic-style browser board game",
   "scripts": {
@@ -26,7 +26,8 @@
     "test:cards:browser": "node scripts/card-contract-smoke.cjs",
     "test:entry:browser": "node scripts/entry-ui-smoke.cjs",
     "test:observer:browser": "node scripts/observer-ui-smoke.cjs",
-    "test:entry-art:browser": "node scripts/entry-art-smoke.cjs"
+    "test:entry-art:browser": "node scripts/entry-art-smoke.cjs",
+    "test:display:browser": "node scripts/display-bugs-smoke.cjs"
   },
   "engines": {
     "node": ">=18"

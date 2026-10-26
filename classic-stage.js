@@ -3,7 +3,7 @@
 'use strict';
 let entered=!!game||document.body.classList.contains('online-session');
 const original=ClassicLayout,art=ReferenceArt;
-const title=document.createElement('button');title.id='classic-title';title.type='button';title.setAttribute('aria-label','点击任意位置继续');title.innerHTML=art.sprite('loadingscreen','loadingscreen',1024,768)+'<span class="classic-title-version">v0.6.2</span><span class="classic-title-continue">点击任意位置继续</span>';document.querySelector('main').append(title);
+const title=document.createElement('button');title.id='classic-title';title.type='button';title.setAttribute('aria-label','点击任意位置继续');title.innerHTML=art.sprite('loadingscreen','loadingscreen',1024,768)+'<span class="classic-title-version">v0.6.3</span><span class="classic-title-continue">点击任意位置继续</span>';document.querySelector('main').append(title);
 const sheet=document.createElement('div');sheet.className='classic-menu-sheet';sheet.setAttribute('aria-hidden','true');sheet.innerHTML=art.sprite('ui2','main_sheet',673,586);$('online-panel').prepend(sheet);
 const createInstructions=document.createElement('p');createInstructions.className='classic-create-instructions hidden';createInstructions.innerHTML='1. 可以修改游戏房间名称。<br>2. 如需私人房间，请设置密码。<br>3. 点击玩家方框选择人数。<br>4. 准备好后点击“创建游戏”。';$('room-create-form').append(createInstructions);
 const roomHeading=document.createElement('h3');roomHeading.className='classic-room-list-heading';roomHeading.textContent='房间';$('room-browser').append(roomHeading);

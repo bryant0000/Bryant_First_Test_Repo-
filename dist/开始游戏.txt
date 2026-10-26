@@ -1,7 +1,8 @@
-现金流网页游戏 v0.6.2 测试版
+现金流网页游戏 v0.6.3 测试版
 
 快速开始（无需安装）：
-解压后，用 Chrome 或 Edge 打开 cashflow-offline.html。
+解压后，用 Chrome 或 Edge 打开 index.html 或 cashflow-offline.html。
+两个入口均已内嵌字体、图片和脚本，直接双击不需要本地服务。
 支持单人及同屏轮流，浏览器保存进度。
 
 不同设备联机：
