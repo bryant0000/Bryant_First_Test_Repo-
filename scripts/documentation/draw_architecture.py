@@ -1,0 +1,13 @@
+from pathlib import Path
+from html import escape
+OUT=Path(__file__).resolve().parents[2]/'docs/professional-delivery/03-交互与视觉设计'
+def write(name,title,nodes,edges,height=760):
+ s=[f'<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="{height}" viewBox="0 0 1100 {height}"><defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#087f8c"/></marker></defs><rect width="1100" height="{height}" fill="#f5f8fb"/><text x="30" y="36" font-family="sans-serif" font-size="22" fill="#18354b">{escape(title)}</text>']
+ for path,label,lx,ly in edges:
+  s.append(f'<path d="{path}" fill="none" stroke="#087f8c" stroke-width="2" marker-end="url(#a)"/>')
+  if label:s.append(f'<text x="{lx}" y="{ly}" font-family="sans-serif" font-size="13" fill="#506577">{escape(label)}</text>')
+ for x,y,w,h,title,detail in nodes:
+  s.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="10" fill="white" stroke="#087f8c"/><text x="{x+16}" y="{y+32}" font-family="sans-serif" font-size="20" fill="#18354b">{escape(title)}</text><text x="{x+16}" y="{y+61}" font-family="sans-serif" font-size="13" fill="#64748b">{escape(detail)}</text>')
+ s.append('</svg>');(OUT/(name+'.svg')).write_text(''.join(s))
+write('系统架构','系统架构｜本机与在线是并列分支；箭头表示主调用／状态流',[(375,65,350,90,'用户操作与界面','DOM输入、状态呈现与会话选择'),(50,230,280,90,'本机房间适配','local-rooms.js｜同设备座位'),(770,230,280,90,'在线会话客户端','online.js｜HTTP／version／恢复'),(375,420,350,100,'共享规则与轮序','engine.js + table.js'),(770,420,280,100,'权威房间服务','Rooms：鉴权／轮序／版本检查'),(50,630,280,85,'本机持久化','localStorage｜房间及游戏键'),(770,630,280,85,'服务端持久化','JSON文件｜单进程模型'),(375,630,350,85,'画布、声音与资源','显示失败不应产生额外结算')],[('M550,155 V190 H190 V230','本机',220,182),('M550,155 V190 H910 V230','在线',825,182),('M330,275 H350 V470 H375','调用规则',350,382),('M190,320 V630','保存／恢复',65,560),('M910,320 V420','请求／响应',920,370),('M770,470 H725','规则',728,455),('M910,520 V630','原子替换文件',920,585),('M550,520 V630','结果呈现',560,584)])
+write('用户回合流程','用户流程｜主路径与条件分支；持久化／恢复是横切能力',[(40,90,300,85,'标题与房间','本机或在线入口'),(390,90,300,85,'职业与逐人梦想','确认梦想后才可开始'),(740,90,300,85,'开始回合／休整','选择骰子、借还或确认跳过'),(740,280,300,85,'掷骰与移动','由规则／服务端确定结果'),(390,280,300,85,'事件／交易子状态','确认、取消、贷款与强制事件'),(40,280,300,85,'更新报表／结束回合','未解决pending不能交棒'),(40,480,300,85,'快车道与投资','达到条件后确认进入'),(390,480,300,85,'重整／胜利／退出','按状态确认与恢复'),(740,480,300,85,'保存／刷新／重连','作用于各状态，不仅在终局')],[('M340,132 H390','',0,0),('M690,132 H740','',0,0),('M890,175 V280','移动',902,230),('M740,322 H690','',0,0),('M390,322 H340','事件完成',342,306),('M190,280 V215 H1070 V132 H1040','下一回合／下一位',470,207),('M540,365 V420 H190 V480','进入条件满足',250,414),('M340,522 H390','',0,0),('M690,522 H740','恢复能力',690,505)],650)

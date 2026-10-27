@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "rooms": [
+    {
+      "id": "documentation-example",
+      "name": "文档样例（非生产存档）",
+      "capacity": 1,
+      "host": 0,
+      "version": 1,
+      "seats": [
+        {
+          "name": "契约样例",
+          "ready": true,
+          "left": false,
+          "away": false,
+          "lastSeen": 0,
+          "tokenHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "jobId": 4
+        }
+      ],
+      "salt": "documentation-only",
+      "passwordHash": null,
+      "chatRevision": 0,
+      "chat": [],
+      "game": {
+        "version": 3,
+        "ruleset": "classic-research-v3",
+        "players": [
+          {
+            "version": 3,
+            "ruleset": "classic-research-v3",
+            "rulesProfile": "reference-web-2026-10-23",
+            "jobId": 4,
+            "dreamId": 0,
+            "dreamMultiplier": 1,
+            "cardQueue": [],
+            "processingQueue": false,
+            "turn": 0,
+            "pos": 16,
+            "stage": "rat",
+            "cash": 750,
+            "kids": 0,
+            "assets": [],
+            "fastAssets": [],
+            "loans": [
+              {
+                "id": "home",
+                "name": "住房抵押贷款",
+                "balance": 38000,
+                "payment": 400
+              },
+              {
+                "id": "car",
+                "name": "汽车贷款",
+                "balance": 4000,
+                "payment": 80
+              },
+              {
+                "id": "credit",
+                "name": "信用卡债务",
+                "balance": 2000,
+                "payment": 60
+              },
+              {
+                "id": "retail",
+                "name": "零售债务",
+                "balance": 1000,
+                "payment": 50
+              }
+            ],
+            "charity": 0,
+            "fastCharity": false,
+            "skip": 0,
+            "pending": null,
+            "suspended": null,
+            "restructuring": false,
+            "lastDice": [],
+            "history": [
+              {
+                "turn": 0,
+                "text": "领取职业：卡车司机；开局现金为储蓄 750。"
+              }
+            ],
+            "fastBase": 0,
+            "fastGain": 0,
+            "won": false,
+            "bankrupt": false,
+            "uid": 1,
+            "decks": {},
+            "referenceInitVersion": 2,
+            "name": "契约样例",
+            "color": "#775478",
+            "dreamConfirmed": false
+          }
+        ],
+        "active": 0,
+        "rolled": false,
+        "decks": {},
+        "round": 1,
+        "dreamSelection": "per-turn",
+        "ui": {
+          "introIndex": 0,
+          "step": "dream"
+        }
+      }
+    }
+  ]
+}

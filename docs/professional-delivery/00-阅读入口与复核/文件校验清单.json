@@ -1,0 +1,457 @@
+{
+  "baseline": "v0.6.4",
+  "date": "2026-10-27",
+  "self_hash_excluded": true,
+  "files": [
+    {
+      "path": "00-阅读入口与复核/交付依据与阶段复核报告.docx",
+      "bytes": 41862,
+      "sha256": "d15a5a5d8147dec2ebf915204f2f78df4ca4586100dc0b8a97d511426bf7ec3d"
+    },
+    {
+      "path": "00-阅读入口与复核/交付依据与阶段复核报告.pdf",
+      "bytes": 312359,
+      "sha256": "5c7082521bf639b201d62ad186b38dea112feb8509ec3c97c23a7548eaef783e"
+    },
+    {
+      "path": "00-阅读入口与复核/交付复核清单.xlsx",
+      "bytes": 9076,
+      "sha256": "82d5c059ef3f677f4322a0794df79d2af0f33b1a185f5d00fabe2c6eb763d565"
+    },
+    {
+      "path": "00-阅读入口与复核/交付物清单.xlsx",
+      "bytes": 28538,
+      "sha256": "2b2fbc831d4e2e7f07747c12086da1046fccd509434f0a75f195819dea78d8ae"
+    },
+    {
+      "path": "00-阅读入口与复核/公开研究来源.json",
+      "bytes": 7791,
+      "sha256": "54e16e66ae39da948343265bd00205c77e84129bed7a2a3c93a76e930175d52f"
+    },
+    {
+      "path": "00-阅读入口与复核/复核结果.json",
+      "bytes": 12167,
+      "sha256": "cea9daab1e5a1e9efc90df8250c8811301435c250810e211a56c31ca85e83480"
+    },
+    {
+      "path": "00-阅读入口与复核/工具链与字体复核.json",
+      "bytes": 528,
+      "sha256": "e7dac665d650a3516e81adbb7f0dea66c210d1df03d0da10a8851e9107da05bf"
+    },
+    {
+      "path": "00-阅读入口与复核/接口与Schema复核结果.json",
+      "bytes": 2392,
+      "sha256": "60591b4d8a1f181772a48910090c9cea64b82eb6da938958063d13ac5b681afc"
+    },
+    {
+      "path": "00-阅读入口与复核/构建事实快照.json",
+      "bytes": 719,
+      "sha256": "20cc72bd60658131e25e3d22518de20b98056d7e518737cebe0fc24d314b909e"
+    },
+    {
+      "path": "00-阅读入口与复核/源码复核指纹.json",
+      "bytes": 1190,
+      "sha256": "2eada1793b92f1c8b1f925ada7998ae892b2a2bd965080fb2214688567e386b9"
+    },
+    {
+      "path": "00-阅读入口与复核/研发阶段与验收评审简报.pdf",
+      "bytes": 678412,
+      "sha256": "5cb635a0768001e10f2f773509b3d67e7546af859f486fc16b74641558c484d9"
+    },
+    {
+      "path": "00-阅读入口与复核/研发阶段与验收评审简报.pptx",
+      "bytes": 1595989,
+      "sha256": "2217d61ff6b2f2e9c80742fc7e7a5c62811897128321dcfadf095d228413a00e"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/assets/reference/SOURCES.json",
+      "bytes": 11009,
+      "sha256": "275d363261ff0f41b3c8e353d5a82ad0f41121479383353c579478962592b1dd"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/deck-copy-bounds-v0.6.4.json",
+      "bytes": 433,
+      "sha256": "c35db08abe646da4cb9db9d5351d905a4c014352b091d2a8d17071c6b6549935"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/dice-layout-fixtures.json",
+      "bytes": 1125,
+      "sha256": "76a8313270e8dd843fda6a5a9f6ed05d3155ee07c64a91a060025c91cbf48bc1"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/display-fixes-v0.6.4.json",
+      "bytes": 13218,
+      "sha256": "a9cf8d37d64d599eda4a8ab9d752df72213d4c67525cb7a5d53845dae397c5af"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/official-runtime.json",
+      "bytes": 12648,
+      "sha256": "38ece2ae450812a111520c4fdddcb4cfc598b739795cf19f18fd534a6e1e7d69"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/reference-coverage.json",
+      "bytes": 27892,
+      "sha256": "be41ff328bf079681f8c9e94842796b6d97a9dee0c45f63c3d8dc4ab1886b0c1"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/font-denied.log",
+      "bytes": 271,
+      "sha256": "30a797004b813ff8873ebe7b30aa78d27ba91e454c699fef15ce9cbd5e942af3"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/index-local-attachment-regressions-smoke.log",
+      "bytes": 314,
+      "sha256": "a2ed58d406464714ae1befaf5f1d2cc489087bbff6a3262227f71b83e035a18f"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/index-local-display-bugs-smoke.log",
+      "bytes": 271,
+      "sha256": "30a797004b813ff8873ebe7b30aa78d27ba91e454c699fef15ce9cbd5e942af3"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/index-local-standalone-smoke.log",
+      "bytes": 167,
+      "sha256": "4abb716f817838701b08bf451c3ba2536a176e171cc68cddc95a78ce367daf4d"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-attachment-regressions-smoke.log",
+      "bytes": 314,
+      "sha256": "a2ed58d406464714ae1befaf5f1d2cc489087bbff6a3262227f71b83e035a18f"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-card-contract-smoke.log",
+      "bytes": 166,
+      "sha256": "df8d4c439784730dce4320ca6be27eef9215b406e35cf52df8f0eb40fd878c90"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-classic-layout-smoke.log",
+      "bytes": 252,
+      "sha256": "cc1db1e1db967e6d58159aa60ab1c8d1404b398db2ba1a2720c3fa9ea6eaad73"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-classic-sound-smoke.log",
+      "bytes": 179,
+      "sha256": "1c3f7b87b6bfc7ac9550ec2cb01f640cba2db8c638dba15c7cdec72f77215ed9"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-classic-visual-smoke.log",
+      "bytes": 172,
+      "sha256": "50807412a7d42103660b23f114fe89ed02a709a3e80bd4b5cdd9ca3b87afd694"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-display-bugs-smoke.log",
+      "bytes": 271,
+      "sha256": "30a797004b813ff8873ebe7b30aa78d27ba91e454c699fef15ce9cbd5e942af3"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-entry-art-smoke.log",
+      "bytes": 189,
+      "sha256": "9c6864357eeb68f04d58a592fcc50ab3e0aaac6fea500661b78703e9623bfbe6"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-entry-ui-smoke.log",
+      "bytes": 196,
+      "sha256": "5a0a1d5b5e5d3fac02b7f29cc77fcec9f609a19c7cdbd038adddf5d3b74eac72"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-standalone-smoke.log",
+      "bytes": 167,
+      "sha256": "4abb716f817838701b08bf451c3ba2536a176e171cc68cddc95a78ce367daf4d"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/offline-terminal-ui-smoke.log",
+      "bytes": 130,
+      "sha256": "fa93224564a3074ebb9868ca87d63b81e6c79cde6f80dc01e4289546a164ce94"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-attachment-regressions-smoke.log",
+      "bytes": 314,
+      "sha256": "a2ed58d406464714ae1befaf5f1d2cc489087bbff6a3262227f71b83e035a18f"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-card-contract-smoke.log",
+      "bytes": 166,
+      "sha256": "df8d4c439784730dce4320ca6be27eef9215b406e35cf52df8f0eb40fd878c90"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-classic-layout-smoke.log",
+      "bytes": 252,
+      "sha256": "cc1db1e1db967e6d58159aa60ab1c8d1404b398db2ba1a2720c3fa9ea6eaad73"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-classic-sound-smoke.log",
+      "bytes": 179,
+      "sha256": "1c3f7b87b6bfc7ac9550ec2cb01f640cba2db8c638dba15c7cdec72f77215ed9"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-classic-visual-smoke.log",
+      "bytes": 172,
+      "sha256": "50807412a7d42103660b23f114fe89ed02a709a3e80bd4b5cdd9ca3b87afd694"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-display-bugs-smoke.log",
+      "bytes": 271,
+      "sha256": "30a797004b813ff8873ebe7b30aa78d27ba91e454c699fef15ce9cbd5e942af3"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-entry-art-smoke.log",
+      "bytes": 189,
+      "sha256": "9c6864357eeb68f04d58a592fcc50ab3e0aaac6fea500661b78703e9623bfbe6"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-entry-ui-smoke.log",
+      "bytes": 192,
+      "sha256": "a45995378af87c9b0587a28627af70259a8304fd89289465910dcc7c7fa1d719"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-interaction-smoke.log",
+      "bytes": 302,
+      "sha256": "77842f0a59285b0a277bcce2cb1dc9029941667a122a5ff12e17183ca38e58b6"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-observer-ui-smoke.log",
+      "bytes": 143,
+      "sha256": "f9dce6397968b90cfcb16e617ef5fb7eee644b0403fae0d5b9b0341b2c60111e"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-online-smoke.log",
+      "bytes": 294,
+      "sha256": "736c4efec2a89ebea180f8cfdffdf27f03a27d227b2d5ab10054732ce3854a12"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-reference-ui-smoke.log",
+      "bytes": 701,
+      "sha256": "8f575a73f68858aacdd57c9ecd4ad153cadc1e56c9276fe786de529c8391d324"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/online-terminal-ui-smoke.log",
+      "bytes": 130,
+      "sha256": "fa93224564a3074ebb9868ca87d63b81e6c79cde6f80dc01e4289546a164ce94"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/unit.log",
+      "bytes": 30041,
+      "sha256": "96a754ad581f03dc69168b735ffb866d3650ae5e36b3a7cb98ea4a39959480b6"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/test-logs/v0.6.4/unpacked-server.log",
+      "bytes": 44,
+      "sha256": "c5707266d12ba5758003523efacd1a68dfd05601647794874aaefc77cd512e96"
+    },
+    {
+      "path": "00-阅读入口与复核/证据快照/audit/validation-latest.json",
+      "bytes": 11588,
+      "sha256": "d3950ba985443558f376c54c50b4451da1f3fcc05eddf51fd470325ffdf49dc9"
+    },
+    {
+      "path": "00-阅读入口与复核/阅读与复现说明.txt",
+      "bytes": 1478,
+      "sha256": "0a8100a7eadeccac5319b96766aeb87a88a8fa09a4d5c145cc9f17b581a9de9c"
+    },
+    {
+      "path": "00-阅读入口与复核/阅读入口与原型复核.json",
+      "bytes": 281,
+      "sha256": "c545320ada766d007e0c5233c6360b2ff346cc7d3456c7fac29543a017b55bee"
+    },
+    {
+      "path": "01-立项与治理/治理职责与风险台账.xlsx",
+      "bytes": 18565,
+      "sha256": "b4aab63bbb04ad46bda5c895f472ca1776c34cb87b453498f290325bea4afe32"
+    },
+    {
+      "path": "01-立项与治理/项目章程与治理.docx",
+      "bytes": 42021,
+      "sha256": "2bb05685d2950af54a0914218456211db31ed46d335756d4a4ac7d5539ab9b84"
+    },
+    {
+      "path": "01-立项与治理/项目章程与治理.pdf",
+      "bytes": 327315,
+      "sha256": "9c64b7fe825c6c3d257e02d9be96801037966821ebd2b4813a504328923003c9"
+    },
+    {
+      "path": "02-需求与游戏规则/GDD玩法与数值设计.docx",
+      "bytes": 42697,
+      "sha256": "ab0ca3c1879996b82ca4cf36dda60150b4ba94eb86a6f5a8ee7abc4e9a2e8e72"
+    },
+    {
+      "path": "02-需求与游戏规则/GDD玩法与数值设计.pdf",
+      "bytes": 364720,
+      "sha256": "6eee2d8ece28d996c06530713b711fb988e88845201aed053a858efb09fab1d2"
+    },
+    {
+      "path": "02-需求与游戏规则/PRD产品需求规格.docx",
+      "bytes": 42678,
+      "sha256": "3f79dfe4cab31581c701f133a476e29d4f244c69ad210386a11a92dc6e362bd9"
+    },
+    {
+      "path": "02-需求与游戏规则/PRD产品需求规格.pdf",
+      "bytes": 369435,
+      "sha256": "e0316845500a74353a0565e1cc010e6c6df9047812235b488e4df0af0c99e041"
+    },
+    {
+      "path": "02-需求与游戏规则/需求规则与数值主表.xlsx",
+      "bytes": 70267,
+      "sha256": "10972076d8582346d5669b0a3a034b07850205ad17f121d6950cf046abbc1fcc"
+    },
+    {
+      "path": "03-交互与视觉设计/交互与视觉设计规格.docx",
+      "bytes": 2138524,
+      "sha256": "d09c94b8cabd0159ea7b57a11b883d5233c7e5301e28062fc8de90e489e9c6ac"
+    },
+    {
+      "path": "03-交互与视觉设计/交互与视觉设计规格.pdf",
+      "bytes": 713868,
+      "sha256": "65cdd9c9e9fac3979cf67979e7f17da8e5dc15eb2e8bffeab57bad1c1d793b35"
+    },
+    {
+      "path": "03-交互与视觉设计/交互设计原型.html",
+      "bytes": 3048,
+      "sha256": "0dd93aab6fabcc3a9778918d5102b654e3e684b0502564b305b02f6e2c9cbfdb"
+    },
+    {
+      "path": "03-交互与视觉设计/用户回合流程.png",
+      "bytes": 161800,
+      "sha256": "8962136fc04ed98cd0f4ceaf5fb267bb80429b09a04aa3358c06845ba269347b"
+    },
+    {
+      "path": "03-交互与视觉设计/用户回合流程.svg",
+      "bytes": 4517,
+      "sha256": "ecbb67601a118311b27821d159e1063a7ef31f7f2e387a435642ec6cc6e08dbe"
+    },
+    {
+      "path": "03-交互与视觉设计/系统架构.png",
+      "bytes": 170418,
+      "sha256": "1a3a50e5a85af519c3b0068ae3adfdeaccfb5526497e4feacf8ccbb762c3fb55"
+    },
+    {
+      "path": "03-交互与视觉设计/系统架构.svg",
+      "bytes": 4413,
+      "sha256": "a7ac6561660dc6a9a422b527ff32925f2261f4233ccdc35e6da9ae34623e10d4"
+    },
+    {
+      "path": "03-交互与视觉设计/页面状态与素材规范.xlsx",
+      "bytes": 20997,
+      "sha256": "aae0081d43c7e64998c24ed027cd17cf7a209eb775ad30dc3ae88c633db136bb"
+    },
+    {
+      "path": "04-技术与接口契约/game.example.json",
+      "bytes": 1717,
+      "sha256": "0502fa6c21c4a1c4f813eba1b396a75fc41ade781389bcc1d350c02f2c887b5e"
+    },
+    {
+      "path": "04-技术与接口契约/game.schema.json",
+      "bytes": 9039,
+      "sha256": "4978f76e9f770eaf4c6f1002d8030471bb70663969b7863b1c46b033de217959"
+    },
+    {
+      "path": "04-技术与接口契约/openapi.json",
+      "bytes": 52205,
+      "sha256": "9c827fbb732f5a42a2996158e54c00428522d6bbb73eac1a33fc587b0b4750b9"
+    },
+    {
+      "path": "04-技术与接口契约/room-store.example.json",
+      "bytes": 2805,
+      "sha256": "df5170dd3c785a1f85b7d4ed59532316cdc6402561bb5b21bafc7400ae0f3156"
+    },
+    {
+      "path": "04-技术与接口契约/room-store.schema.json",
+      "bytes": 12651,
+      "sha256": "53db40197e40586e648dab5ec1d6bee74585cbce38baf849ca366beada7830be"
+    },
+    {
+      "path": "04-技术与接口契约/技术设计与联调契约.docx",
+      "bytes": 42080,
+      "sha256": "f398a3d21dc84f265dd8fec1c4d64378c5c286190e17e10437636494ad732f7c"
+    },
+    {
+      "path": "04-技术与接口契约/技术设计与联调契约.pdf",
+      "bytes": 327405,
+      "sha256": "05042f11a765003d4a3f14958b988b0f46427e07bb0d6c6d4105e2def248aab2"
+    },
+    {
+      "path": "04-技术与接口契约/接口指令与数据字典.xlsx",
+      "bytes": 23900,
+      "sha256": "22479bc4010281145a4038714c53d455fc8acdf91977df9c7645ec65dab73192"
+    },
+    {
+      "path": "05-开发计划与协作/WBS需求追踪与交接.xlsx",
+      "bytes": 19407,
+      "sha256": "04ef3c2a0f74e3752ccf8956cc2c2756f5afba4947612c8e77041f5734e61d2e"
+    },
+    {
+      "path": "05-开发计划与协作/实施计划与部门交接.docx",
+      "bytes": 41103,
+      "sha256": "a3569d8969ce8d32eb64c877b65636bdca8987407fc9ce1221bd1ddfbf00be63"
+    },
+    {
+      "path": "05-开发计划与协作/实施计划与部门交接.pdf",
+      "bytes": 256793,
+      "sha256": "a384fa2e03a43b6ca53c29ace918af74683eb396eacd75bb310e1e02aaa323b2"
+    },
+    {
+      "path": "06-测试与质量保证/测试用例执行与缺陷.xlsx",
+      "bytes": 24496,
+      "sha256": "d29906b5ac9950d0627c946268820827d3715c88a04ed7a3ca8a1bdb16a1896e"
+    },
+    {
+      "path": "06-测试与质量保证/测试设计与质量报告.docx",
+      "bytes": 41148,
+      "sha256": "90bb566935f3d67ac065408ad25cd3aec399b36a0cc6526097dc698f2c3baaf4"
+    },
+    {
+      "path": "06-测试与质量保证/测试设计与质量报告.pdf",
+      "bytes": 268618,
+      "sha256": "5e553bfa79919c5a61336ae8c6fc3e500e1858993c1f83f911264f265afe8161"
+    },
+    {
+      "path": "07-发布与运维/发布与回退检查表.xlsx",
+      "bytes": 14372,
+      "sha256": "febdef9d2650c8d7e009001c6c0ecd5417803acf86f3888489dc9a5d2090dbd0"
+    },
+    {
+      "path": "07-发布与运维/发布运维与回退手册.docx",
+      "bytes": 41207,
+      "sha256": "82b3d7e8a4a3c4f072563c5ecbce3900e98c0004f28fdac069f882d07738e6c6"
+    },
+    {
+      "path": "07-发布与运维/发布运维与回退手册.pdf",
+      "bytes": 259716,
+      "sha256": "f8ccc069cceeb36297b583a17c58814f8c74716ae32808b1242b48e914cca7f4"
+    },
+    {
+      "path": "08-用户验收/UAT与最终验收方案.docx",
+      "bytes": 40867,
+      "sha256": "89347dc57656e038323f31d1191e0c2bab353a28c8214869f7b6d1fd076de62b"
+    },
+    {
+      "path": "08-用户验收/UAT与最终验收方案.pdf",
+      "bytes": 244962,
+      "sha256": "4f18c2ba43dee0b613a944b40a4a1fd170a036f7f8d4bb723a33585c0e9e90c9"
+    },
+    {
+      "path": "08-用户验收/UAT签收与遗留事项.xlsx",
+      "bytes": 18772,
+      "sha256": "4ea2bda67b1c68929846c9e77b3ec81216414966781a2fafb5f6c9b0804cf8a8"
+    },
+    {
+      "path": "09-维护与变更/缺陷变更与维护规范.docx",
+      "bytes": 40743,
+      "sha256": "3b1b9e2a299aee9ebcb580a2742357584e270a4fe6e88cd9ce87d5d4a3ed509b"
+    },
+    {
+      "path": "09-维护与变更/缺陷变更与维护规范.pdf",
+      "bytes": 228780,
+      "sha256": "f3aa185c9a4a28289385538b6a8aa6b6b2f88b3c84d59ccb1e014b8c075d42a0"
+    },
+    {
+      "path": "09-维护与变更/问题变更与决策台账.xlsx",
+      "bytes": 15201,
+      "sha256": "63ce3b7a8d2601bc0d0245ffbabe79f7d24321b4dcf7bc74b263dbf818c84040"
+    },
+    {
+      "path": "开始阅读.html",
+      "bytes": 19236,
+      "sha256": "17052e796c66d09e7f5c5220c789bb7d9d920c54bee0fcaa7fa8d5ba7adad70c"
+    }
+  ]
+}

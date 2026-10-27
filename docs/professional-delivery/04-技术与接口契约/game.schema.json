@@ -1,0 +1,434 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:cashflow:game-v3",
+  "title": "Cashflow Game v3 snapshot",
+  "type": "object",
+  "required": [
+    "version",
+    "ruleset",
+    "players",
+    "active",
+    "rolled",
+    "decks",
+    "round"
+  ],
+  "properties": {
+    "version": {
+      "const": 3
+    },
+    "ruleset": {
+      "type": "string",
+      "const": "classic-research-v3",
+      "description": "当前v0.6.4数据修订；升级数据时需要新契约／迁移审查。"
+    },
+    "players": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/Player"
+      }
+    },
+    "active": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "rolled": {
+      "type": "boolean"
+    },
+    "decks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        }
+      }
+    },
+    "round": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "ui": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "over": {
+      "type": "boolean"
+    }
+  },
+  "$defs": {
+    "Player": {
+      "type": "object",
+      "required": [
+        "version",
+        "ruleset",
+        "jobId",
+        "dreamId",
+        "turn",
+        "pos",
+        "stage",
+        "cash",
+        "assets",
+        "fastAssets",
+        "loans",
+        "lastDice",
+        "history",
+        "name"
+      ],
+      "properties": {
+        "version": {
+          "const": 3
+        },
+        "ruleset": {
+          "type": "string",
+          "const": "classic-research-v3",
+          "description": "当前v0.6.4数据修订；升级数据时需要新契约／迁移审查。"
+        },
+        "rulesProfile": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "jobId": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 11
+        },
+        "dreamId": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 22
+        },
+        "name": {
+          "type": "string"
+        },
+        "stage": {
+          "enum": [
+            "rat",
+            "fast"
+          ]
+        },
+        "pos": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 47
+        },
+        "turn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "cash": {
+          "type": "number"
+        },
+        "kids": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Asset"
+          }
+        },
+        "fastAssets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "position",
+              "name",
+              "cost",
+              "income"
+            ],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "position": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 47
+              },
+              "name": {
+                "type": "string"
+              },
+              "cost": {
+                "type": "number"
+              },
+              "income": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "loans": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Loan"
+          }
+        },
+        "pending": {
+          "$ref": "#/$defs/Pending"
+        },
+        "lastDice": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          },
+          "maxItems": 3
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "turn",
+              "text"
+            ],
+            "properties": {
+              "turn": {
+                "type": "integer"
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "dreamMultiplier": {
+          "type": "number"
+        },
+        "fastBase": {
+          "type": "number"
+        },
+        "fastGain": {
+          "type": "number"
+        },
+        "uid": {
+          "type": "number"
+        },
+        "processingQueue": {
+          "type": "boolean"
+        },
+        "fastCharity": {
+          "type": "boolean"
+        },
+        "restructuring": {
+          "type": "boolean"
+        },
+        "won": {
+          "type": "boolean"
+        },
+        "bankrupt": {
+          "type": "boolean"
+        },
+        "inactive": {
+          "type": "boolean"
+        },
+        "dreamConfirmed": {
+          "type": "boolean"
+        },
+        "inBankruptcy": {
+          "type": "boolean"
+        },
+        "charity": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "skip": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "color": {
+          "type": "string"
+        },
+        "cardQueue": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "suspended": {
+          "$ref": "#/$defs/Pending"
+        },
+        "decks": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "stage": {
+                "const": "rat"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "pos": {
+                "maximum": 23
+              }
+            }
+          }
+        }
+      ],
+      "additionalProperties": true
+    },
+    "Asset": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "cost",
+        "value",
+        "debt",
+        "income",
+        "quantity"
+      ],
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "cost": {
+          "type": "number"
+        },
+        "value": {
+          "type": "number"
+        },
+        "debt": {
+          "type": "number"
+        },
+        "income": {
+          "type": "number"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Loan": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "balance",
+        "payment"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "balance": {
+          "type": "number"
+        },
+        "payment": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Pending": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "notice",
+            "choose",
+            "deal",
+            "stockTrade",
+            "stockSplit",
+            "payment",
+            "doodadChoice",
+            "market",
+            "marketMust",
+            "baby",
+            "charity",
+            "enterFast",
+            "fastDeal",
+            "dream",
+            "investmentRoll",
+            "skipTurn",
+            "insolvent",
+            "debtHalved",
+            "recovery",
+            "bankruptLost",
+            "assetSale",
+            "debtPicker",
+            "debtReview",
+            "borrowReview",
+            "loanOffer"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "number"
+        },
+        "cost": {
+          "type": "number"
+        },
+        "loan": {
+          "type": "number"
+        },
+        "die": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "loanId": {
+          "type": "string"
+        },
+        "assetId": {
+          "type": "number"
+        },
+        "previous": {
+          "$ref": "#/$defs/Pending"
+        },
+        "offer": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": true,
+      "description": "kind联合状态的结构检查；具体余额、引用存在性及合法转移由engine/table验证。"
+    }
+  },
+  "additionalProperties": true,
+  "$comment": "active < players.length and monetary invariants require semantic validation; additional fields remain forward-compatible, not undocumented approval."
+}

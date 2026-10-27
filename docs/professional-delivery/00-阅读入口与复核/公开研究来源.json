@@ -1,0 +1,154 @@
+[
+  {
+    "id": "NASA-SWE",
+    "title": "NASA Software Engineering Handbook",
+    "url": "https://swehb.nasa.gov/",
+    "accessed_at": "2026-10-27",
+    "status": "访问未成功，不作为已读证据",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "use": "生命周期、需求、评审、验证与配置管理的公开工程参考；不声称项目符合NASA标准。"
+  },
+  {
+    "id": "MS-GDK",
+    "title": "Microsoft GDK documentation",
+    "url": "https://learn.microsoft.com/en-us/gaming/gdk/",
+    "accessed_at": "2026-10-27",
+    "status": "访问未成功，不作为已读证据",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "use": "游戏开发平台、技术与发布资料的公开实例；不代表微软内部文档模板。"
+  },
+  {
+    "id": "MS-PLAYFAB",
+    "title": "PlayFab documentation",
+    "url": "https://learn.microsoft.com/en-us/gaming/playfab/",
+    "accessed_at": "2026-10-27",
+    "status": "访问未成功，不作为已读证据",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "use": "多人游戏服务与运行支持的公开产品文档参考。"
+  },
+  {
+    "id": "OPENAPI",
+    "title": "OpenAPI Specification 3.1.0",
+    "url": "https://spec.openapis.org/oas/v3.1.0",
+    "accessed_at": "2026-10-27",
+    "status": "访问未成功，不作为已读证据",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "use": "机器可读HTTP接口契约的规范。"
+  },
+  {
+    "id": "JSON-SCHEMA",
+    "title": "JSON Schema 2020-12",
+    "url": "https://json-schema.org/draft/2020-12",
+    "accessed_at": "2026-10-27",
+    "status": "访问未成功，不作为已读证据",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "use": "数据契约结构和验证的规范。"
+  },
+  {
+    "id": "WCAG",
+    "title": "WCAG 2.2",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "accessed_at": "2026-10-27",
+    "status": "访问未成功，不作为已读证据",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "use": "可访问性验收要求参考，不代表当前游戏已合规。"
+  },
+  {
+    "id": "ISO-REQ",
+    "title": "ISO/IEC/IEEE 29148 overview",
+    "url": "https://www.iso.org/standard/72089.html",
+    "accessed_at": "2026-10-27",
+    "status": "访问未成功，不作为已读证据",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "use": "需求工程标准公开摘要；未取得付费全文，不引用其未读取条款。"
+  },
+  {
+    "title": "OpenAPI官方仓库",
+    "url": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/versions/3.1.0.md",
+    "http_status": 200,
+    "status": "已读取公开官方仓库",
+    "excerpt": "# OpenAPI Specification\n\n#### Version 3.1.0\n\nThe key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"NOT RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this document are to be interpreted as described in [BCP 14](https://tools.ietf.org/html/bcp14) [RFC2119](https://tools.ietf.org/html/rfc2119) [RFC8174](https://tools.ietf.org/html/rfc8174) when, and only",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "JSON Schema官方仓库",
+    "url": "https://raw.githubusercontent.com/json-schema-org/json-schema-spec/main/README.md",
+    "http_status": 200,
+    "status": "已读取公开官方仓库",
+    "excerpt": "# Welcome to JSON Schema\n[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/json-schema-org/.github/blob/main/CODE_OF_CONDUCT.md)\n[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)\n[![Financ",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "W3C WCAG官方仓库",
+    "url": "https://raw.githubusercontent.com/w3c/wcag/main/README.md",
+    "http_status": 200,
+    "status": "已读取公开官方仓库",
+    "excerpt": "WCAG (Web Content Accessibility Guidelines) 2\n===\n\nThis repository is used to develop content for WCAG 2, as well as associated understanding documents and techniques.\n\nSee [Onboarding for working in Github](https://www.w3.org/WAI/GL/wiki/Onboarding_for_working_in_Github)\n\n## Editorial style guide\n\n@@To complete\n\n* Avoid use of RFC2119 terms such as \"must\", \"shall\", or \"may\" in non-normative conte",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft PlayFab文档仓库",
+    "url": "https://raw.githubusercontent.com/MicrosoftDocs/playfab-docs/live/README.md",
+    "status": "访问未成功",
+    "error": "HTTP Error 404: Not Found",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft GDK仓库",
+    "url": "https://raw.githubusercontent.com/microsoft/GDK/main/README.md",
+    "status": "访问未成功",
+    "error": "HTTP Error 404: Not Found",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft PlayFab",
+    "url": "https://raw.githubusercontent.com/MicrosoftDocs/playfab-docs/master/README.md",
+    "http_status": 200,
+    "status": "已读取官方公开仓库",
+    "excerpt": "## Microsoft Open Source Code of Conduct\nThis project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).\nFor more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft PlayFab main",
+    "url": "https://raw.githubusercontent.com/MicrosoftDocs/playfab-docs/main/README.md",
+    "status": "访问未成功",
+    "error": "HTTP Error 404: Not Found",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft Xbox GDK Samples",
+    "url": "https://raw.githubusercontent.com/microsoft/Xbox-GDK-Samples/main/README.md",
+    "http_status": 200,
+    "status": "已读取官方公开仓库",
+    "excerpt": "# Xbox-GDK-Samples\n\nThis repo contains game development samples written by the Microsoft Xbox Advanced Technology Group using the Microsoft Game Development Kit (GDK).\n\n* [Kits](/Kits) contains support code used by the samples\n* [Media](/Media) contains media files used by the samples\n* [Samples](gdk-samples-list.md) contains samples\n  * [Audio](gdk-samples-list.md#Audio)\n  * [Graphics](gdk-sample",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft Agile工作流",
+    "url": "https://raw.githubusercontent.com/MicrosoftDocs/azure-devops-docs/main/docs/boards/work-items/guidance/agile-process-workflow.md",
+    "status": "访问未成功",
+    "error": "HTTP Error 404: Not Found",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft 测试计划",
+    "url": "https://raw.githubusercontent.com/MicrosoftDocs/azure-devops-docs/main/docs/test/create-a-test-plan.md",
+    "status": "访问未成功",
+    "error": "HTTP Error 404: Not Found",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft Azure Boards工作流",
+    "url": "https://raw.githubusercontent.com/MicrosoftDocs/azure-devops-docs/live/docs/boards/work-items/guidance/agile-process-workflow.md",
+    "status": "访问未成功",
+    "error": "HTTP Error 404: Not Found",
+    "accessed_at": "2026-10-27"
+  },
+  {
+    "title": "Microsoft Azure测试计划",
+    "url": "https://raw.githubusercontent.com/MicrosoftDocs/azure-devops-docs/live/docs/test/create-a-test-plan.md",
+    "status": "访问未成功",
+    "error": "HTTP Error 404: Not Found",
+    "accessed_at": "2026-10-27"
+  }
+]

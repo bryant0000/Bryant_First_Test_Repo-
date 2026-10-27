@@ -1,0 +1,1907 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Cashflow room API — implementation review contract",
+    "version": "0.6.4-doc1",
+    "description": "基于当前实现补建，供联调评审；不宣称服务已使用Schema中间件。UI房名8/密码4与服务端32/128上限分开。GET房间更新presence；除chat外的命令检查version。 契约描述受支持的客户端载荷；服务端部分字段另有截断／回退处理，不声称已用Schema中间件实施所有约束。"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/api/rooms": {
+      "get": {
+        "operationId": "listRooms",
+        "summary": "列出可加入房间",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomList"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      },
+      "post": {
+        "operationId": "createRoom",
+        "summary": "创建房间并签发token；初始host就绪",
+        "responses": {
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionRoomView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRoom"
+              },
+              "example": {
+                "name": "演示房间",
+                "capacity": 2,
+                "playerName": "甲",
+                "password": "1234"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rooms/{id}": {
+      "get": {
+        "operationId": "readRoom",
+        "summary": "读取本座位视图并更新presence；decks为空",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "RoomBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/api/rooms/{id}/join": {
+      "post": {
+        "operationId": "joinRoom",
+        "summary": "校验密码与容量，签发座位token",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionRoomView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JoinRoom"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rooms/{id}/ready": {
+      "post": {
+        "operationId": "readyRoom",
+        "summary": "开局前准备",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "RoomBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReadyBody"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rooms/{id}/rename": {
+      "post": {
+        "operationId": "renameRoom",
+        "summary": "开局前改名",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "RoomBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RenameBody"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rooms/{id}/start": {
+      "post": {
+        "operationId": "startRoom",
+        "summary": "房主开始；人员和准备需满足",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "RoomBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VersionBody"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rooms/{id}/action": {
+      "post": {
+        "operationId": "actionRoom",
+        "summary": "仅当前座位；规则与状态校验",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "RoomBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActionBody"
+              },
+              "example": {
+                "version": 5,
+                "action": "roll",
+                "args": [
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rooms/{id}/chat": {
+      "post": {
+        "operationId": "chatRoom",
+        "summary": "独立chatRevision，无需version",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoomView"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "RoomBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBody"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rooms/{id}/leave": {
+      "post": {
+        "operationId": "leaveRoom",
+        "summary": "离开与轮序；等待房主可关闭房间",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Left"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Validation/session/permission/version/limit failure as applicable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "RoomBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VersionBody"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      },
+      "Game": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Cashflow Game v3 snapshot",
+        "type": "object",
+        "required": [
+          "version",
+          "ruleset",
+          "players",
+          "active",
+          "rolled",
+          "decks",
+          "round"
+        ],
+        "properties": {
+          "version": {
+            "const": 3
+          },
+          "ruleset": {
+            "type": "string",
+            "const": "classic-research-v3",
+            "description": "当前v0.6.4数据修订；升级数据时需要新契约／迁移审查。"
+          },
+          "players": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 6,
+            "items": {
+              "$ref": "#/components/schemas/Game/$defs/Player"
+            }
+          },
+          "active": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "rolled": {
+            "type": "boolean"
+          },
+          "decks": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          },
+          "round": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "ui": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "over": {
+            "type": "boolean"
+          }
+        },
+        "$defs": {
+          "Player": {
+            "type": "object",
+            "required": [
+              "version",
+              "ruleset",
+              "jobId",
+              "dreamId",
+              "turn",
+              "pos",
+              "stage",
+              "cash",
+              "assets",
+              "fastAssets",
+              "loans",
+              "lastDice",
+              "history",
+              "name"
+            ],
+            "properties": {
+              "version": {
+                "const": 3
+              },
+              "ruleset": {
+                "type": "string",
+                "const": "classic-research-v3",
+                "description": "当前v0.6.4数据修订；升级数据时需要新契约／迁移审查。"
+              },
+              "rulesProfile": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "jobId": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 11
+              },
+              "dreamId": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 22
+              },
+              "name": {
+                "type": "string"
+              },
+              "stage": {
+                "enum": [
+                  "rat",
+                  "fast"
+                ]
+              },
+              "pos": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 47
+              },
+              "turn": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "cash": {
+                "type": "number"
+              },
+              "kids": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "assets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Game/$defs/Asset"
+                }
+              },
+              "fastAssets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "position",
+                    "name",
+                    "cost",
+                    "income"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "position": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 47
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "cost": {
+                      "type": "number"
+                    },
+                    "income": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              },
+              "loans": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Game/$defs/Loan"
+                }
+              },
+              "pending": {
+                "$ref": "#/components/schemas/Game/$defs/Pending"
+              },
+              "lastDice": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 6
+                },
+                "maxItems": 3
+              },
+              "history": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "turn",
+                    "text"
+                  ],
+                  "properties": {
+                    "turn": {
+                      "type": "integer"
+                    },
+                    "text": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "dreamMultiplier": {
+                "type": "number"
+              },
+              "fastBase": {
+                "type": "number"
+              },
+              "fastGain": {
+                "type": "number"
+              },
+              "uid": {
+                "type": "number"
+              },
+              "processingQueue": {
+                "type": "boolean"
+              },
+              "fastCharity": {
+                "type": "boolean"
+              },
+              "restructuring": {
+                "type": "boolean"
+              },
+              "won": {
+                "type": "boolean"
+              },
+              "bankrupt": {
+                "type": "boolean"
+              },
+              "inactive": {
+                "type": "boolean"
+              },
+              "dreamConfirmed": {
+                "type": "boolean"
+              },
+              "inBankruptcy": {
+                "type": "boolean"
+              },
+              "charity": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "skip": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "color": {
+                "type": "string"
+              },
+              "cardQueue": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "suspended": {
+                "$ref": "#/components/schemas/Game/$defs/Pending"
+              },
+              "decks": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "stage": {
+                      "const": "rat"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "pos": {
+                      "maximum": 23
+                    }
+                  }
+                }
+              }
+            ],
+            "additionalProperties": true
+          },
+          "Asset": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "cost",
+              "value",
+              "debt",
+              "income",
+              "quantity"
+            ],
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "cost": {
+                "type": "number"
+              },
+              "value": {
+                "type": "number"
+              },
+              "debt": {
+                "type": "number"
+              },
+              "income": {
+                "type": "number"
+              },
+              "quantity": {
+                "type": "number"
+              },
+              "type": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "Loan": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "balance",
+              "payment"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "balance": {
+                "type": "number"
+              },
+              "payment": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": true
+          },
+          "Pending": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "notice",
+                  "choose",
+                  "deal",
+                  "stockTrade",
+                  "stockSplit",
+                  "payment",
+                  "doodadChoice",
+                  "market",
+                  "marketMust",
+                  "baby",
+                  "charity",
+                  "enterFast",
+                  "fastDeal",
+                  "dream",
+                  "investmentRoll",
+                  "skipTurn",
+                  "insolvent",
+                  "debtHalved",
+                  "recovery",
+                  "bankruptLost",
+                  "assetSale",
+                  "debtPicker",
+                  "debtReview",
+                  "borrowReview",
+                  "loanOffer"
+                ]
+              },
+              "title": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "cost": {
+                "type": "number"
+              },
+              "loan": {
+                "type": "number"
+              },
+              "die": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 6
+              },
+              "quantity": {
+                "type": "number"
+              },
+              "loanId": {
+                "type": "string"
+              },
+              "assetId": {
+                "type": "number"
+              },
+              "previous": {
+                "$ref": "#/components/schemas/Game/$defs/Pending"
+              },
+              "offer": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "kind"
+            ],
+            "additionalProperties": true,
+            "description": "kind联合状态的结构检查；具体余额、引用存在性及合法转移由engine/table验证。"
+          }
+        },
+        "additionalProperties": true,
+        "$comment": "active < players.length and monetary invariants require semantic validation; additional fields remain forward-compatible, not undocumented approval."
+      },
+      "RoomView": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "capacity",
+          "version",
+          "chatRevision",
+          "chat",
+          "seat",
+          "host",
+          "players",
+          "game"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "capacity": {
+            "type": "integer"
+          },
+          "version": {
+            "type": "integer"
+          },
+          "chatRevision": {
+            "type": "integer"
+          },
+          "chat": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChatMessage"
+            }
+          },
+          "seat": {
+            "type": "integer"
+          },
+          "host": {
+            "type": "integer"
+          },
+          "players": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SeatSummary"
+            }
+          },
+          "game": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Game"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "token": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      },
+      "RoomList": {
+        "type": "object",
+        "required": [
+          "rooms"
+        ],
+        "properties": {
+          "rooms": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RoomSummary"
+            }
+          }
+        }
+      },
+      "Left": {
+        "type": "object",
+        "required": [
+          "left"
+        ],
+        "properties": {
+          "left": {
+            "const": true
+          }
+        }
+      },
+      "CreateRoom": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 32
+          },
+          "capacity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          },
+          "playerName": {
+            "type": "string",
+            "maxLength": 8
+          },
+          "password": {
+            "type": "string",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "capacity"
+        ]
+      },
+      "JoinRoom": {
+        "type": "object",
+        "properties": {
+          "playerName": {
+            "type": "string",
+            "maxLength": 8
+          },
+          "password": {
+            "type": "string",
+            "maxLength": 128
+          }
+        }
+      },
+      "VersionBody": {
+        "type": "object",
+        "required": [
+          "version"
+        ],
+        "properties": {
+          "version": {
+            "type": "integer"
+          }
+        }
+      },
+      "ReadyBody": {
+        "type": "object",
+        "required": [
+          "version",
+          "ready"
+        ],
+        "properties": {
+          "version": {
+            "type": "integer"
+          },
+          "ready": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RenameBody": {
+        "type": "object",
+        "required": [
+          "version",
+          "name"
+        ],
+        "properties": {
+          "version": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 8
+          }
+        }
+      },
+      "ChatBody": {
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        }
+      },
+      "ActionBody": {
+        "type": "object",
+        "required": [
+          "version",
+          "action"
+        ],
+        "properties": {
+          "version": {
+            "type": "integer"
+          },
+          "action": {
+            "enum": [
+              "roll",
+              "deal",
+              "buy",
+              "donate",
+              "dismiss",
+              "payDoodad",
+              "enterFast",
+              "resolveInvestment",
+              "acceptSplit",
+              "payEvent",
+              "acceptLoan",
+              "cancelLoan",
+              "confirmRelief",
+              "completeRecovery",
+              "confirmBankruptLoss",
+              "confirmChild",
+              "confirmSkip",
+              "openAssetSale",
+              "cancelAssetSale",
+              "confirmAssetSale",
+              "openDebtReview",
+              "cancelDebtReview",
+              "confirmDebtReview",
+              "openDebtPicker",
+              "cancelDebtPicker",
+              "changeDebtAmount",
+              "openBorrowReview",
+              "cancelBorrowReview",
+              "confirmBorrowReview",
+              "openStock",
+              "stockQuantity",
+              "cancelStock",
+              "confirmStock",
+              "chooseDream",
+              "cycleDream",
+              "end"
+            ]
+          },
+          "args": {
+            "type": "array",
+            "maxItems": 3,
+            "default": []
+          }
+        },
+        "description": "Client payload convention. Per-action argument types and state guards are documented in the interface workbook; runtime semantic validation remains in Rooms/engine."
+      },
+      "RoomSummary": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "capacity",
+          "players",
+          "private",
+          "version"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "capacity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          },
+          "players": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 6
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "version": {
+            "type": "integer"
+          }
+        }
+      },
+      "SeatSummary": {
+        "type": "object",
+        "required": [
+          "seat",
+          "name",
+          "ready",
+          "left",
+          "away"
+        ],
+        "properties": {
+          "seat": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "name": {
+            "type": "string"
+          },
+          "ready": {
+            "type": "boolean"
+          },
+          "left": {
+            "type": "boolean"
+          },
+          "away": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ChatMessage": {
+        "type": "object",
+        "required": [
+          "id",
+          "author",
+          "message",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "author": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "description": "目前为chat或action；系统动作记录也使用action。"
+          }
+        }
+      },
+      "SessionRoomView": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RoomView"
+          },
+          {
+            "type": "object",
+            "required": [
+              "token"
+            ],
+            "properties": {
+              "token": {
+                "type": "string",
+                "minLength": 1,
+                "description": "创建／加入签发的房间会话；不输出到公开日志。"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "securitySchemes": {
+      "RoomBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Room-scoped token issued by create/join; not an account or JWT."
+      }
+    }
+  }
+}

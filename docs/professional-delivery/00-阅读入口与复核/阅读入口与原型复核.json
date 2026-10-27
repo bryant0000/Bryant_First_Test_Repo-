@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-27",
+  "passed": true,
+  "stage_links": 10,
+  "states_checked": [
+    "trade",
+    "fast",
+    "board"
+  ],
+  "page_errors": [],
+  "missing_resources": [],
+  "scope": "HTTP本地路由映射验证阅读入口和设计原型；不声称file导航已通过。"
+}

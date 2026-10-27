@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-27",
+  "http_exchanges": [
+    {
+      "method": "get",
+      "path": "/api/rooms",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms",
+      "status": "201"
+    },
+    {
+      "method": "get",
+      "path": "/api/rooms/{id}",
+      "status": "401"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/join",
+      "status": "403"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/join",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/ready",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/rename",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/start",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/action",
+      "status": "403"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/action",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/chat",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/action",
+      "status": "409"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/action",
+      "status": "200"
+    },
+    {
+      "method": "get",
+      "path": "/api/rooms/{id}",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/leave",
+      "status": "200"
+    },
+    {
+      "method": "get",
+      "path": "/api/rooms/{id}",
+      "status": "200"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms/{id}/leave",
+      "status": "200"
+    },
+    {
+      "method": "get",
+      "path": "/api/rooms/{id}",
+      "status": "404"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms",
+      "status": "400"
+    },
+    {
+      "method": "post",
+      "path": "/api/rooms",
+      "status": "413"
+    }
+  ],
+  "validated_count": 20,
+  "game_schema_valid": true,
+  "store_schema_valid": true,
+  "game_example_valid": true,
+  "store_example_valid": true,
+  "scope": "本项目内存房间的状态码和响应形状；不是完整安全审计或所有业务路径测试。",
+  "typed_room_seat_chat_session_responses": "passed",
+  "nested_store_game_schema": "passed",
+  "successful_request_bodies_validated": 10,
+  "nested_store_nonempty_example_valid": true
+}

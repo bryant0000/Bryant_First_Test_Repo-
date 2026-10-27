@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-27",
+  "game_baseline": "236a3933ecefbf34da7ec5c434dcd8b87efc0d41",
+  "files": {
+    "engine.js": "4c8f045690edc4a6a625c52f34a16ade8ad6906a44e69defe0bbb93c970401bd",
+    "table.js": "b79887e981ee67ceec153c6eaf7ee2472ad3ac5be0681cf0feabc28d303b0f19",
+    "reference-data.js": "4324a2e098f56850f467687fcf2a27ab5c3de9391a721d4dbb5536469a7e92ed",
+    "scripts/rooms.cjs": "395218acb0140a0517e17ed9c8e9978ba016e57d68c91470b161f740f1c617c1",
+    "scripts/serve.cjs": "8b3719c72b54b62b33ed62048519d29d59fc3d0303e154b86f6ec1da2ac57878",
+    "online.js": "c585df85c648b39bc7240b13cfa2bfbc2d00b2a45298f4cd7668262454164d72",
+    "local-rooms.js": "8fdf14db5d97e1ddc72925c24c73c84e7ee743a97bc61e4a6b146c8939f1e6a8",
+    "interaction.js": "1f31d0ef3e048d89967cc55a13f8d61d979549285f63e95dacfc551ce18e35f5",
+    "classic-stage.js": "cb41a6fd114de70459e8d01d1614c9eb04c8a81e2dc96b53a19d3a2a9e33e263",
+    "scene-canvas.js": "ba739b8e3eca355fe4be0748de13dcb5d7829f4a7e9ef5b1eba4cf2022f55a94",
+    "scripts/build-preview.py": "4757039c22709da18ea8e33e531e373ee6abe9cb2a030478447a8a7fff48d6a5",
+    "package.json": "d22939f104bf9a93e94cdaa00f8eafeaad851d84d061b6237ed88c36c6a50a4a"
+  }
+}

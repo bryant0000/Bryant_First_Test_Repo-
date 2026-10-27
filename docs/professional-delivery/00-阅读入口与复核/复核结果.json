@@ -1,0 +1,523 @@
+{
+  "date": "2026-10-27",
+  "scope": "专业交付文件、实际代码数据、接口样例与资料一致性；不是游戏完整重新验收",
+  "passed": true,
+  "counts": {
+    ".html": 2,
+    ".pdf": 12,
+    ".xlsx": 11,
+    ".docx": 11,
+    ".json": 13,
+    ".png": 2,
+    ".svg": 2,
+    ".txt": 1,
+    ".pptx": 1
+  },
+  "checks": [
+    {
+      "file": "00-阅读入口与复核/交付依据与阶段复核报告.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 5,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/交付依据与阶段复核报告.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 3,
+        "text_characters": 2193,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/交付复核清单.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 2,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/交付物清单.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 7,
+        "formulas_with_cache": 4
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/公开研究来源.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/复核结果.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/工具链与字体复核.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/接口与Schema复核结果.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/文件校验清单.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/构建事实快照.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/源码复核指纹.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/研发阶段与验收评审简报.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 15,
+        "text_characters": 2418,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/研发阶段与验收评审简报.pptx",
+      "kind": "PPTX",
+      "passed": true,
+      "details": {
+        "slides": 15,
+        "shape_bounds": "pass"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/阅读入口与原型复核.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "01-立项与治理/治理职责与风险台账.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 4,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "01-立项与治理/项目章程与治理.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 4,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "01-立项与治理/项目章程与治理.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 4,
+        "text_characters": 2361,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "02-需求与游戏规则/GDD玩法与数值设计.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 5,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "02-需求与游戏规则/GDD玩法与数值设计.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 4,
+        "text_characters": 2953,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "02-需求与游戏规则/PRD产品需求规格.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 3,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "02-需求与游戏规则/PRD产品需求规格.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 4,
+        "text_characters": 2853,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "02-需求与游戏规则/需求规则与数值主表.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 14,
+        "formulas_with_cache": 178
+      }
+    },
+    {
+      "file": "03-交互与视觉设计/交互与视觉设计规格.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 4,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "03-交互与视觉设计/交互与视觉设计规格.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 5,
+        "text_characters": 2436,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "03-交互与视觉设计/用户回合流程.svg",
+      "kind": "SVG",
+      "passed": true,
+      "details": {
+        "xml": "pass"
+      }
+    },
+    {
+      "file": "03-交互与视觉设计/系统架构.svg",
+      "kind": "SVG",
+      "passed": true,
+      "details": {
+        "xml": "pass"
+      }
+    },
+    {
+      "file": "03-交互与视觉设计/页面状态与素材规范.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 4,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "04-技术与接口契约/game.example.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "04-技术与接口契约/game.schema.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "04-技术与接口契约/openapi.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "04-技术与接口契约/room-store.example.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "04-技术与接口契约/room-store.schema.json",
+      "kind": "JSON",
+      "passed": true,
+      "details": {
+        "parse": "pass"
+      }
+    },
+    {
+      "file": "04-技术与接口契约/技术设计与联调契约.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 4,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "04-技术与接口契约/技术设计与联调契约.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 3,
+        "text_characters": 2418,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "04-技术与接口契约/接口指令与数据字典.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 7,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "05-开发计划与协作/WBS需求追踪与交接.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 4,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "05-开发计划与协作/实施计划与部门交接.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 4,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "05-开发计划与协作/实施计划与部门交接.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 3,
+        "text_characters": 1528,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "06-测试与质量保证/测试用例执行与缺陷.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 5,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "06-测试与质量保证/测试设计与质量报告.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 3,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "06-测试与质量保证/测试设计与质量报告.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 3,
+        "text_characters": 1735,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "07-发布与运维/发布与回退检查表.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 3,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "07-发布与运维/发布运维与回退手册.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 3,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "07-发布与运维/发布运维与回退手册.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 3,
+        "text_characters": 1872,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "08-用户验收/UAT与最终验收方案.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 3,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "08-用户验收/UAT与最终验收方案.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 3,
+        "text_characters": 1492,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "08-用户验收/UAT签收与遗留事项.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 4,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "09-维护与变更/缺陷变更与维护规范.docx",
+      "kind": "DOCX",
+      "passed": true,
+      "details": {
+        "tables": 3,
+        "pdf_copy": true
+      }
+    },
+    {
+      "file": "09-维护与变更/缺陷变更与维护规范.pdf",
+      "kind": "PDF",
+      "passed": true,
+      "details": {
+        "pages": 3,
+        "text_characters": 1449,
+        "out_of_page_spans": 0
+      }
+    },
+    {
+      "file": "09-维护与变更/问题变更与决策台账.xlsx",
+      "kind": "XLSX",
+      "passed": true,
+      "details": {
+        "sheets": 3,
+        "formulas_with_cache": 0
+      }
+    },
+    {
+      "file": "02-需求与游戏规则/需求规则与数值主表.xlsx",
+      "kind": "DATA-CROSSCHECK",
+      "passed": true,
+      "details": {
+        "jobs": 12,
+        "mechanical_cards": 182,
+        "dreams": 23,
+        "fast_spaces": 48,
+        "role_formula_results": "match actual engine"
+      }
+    },
+    {
+      "file": "08-用户验收/UAT签收与遗留事项.xlsx",
+      "kind": "APPROVAL-BOUNDARY",
+      "passed": true,
+      "details": {
+        "approval": "not fabricated",
+        "uat": "not signed"
+      }
+    },
+    {
+      "file": "00-阅读入口与复核/源码复核指纹.json",
+      "kind": "SOURCE-FINGERPRINT",
+      "passed": true,
+      "details": {
+        "files": 12,
+        "unchanged": true
+      }
+    },
+    {
+      "file": "04-技术与接口契约/openapi.json",
+      "kind": "CONTRACT-STRUCTURE",
+      "passed": true,
+      "details": {
+        "operations": 10,
+        "all_local_refs_resolved": true,
+        "schema_examples": 2,
+        "negative_game_position": "rejected"
+      }
+    },
+    {
+      "file": "开始阅读.html",
+      "kind": "LOCAL-LINKS",
+      "passed": true,
+      "details": {
+        "relative_links": "all resolve"
+      }
+    }
+  ],
+  "errors": [],
+  "http_contract_exchanges": 20,
+  "manual_review": "抽查PRD、交付复核报告、UX正文、架构图和评审简报；完整PDF均做文字边界与解析检查",
+  "known_limits": [
+    "没有大公司内部模板或标准认证的声明",
+    "未重跑历史27套游戏浏览器检查",
+    "真实file入口、性能安全与最终UAT仍待执行",
+    "多骰原版运行坐标未全部核验"
+  ]
+}

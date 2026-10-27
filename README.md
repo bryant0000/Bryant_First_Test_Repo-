@@ -54,3 +54,7 @@ npm run release:check
 完整流程、岗位分工、需求／规则／设计／技术契约、协作方式和验收门禁见 [开发文档总入口](docs/development/README.md)。当前流程覆盖审计与剩余补齐任务见 [差距审计](docs/development/07-gap-audit.md)。这些是基于 v0.6.4 补建的待评审基线，不等于已通过最终验收。
 
 开发阶段与对应文档的完整表格、分阶段文件夹见 [开发文档目录](docs/development/README.md)。
+
+## 原生专业文档交付
+
+优先使用 [专业交付目录](docs/professional-delivery/开始阅读.html)：按阶段提供 DOCX／PDF、XLSX、PPTX、SVG／HTML及OpenAPI／JSON Schema。历史Markdown资料保留作工程备注，专业评审依据见新目录的阶段复核报告与文件清单。

@@ -1,0 +1,8 @@
+{
+  "checked_at_utc": "2026-10-26T09:00:23.426370+00:00",
+  "scope": "All 55 small and 40 big offer titles and flow text blocks rendered with the actual deck data in the candidate classic UI",
+  "offers_checked": 95,
+  "overflow_failures": [],
+  "method": "Playwright: render each actual offer, compare title/paragraph/facts bounds to card right edge and action-tray boundary",
+  "complete_original_equivalence_established": false
+}
