@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-02",
+  "review_type": "AI直接视觉审查",
+  "first_pass_pages": 16,
+  "final_pass": true,
+  "final_pages": 17,
+  "documents": [
+    {
+      "document": "04-技术与接口契约/技术设计与联调契约.docx",
+      "pdf": "04-技术与接口契约/技术设计与联调契约.pdf",
+      "final_render_pdf_sha256": "de9f6cf6755fcd33e5f96503f82d34b6c4524d2d2a60ff139ad157449cc42c3d",
+      "pages": 4,
+      "visual_pages": [
+        {
+          "page": 1,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 2,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 3,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 4,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        }
+      ]
+    },
+    {
+      "document": "06-测试与质量保证/测试设计与质量报告.docx",
+      "pdf": "06-测试与质量保证/测试设计与质量报告.pdf",
+      "final_render_pdf_sha256": "9ef77656fbbde7a79f09f05f9f54b32bb3ff70cd81064922adba17afd3639a93",
+      "pages": 3,
+      "visual_pages": [
+        {
+          "page": 1,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 2,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 3,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        }
+      ]
+    },
+    {
+      "document": "07-发布与运维/发布运维与回退手册.docx",
+      "pdf": "07-发布与运维/发布运维与回退手册.pdf",
+      "final_render_pdf_sha256": "2ccdf4c5ff4cf4533fb05f53893fb6d3c5104cbc71b962465e8c1eb3eaaad148",
+      "pages": 3,
+      "visual_pages": [
+        {
+          "page": 1,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 2,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 3,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        }
+      ]
+    },
+    {
+      "document": "10-专家审核与修订/技术质量专家审核.docx",
+      "pdf": "10-专家审核与修订/技术质量专家审核.pdf",
+      "final_render_pdf_sha256": "7d8a96e60c6fbb4991b524aa6418e6cf9f483fef355205783ca57994c4f29ec3",
+      "pages": 4,
+      "visual_pages": [
+        {
+          "page": 1,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 2,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 3,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 4,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        }
+      ]
+    },
+    {
+      "document": "10-专家审核与修订/技术安全与恢复补充规格.docx",
+      "pdf": "10-专家审核与修订/技术安全与恢复补充规格.pdf",
+      "final_render_pdf_sha256": "374344f57fe68472b94ddcf6bb50eafa13466c38d7c541b9184841fcc199155d",
+      "pages": 3,
+      "visual_pages": [
+        {
+          "page": 1,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 2,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        },
+        {
+          "page": 3,
+          "status": "通过",
+          "method": "view_image逐页直接目检",
+          "font_readable": true,
+          "clipping": false,
+          "overlap": false,
+          "orphan_heading": false,
+          "table_header_and_rows_readable": true
+        }
+      ]
+    }
+  ],
+  "fix_history": [
+    "首轮审核表格跨页拆行，设置cantSplit和小表keepNext。",
+    "补充规格表头独占页尾，设置重复表头及表头keepNext。",
+    "修后审核PDF遗漏批准表，显式分页后4页完整呈现并重新目检。"
+  ],
+  "semantic_cross_review": "综合报告TQ-01—08/353单测/存储、代理、TTL和未执行边界与实际规格一致。",
+  "scope_boundary": "此结论限文档版式，不代表游戏视觉或安全、性能、UAT通过。"
+}

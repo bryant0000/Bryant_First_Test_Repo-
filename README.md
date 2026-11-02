@@ -57,4 +57,4 @@ npm run release:check
 
 ## 原生专业文档交付
 
-优先使用 [专业交付目录](docs/professional-delivery/开始阅读.html)：按阶段提供 DOCX／PDF、XLSX、PPTX、SVG／HTML及OpenAPI／JSON Schema。历史Markdown资料保留作工程备注，专业评审依据见新目录的阶段复核报告与文件清单。
+优先使用 [专业交付目录](docs/professional-delivery/开始阅读.html)：按阶段提供 DOCX／PDF、XLSX、PPTX、SVG／HTML及OpenAPI／JSON Schema。2026-11-02文档修订1.1包含三个独立AI领域审核、22项问题追踪及同步修订，优先阅读10目录综合审核报告；游戏实现仍为v0.6.4，正式UAT与原版完全一致性未获通过。历史Markdown资料保留作工程备注。

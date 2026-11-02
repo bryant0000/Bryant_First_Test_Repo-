@@ -1,13 +1,11 @@
-Cashflow 专业文档交付（v0.6.4实现基线，2026-10-27文档评审稿）
+Cashflow 开发文档审核修订包
+文档修订1.1 / 2026-11-02；游戏实现仍为v0.6.4。
 
-先解压，打开最外层“开始阅读.html”。Word／Excel／PowerPoint可编辑，PDF固定排版，HTML是设计原型，JSON是接口及数据契约。不是游戏安装包。
+先解压，打开 开始阅读.html，优先阅读10目录的综合审核与修订报告.pdf。
+包含完整原生Word、Excel、PDF、既有PPT、图示、HTML设计原型及JSON技术契约；不是游戏安装包。
 
-批准状态保持未签署。公开来源中失败的访问不当作已读标准；企业公开示例不是内部文档模板。
+三个独立AI审查任务覆盖治理、玩法/体验、技术/质量六类职责，未冒充外部真人签字。22项问题逐项追踪；原文已同步修订。
+本轮单元353通过；原版全等门禁仍BLOCKED。未执行的安全、容量、真file设备和UAT不填通过。
 
-本次复核工具位于仓库scripts/documentation：build_delivery.py生成原生资料，draw_architecture.py生成图，render_diagrams.cjs渲染图，style_delivery.py增强工作簿及简报，check_api_examples.cjs验证项目自身接口，finalize_delivery.py建立阅读入口和清单。依赖python-docx、openpyxl、python-pptx、jsonschema、PyMuPDF、Playwright与LibreOffice。
-
-补充复现顺序：生成基础资料→draw_architecture→render_diagrams→style_delivery→add_data_dictionary→add_rule_review→polish_contract→Office转PDF并重算工作簿→接口和入口校验→finalize_delivery→apply_metadata→check_delivery。所有步骤以仓库脚本及校验结果为准，重新生成后需再次复核。
-
-建议用PDF进行固定版式评审；Office编辑时若本机缺少Noto Sans CJK字体，可能发生字体回退。PDF已实际导出并检查中文。
-
-PDF由LibreOffice实际导出；Excel公式由LibreOffice重算。脚本不代签验收，不替用户执行file入口和完整UAT。质量结果及哈希文件随包保存。
+既有2026-10-27报告与日志保留为历史证据，2026-11-02审核条款以10目录综合报告及专项规格为准。
+本轮复现：review_governance.py、review_game_ux.py、review_tech_quality.py分别生成领域修订；integrate_expert_review.py集成；统一Office导出/工作簿重算后执行check_delivery.py与check_expert_review.py；最后生成文件校验清单及ZIP。生成后应重新渲染并核验。

@@ -103,10 +103,10 @@ for col,width in [('A',75),('B',25),('C',12),('D',90)]:s.column_dimensions[col].
 for row in s.iter_rows(min_row=3):
  for c in row:c.font=Font(name='Microsoft YaHei',size=10);c.alignment=Alignment(wrap_text=True,vertical='top')
  s.row_dimensions[row[0].row].height=45
-s2=wb.create_sheet('复核边界');s2.append(['事项','结论']);s2.append(['本轮HTTP契约样例',20]);s2.append(['历史游戏测试','353单测／27浏览器来自既有v0.6.4，不冒充重跑']);s2.append(['正式批准／用户签收','未签署']);s2.append(['尚未通过范围','真实file入口全矩阵、容量／性能、安全审计、原版全部内容一致性'])
+s2=wb.create_sheet('复核边界');s2.append(['事项','结论']);s2.append(['本轮HTTP契约样例',20]);s2.append(['游戏测试边界','353单测本轮重跑；27浏览器来自既有v0.6.4，不冒充重跑']);s2.append(['正式批准／用户签收','未签署']);s2.append(['尚未通过范围','真实file入口全矩阵、容量／性能、安全审计、原版全部内容一致性'])
 s2.column_dimensions['A'].width=30;s2.column_dimensions['B'].width=110
 qa=OUT/'00-阅读入口与复核/交付复核清单.xlsx';wb.save(qa);assert load_workbook(qa).sheetnames==['文件复核结果','复核边界']
-result={'date':'2026-10-27','scope':'专业交付文件、实际代码数据、接口样例与资料一致性；不是游戏完整重新验收','passed':not errors,'counts':dict(Counter(p.suffix for p in OUT.rglob('*') if p.is_file() and '证据快照' not in p.parts)),'checks':rows,'errors':errors,'http_contract_exchanges':20,'manual_review':'抽查PRD、交付复核报告、UX正文、架构图和评审简报；完整PDF均做文字边界与解析检查','known_limits':['没有大公司内部模板或标准认证的声明','未重跑历史27套游戏浏览器检查','真实file入口、性能安全与最终UAT仍待执行','多骰原版运行坐标未全部核验']}
+result={'date':'2026-11-02','scope':'本轮审核修订交付文件、实际代码数据和接口样例；单元测试另有本轮日志；不是游戏完整重新验收','passed':not errors,'counts':dict(Counter(p.suffix for p in OUT.rglob('*') if p.is_file() and '证据快照' not in p.parts)),'checks':rows,'errors':errors,'http_contract_exchanges':20,'manual_review':'18份DOCX导出PDF全页目检见各领域版式复核JSON；既有简报PDF保留历史复核；所有PDF做文字边界与解析检查','known_limits':['没有大公司内部模板或标准认证的声明','未重跑历史27套游戏浏览器检查','真实file入口、性能安全与最终UAT仍待执行','多骰原版运行坐标未全部核验']}
 (OUT/'00-阅读入口与复核/复核结果.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
 print(json.dumps({'passed':not errors,'files_checked':len(rows),'errors':errors,'counts':result['counts']},ensure_ascii=False))
 assert not errors

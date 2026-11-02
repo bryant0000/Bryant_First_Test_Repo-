@@ -1,0 +1,45 @@
+[
+  {
+    "title": "NIST SSDF公开项目",
+    "url": "https://raw.githubusercontent.com/usnistgov/ssdf/main/README.md",
+    "date": "2026-11-02",
+    "status": "unavailable",
+    "error": "HTTP Error 404: Not Found",
+    "excerpt": "",
+    "use": "未读取，不作为结论依据。"
+  },
+  {
+    "title": "Microsoft SDL公开实践",
+    "url": "https://www.microsoft.com/en-us/securityengineering/sdl/practices",
+    "date": "2026-11-02",
+    "status": "unavailable",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "excerpt": "",
+    "use": "未读取，不作为结论依据。"
+  },
+  {
+    "title": "Unity生产阶段公开说明",
+    "url": "https://unity.com/how-to/stages-of-game-development",
+    "date": "2026-11-02",
+    "status": "unavailable",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "excerpt": "",
+    "use": "未读取，不作为结论依据。"
+  },
+  {
+    "title": "OWASP ASVS公开工程",
+    "url": "https://raw.githubusercontent.com/OWASP/ASVS/master/README.md",
+    "date": "2026-11-02",
+    "status": 200,
+    "excerpt": "# OWASP Application Security Verification Standard\n\n<img src=\"https://owasp.org/www-project-application-security-verification-standard/assets/images/OWASP_ASVS_Linkedin_Banner-01.jpg\" width=\"700px\">\n\n[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]\n\nThis work is licensed under a\n[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].\n\n[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]\n\n[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/\n[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png\n[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue.svg\n\n🎉🎉🎉 **Welcome to Version 5.0 of the ASVS!** 🎉🎉🎉 \n\n**Released LIVE on stage at Global AppSec EU Barcelona 2025!**\n\n## Introduction\n\nThe primary aim of the OWASP Application Security Verification Standard (ASVS) Project is to provide an open application security standard for web apps and web services of all types.\n\nOriginally launched in 2008 through a global community collaboration, the ASVS defines a comprehensive set of security requirements for designing, developing, and testing modern web applications and services.\n\nFollowing the release of ASVS 4.0 in 2019 and its minor update (v4.0.3) in 2021, Version 5.0 represents a significant milestone—modernized to reflect the latest ad",
+    "use": "仅使用实际读取的公开说明；不是企业私有流程或完整合规评估。"
+  },
+  {
+    "title": "Xbox GDK样例发布与版本控制",
+    "url": "https://raw.githubusercontent.com/microsoft/Xbox-GDK-Samples/main/README.md",
+    "date": "2026-11-02",
+    "status": 200,
+    "excerpt": "# Xbox-GDK-Samples\n\nThis repo contains game development samples written by the Microsoft Xbox Advanced Technology Group using the Microsoft Game Development Kit (GDK).\n\n* [Kits](/Kits) contains support code used by the samples\n* [Media](/Media) contains media files used by the samples\n* [Samples](gdk-samples-list.md) contains samples\n  * [Audio](gdk-samples-list.md#Audio)\n  * [Graphics](gdk-samples-list.md#Graphics)\n  * [Handheld](gdk-samples-list.md#Handheld)\n  * [IntroGraphics](gdk-samples-list.md#IntroGraphics)\n  * [Live](gdk-samples-list.md#Live)\n  * [System](gdk-samples-list.md#System)\n  * [Tools](gdk-samples-list.md#Tools)\n  * [Unity](gdk-samples-list.md#Unity)\n  * [xCloud](gdk-samples-list.md#xCloud)\n\n## Other Samples\n\nFor more samples, see [XBOX-Godot-NetRumble](https://github.com/microsoft/XBOX-Godot-NetRumble), and [XBOX-Godot-Sample](https://github.com/microsoft/XBOX-Godot-Sample).\n\nLegacy samples are also available at [DirectML Samples](https://github.com/microsoft/DirectML), [PlayFab-Samples](https://github.com/PlayFab/PlayFab-Samples), [Xbox-ATG-Samples](https://github.com/microsoft/Xbox-ATG-Samples), and [Xbox-LIVE-Samples](https://github.com/microsoft/xbox-live-samples).\n\n# Requirements\n\n* Visual Studio 2022 or later\n* __October 2025__ Microsoft Game Development K",
+    "use": "仅使用实际读取的公开说明；不是企业私有流程或完整合规评估。"
+  }
+]

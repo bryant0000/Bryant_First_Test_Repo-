@@ -1,0 +1,419 @@
+{
+  "date": "2026-11-02",
+  "reviewer": "AI治理领域逐页视觉复核",
+  "scope": "6份最终DOCX对应PDF共22页，另保留初版22页检查记录",
+  "status": "最终22页全部实际逐页目检通过；仅文档版式与所列一致性，不代表产品/原版全等验收",
+  "initial_pages": [
+    {
+      "document": "01-立项与治理/生命周期与治理补充基线.docx",
+      "page": 1,
+      "image_sha256": "cf2a4581bcc27169ea36b1dac3df93bbbbcf3d825a768fcd73023d4cea913368",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/生命周期与治理补充基线.docx",
+      "page": 2,
+      "image_sha256": "d699de847bccd42e3f9257709203588db10990ba55610fb341c9517a95f37d45",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/生命周期与治理补充基线.docx",
+      "page": 3,
+      "image_sha256": "18cac19b1bb12aedebbd61c06de412a8677ffc9d20a63791818be30411970f6a",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/生命周期与治理补充基线.docx",
+      "page": 4,
+      "image_sha256": "0df95a91b3787e68bb007140bbb8f58adfdb1871e028445f728b0731c14e9b1d",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/生命周期与治理补充基线.docx",
+      "page": 5,
+      "image_sha256": "b3cfa354b2c62005f378b62a18241f5e9bf5c7c6c2dc907ff9f51f06898ff901",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/生命周期与治理补充基线.docx",
+      "page": 6,
+      "image_sha256": "ec498218aaf63998ce960c824aaf036a209002beb44bc8ee4df5133c0a813532",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/项目章程与治理.docx",
+      "page": 1,
+      "image_sha256": "94e81acb3a63eb7ec8bf481fb2b043bab23553163ff9d60d3fa5e13dc3e97ef7",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/项目章程与治理.docx",
+      "page": 2,
+      "image_sha256": "a923868307b6934bc078bc95bfee6b432a6dac77b2a40d2b0010aa3d861e0d09",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/项目章程与治理.docx",
+      "page": 3,
+      "image_sha256": "d6367634e9d462cea7b3706e628b36d7c2de7efe65c70ba03b2e45e11aa0d73e",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "01-立项与治理/项目章程与治理.docx",
+      "page": 4,
+      "image_sha256": "e40a7937a8813e2ce9223078fcb9c3e9eb09b11a47075ba021ef096954fb2b06",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "05-开发计划与协作/实施计划与部门交接.docx",
+      "page": 1,
+      "image_sha256": "dc01e03379bd3743dd26059dc1a5f36e73129798f28ea5cf072fd00110df6094",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "05-开发计划与协作/实施计划与部门交接.docx",
+      "page": 2,
+      "image_sha256": "01875655f8168eea7c14cf5271e01b67b2eb148b1ef82c4fb1c97057f508630c",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "05-开发计划与协作/实施计划与部门交接.docx",
+      "page": 3,
+      "image_sha256": "ad33217e7cec5dab8b0858024110ff32e42c9eebaf0f7ef8b2c0df850b16e684",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "08-用户验收/UAT与最终验收方案.docx",
+      "page": 1,
+      "image_sha256": "240eefcf01a62dbd51638b21b1a418971db81ad91216ed00763ea7c4369b8887",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "08-用户验收/UAT与最终验收方案.docx",
+      "page": 2,
+      "image_sha256": "39d66b26381f3ca7c297db795e5211bdcfc22fc1ab881b8d924893d004b7b2d9",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "08-用户验收/UAT与最终验收方案.docx",
+      "page": 3,
+      "image_sha256": "4d5f6630934f3ebaad830c4fd9db04d56e77e32590d4735f1076a9a641e49f1f",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "09-维护与变更/缺陷变更与维护规范.docx",
+      "page": 1,
+      "image_sha256": "89498bfd6c927256e56ac9b1fd1d0d45623efee0c4c11f4b668fb326749df924",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "09-维护与变更/缺陷变更与维护规范.docx",
+      "page": 2,
+      "image_sha256": "001d32088bac3a0adcc0c96b629e8e6dea2367ab5ad3fbabe2d22c8d345ef9f0",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "09-维护与变更/缺陷变更与维护规范.docx",
+      "page": 3,
+      "image_sha256": "d5bf2fd9e049564f807f0d1bb22b5a7c2e82b29378f6aadfda650f8f2d665144",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "10-专家审核与修订/流程治理专家审核.docx",
+      "page": 1,
+      "image_sha256": "c5ea2e2fa64c22c601d295759e0a6f09eae0a4876e85b3c4ded95950905e7da8",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "10-专家审核与修订/流程治理专家审核.docx",
+      "page": 2,
+      "image_sha256": "12a359caa91c1275e205b5987f631423372753014ce55169315a184f58ccfe4e",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    },
+    {
+      "document": "10-专家审核与修订/流程治理专家审核.docx",
+      "page": 3,
+      "image_sha256": "883fe2a2b9e631d78592ad6e60a46dde5622357f3704700d15816023783aae97",
+      "reviewed": true,
+      "result": "初检已看；具体修正见发现"
+    }
+  ],
+  "findings": [
+    {
+      "id": "LAY-GOV-01",
+      "evidence": "生命周期补充初版第6页仅末节标题和2行正文",
+      "fix": "正文1.15行距/段后4pt，标题前10后4pt",
+      "status": "已修订并完成最终渲染逐页复验"
+    },
+    {
+      "id": "LAY-GOV-02",
+      "evidence": "6份文档新增两列表为50/50，长正文列偏窄",
+      "fix": "治理自有2列表调整26/74分栏",
+      "status": "已修订并完成最终渲染逐页复验"
+    },
+    {
+      "id": "LAY-GOV-03",
+      "evidence": "流程审核初版第3页仅一行表尾和退出段落",
+      "fix": "正文1.1行距/段后3pt及标题前9后3pt",
+      "status": "已修订并完成最终渲染逐页复验"
+    },
+    {
+      "id": "CONS-GOV-01",
+      "evidence": "维护文档决策摘要止于DEC-08，而主表已有DEC-09",
+      "fix": "维护摘要增快车道发薪口径DEC-09",
+      "status": "已修订并完成最终渲染逐页复验"
+    },
+    {
+      "id": "CONS-GOV-02",
+      "evidence": "综合报告L2需求设计基线与治理补充L2纵向切片不一致",
+      "fix": "已告知主代理统一L0—L7定义",
+      "status": "已修订并完成最终渲染逐页复验"
+    }
+  ],
+  "final_pass": true,
+  "final_pages_reviewed": 22,
+  "final_documents": [
+    {
+      "document": "01-立项与治理/生命周期与治理补充基线.docx",
+      "pages": 6,
+      "pdf": "01-立项与治理/生命周期与治理补充基线.pdf",
+      "pdf_sha256": "209bd934028ad04b2d80e5a35b3426f08db6424363698667e43a040ed3c63b8b",
+      "rendered_pdf_sha256": "209bd934028ad04b2d80e5a35b3426f08db6424363698667e43a040ed3c63b8b",
+      "docx_sha256": "b59433ad7038e4df84a50ed292bfb70488c60cb920af3e82415e68fc01a0b50a",
+      "final_pass": true,
+      "page_reviews": [
+        {
+          "page": 1,
+          "reviewed": true,
+          "png_sha256": "cf2a4581bcc27169ea36b1dac3df93bbbbcf3d825a768fcd73023d4cea913368",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 2,
+          "reviewed": true,
+          "png_sha256": "d699de847bccd42e3f9257709203588db10990ba55610fb341c9517a95f37d45",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 3,
+          "reviewed": true,
+          "png_sha256": "18cac19b1bb12aedebbd61c06de412a8677ffc9d20a63791818be30411970f6a",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 4,
+          "reviewed": true,
+          "png_sha256": "0df95a91b3787e68bb007140bbb8f58adfdb1871e028445f728b0731c14e9b1d",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 5,
+          "reviewed": true,
+          "png_sha256": "b3cfa354b2c62005f378b62a18241f5e9bf5c7c6c2dc907ff9f51f06898ff901",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 6,
+          "reviewed": true,
+          "png_sha256": "ec498218aaf63998ce960c824aaf036a209002beb44bc8ee4df5133c0a813532",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        }
+      ]
+    },
+    {
+      "document": "01-立项与治理/项目章程与治理.docx",
+      "pages": 4,
+      "pdf": "01-立项与治理/项目章程与治理.pdf",
+      "pdf_sha256": "769a0813e015e8db5e9a0b421d290582d32b623f010ca5573d8bec037fd73ed0",
+      "rendered_pdf_sha256": "769a0813e015e8db5e9a0b421d290582d32b623f010ca5573d8bec037fd73ed0",
+      "docx_sha256": "d2bb97324fe7bf7bf11d75237843d67d7c09c320e11cbae2da5f5deaf3f9a37f",
+      "final_pass": true,
+      "page_reviews": [
+        {
+          "page": 1,
+          "reviewed": true,
+          "png_sha256": "94e81acb3a63eb7ec8bf481fb2b043bab23553163ff9d60d3fa5e13dc3e97ef7",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 2,
+          "reviewed": true,
+          "png_sha256": "1286f5543fcc74889c62bc1525533c46fd1ab7c42b056fc7cb04f2247cb4b27b",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 3,
+          "reviewed": true,
+          "png_sha256": "4c67aff69faa18eddbb8d37382cfb5f1c87cebcd1e82648fd5d1753ecd37cf6b",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 4,
+          "reviewed": true,
+          "png_sha256": "ed284ac2a020b60550cb9b066b38578544eee579a7ee358317f6594b7a29aa1b",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        }
+      ]
+    },
+    {
+      "document": "05-开发计划与协作/实施计划与部门交接.docx",
+      "pages": 3,
+      "pdf": "05-开发计划与协作/实施计划与部门交接.pdf",
+      "pdf_sha256": "5f0c0bbbfd0f2db6dea63e8b314ded496dff96b1ad728e137488638083b1a253",
+      "rendered_pdf_sha256": "5f0c0bbbfd0f2db6dea63e8b314ded496dff96b1ad728e137488638083b1a253",
+      "docx_sha256": "6643b4f6366804c7881f6bdcf7ba074cffec8eb0e444940980e09e06dac0e7c7",
+      "final_pass": true,
+      "page_reviews": [
+        {
+          "page": 1,
+          "reviewed": true,
+          "png_sha256": "dc01e03379bd3743dd26059dc1a5f36e73129798f28ea5cf072fd00110df6094",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 2,
+          "reviewed": true,
+          "png_sha256": "01875655f8168eea7c14cf5271e01b67b2eb148b1ef82c4fb1c97057f508630c",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 3,
+          "reviewed": true,
+          "png_sha256": "ad33217e7cec5dab8b0858024110ff32e42c9eebaf0f7ef8b2c0df850b16e684",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        }
+      ]
+    },
+    {
+      "document": "08-用户验收/UAT与最终验收方案.docx",
+      "pages": 3,
+      "pdf": "08-用户验收/UAT与最终验收方案.pdf",
+      "pdf_sha256": "d2535573800ae917586cf392af4defcc908b56f8d36790557f279909ac65fb88",
+      "rendered_pdf_sha256": "d2535573800ae917586cf392af4defcc908b56f8d36790557f279909ac65fb88",
+      "docx_sha256": "ba8881d90b5785095ecaa2e32906b0467176ccaed1a3b35451e178b15bcc7ba3",
+      "final_pass": true,
+      "page_reviews": [
+        {
+          "page": 1,
+          "reviewed": true,
+          "png_sha256": "240eefcf01a62dbd51638b21b1a418971db81ad91216ed00763ea7c4369b8887",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 2,
+          "reviewed": true,
+          "png_sha256": "39d66b26381f3ca7c297db795e5211bdcfc22fc1ab881b8d924893d004b7b2d9",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 3,
+          "reviewed": true,
+          "png_sha256": "4d5f6630934f3ebaad830c4fd9db04d56e77e32590d4735f1076a9a641e49f1f",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        }
+      ]
+    },
+    {
+      "document": "09-维护与变更/缺陷变更与维护规范.docx",
+      "pages": 3,
+      "pdf": "09-维护与变更/缺陷变更与维护规范.pdf",
+      "pdf_sha256": "66a2466e07a4a59be5af94377835702271f63680e4c98b7fce72747c27733ce9",
+      "rendered_pdf_sha256": "66a2466e07a4a59be5af94377835702271f63680e4c98b7fce72747c27733ce9",
+      "docx_sha256": "d53221dd58005de7a3d1675e37c0bd3b51f1df79ec46a8f4e5bc7dd7b19cb239",
+      "final_pass": true,
+      "page_reviews": [
+        {
+          "page": 1,
+          "reviewed": true,
+          "png_sha256": "89498bfd6c927256e56ac9b1fd1d0d45623efee0c4c11f4b668fb326749df924",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 2,
+          "reviewed": true,
+          "png_sha256": "74d89c13c8c787570ee94695c4441b476ca64a3c12cac3457c21c1ae19ded240",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 3,
+          "reviewed": true,
+          "png_sha256": "f1c3b24d467ea07a0437b0a2660eb4b18fc6a46281a73c447a2484126dba0268",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        }
+      ]
+    },
+    {
+      "document": "10-专家审核与修订/流程治理专家审核.docx",
+      "pages": 3,
+      "pdf": "10-专家审核与修订/流程治理专家审核.pdf",
+      "pdf_sha256": "05b7eb324a262623b9f5615b9ba73e28814cd7d01c3c996019ebeea9c9bd11f2",
+      "rendered_pdf_sha256": "05b7eb324a262623b9f5615b9ba73e28814cd7d01c3c996019ebeea9c9bd11f2",
+      "docx_sha256": "dffb4d136c4f119d0e85e98b0084e6e08234ad2ad28f31762c6200295ef9677c",
+      "final_pass": true,
+      "page_reviews": [
+        {
+          "page": 1,
+          "reviewed": true,
+          "png_sha256": "9cf34dcb77689952372880ccd0661b2bd08b055ef1929e0bf762d668736cd833",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 2,
+          "reviewed": true,
+          "png_sha256": "360fae6a7dfa0a8bc43b225e408ae76968ddc143f7cf4bd95b97b1af3bfd0aca",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        },
+        {
+          "page": 3,
+          "reviewed": true,
+          "png_sha256": "aef6b8a242f68099b4ee1735ae8c273f06347ce6f281f1d519e6bcd82fcd4320",
+          "result": "通过：文字和表格可读，无空白页、标题孤页、内容裁剪或重叠；表跨页有重复表头。"
+        }
+      ]
+    }
+  ],
+  "semantic_cross_review": {
+    "final_pass": true,
+    "lifecycle_labels": [
+      "L0 发现与可行性",
+      "L1 预研与制作准备",
+      "L2 纵向切片",
+      "L3 Alpha功能完整",
+      "L4 Beta质量与表现",
+      "L5 发布候选与UAT",
+      "L6 上线与持续维护",
+      "L7 退役与归档"
+    ],
+    "checks": [
+      "综合报告与治理补充L0—L7完全一致；章程旧G0—G6已替换",
+      "原治理工作簿说明01—09仅资料域，正式L0—L7以新增台账为准",
+      "原WBS新增09—14对应GX07及TQ持久化/可信代理/限流/TTL，均待执行",
+      "维护规范DEC09与规则主表一致，最后一行完整可读，近空白尾页已去除"
+    ],
+    "workbook_sha256": {
+      "01-立项与治理/治理职责与风险台账.xlsx": "02c3f6b68d7f0e7fa667d1a569824f23d1aa1daaf7fbe9a907211428ecbcc960",
+      "05-开发计划与协作/WBS需求追踪与交接.xlsx": "737d661725860c422dc37947bfd27fcf55c705acd0cefe54ff5730bb8e329cc1"
+    }
+  }
+}

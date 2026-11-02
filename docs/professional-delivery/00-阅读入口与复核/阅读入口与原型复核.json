@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-11-02",
   "passed": true,
-  "stage_links": 10,
+  "stage_links": 11,
   "states_checked": [
     "trade",
     "fast",

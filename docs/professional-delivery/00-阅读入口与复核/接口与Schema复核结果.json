@@ -1,6 +1,10 @@
 {
-  "date": "2026-10-27",
-  "http_exchanges": [
+  "date": "2026-11-02",
+  "validated_count": 20,
+  "validated_success_request_bodies": 10,
+  "passed": true,
+  "scope": "本轮使用收敛后的端点级契约校验真实自建临时房间HTTP交换，不覆盖所有错误分支",
+  "exchanges": [
     {
       "method": "get",
       "path": "/api/rooms",
@@ -101,15 +105,5 @@
       "path": "/api/rooms",
       "status": "413"
     }
-  ],
-  "validated_count": 20,
-  "game_schema_valid": true,
-  "store_schema_valid": true,
-  "game_example_valid": true,
-  "store_example_valid": true,
-  "scope": "本项目内存房间的状态码和响应形状；不是完整安全审计或所有业务路径测试。",
-  "typed_room_seat_chat_session_responses": "passed",
-  "nested_store_game_schema": "passed",
-  "successful_request_bodies_validated": 10,
-  "nested_store_nonempty_example_valid": true
+  ]
 }

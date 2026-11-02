@@ -3,7 +3,7 @@
   "info": {
     "title": "Cashflow room API — implementation review contract",
     "version": "0.6.4-doc1",
-    "description": "基于当前实现补建，供联调评审；不宣称服务已使用Schema中间件。UI房名8/密码4与服务端32/128上限分开。GET房间更新presence；除chat外的命令检查version。 契约描述受支持的客户端载荷；服务端部分字段另有截断／回退处理，不声称已用Schema中间件实施所有约束。"
+    "description": "基于当前实现补建，供联调评审；不宣称服务已使用Schema中间件。UI房名8/密码4与服务端32/128上限分开。GET房间更新presence；除chat外的命令检查version。 契约描述受支持的客户端载荷；服务端部分字段另有截断／回退处理，不声称已用Schema中间件实施所有约束。 Reviewed 2026-11-02: responses narrowed per operation to current reachable code branches; 400 includes generic error mapping, not a proposed ideal HTTP policy. All POST routes may reject Origin (403) or oversized body (413)."
   },
   "servers": [
     {
@@ -27,77 +27,20 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
-        "security": []
+        "security": [],
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       },
       "post": {
         "operationId": "createRoom",
@@ -114,74 +57,48 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST Origin host mismatch; additionally host/turn authorization where required.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST body exceeds 8192 bytes.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room creation only: 200-room map limit reached. This is not a measured capacity guarantee.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [],
@@ -200,7 +117,9 @@
               }
             }
           }
-        }
+        },
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     },
     "/api/rooms/{id}": {
@@ -219,74 +138,37 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Missing, expired or unknown room session.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room does not exist.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [
@@ -303,7 +185,9 @@
               "type": "string"
             }
           }
-        ]
+        ],
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     },
     "/api/rooms/{id}/join": {
@@ -322,74 +206,48 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST Origin host mismatch; additionally host/turn authorization where required.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room does not exist.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST body exceeds 8192 bytes.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [],
@@ -412,7 +270,9 @@
               }
             }
           }
-        }
+        },
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     },
     "/api/rooms/{id}/ready": {
@@ -431,74 +291,70 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Missing, expired or unknown room session.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST Origin host mismatch; additionally host/turn authorization where required.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room does not exist.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST body exceeds 8192 bytes.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+          "409": {
+            "description": "Missing or stale integer room version. Chat intentionally does not require version.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [
@@ -525,7 +381,9 @@
               }
             }
           }
-        }
+        },
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     },
     "/api/rooms/{id}/rename": {
@@ -544,74 +402,70 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Missing, expired or unknown room session.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST Origin host mismatch; additionally host/turn authorization where required.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room does not exist.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST body exceeds 8192 bytes.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+          "409": {
+            "description": "Missing or stale integer room version. Chat intentionally does not require version.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [
@@ -638,7 +492,9 @@
               }
             }
           }
-        }
+        },
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     },
     "/api/rooms/{id}/start": {
@@ -657,74 +513,70 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Missing, expired or unknown room session.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST Origin host mismatch; additionally host/turn authorization where required.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room does not exist.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST body exceeds 8192 bytes.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+          "409": {
+            "description": "Missing or stale integer room version. Chat intentionally does not require version.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [
@@ -751,7 +603,9 @@
               }
             }
           }
-        }
+        },
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     },
     "/api/rooms/{id}/action": {
@@ -770,74 +624,70 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Missing, expired or unknown room session.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST Origin host mismatch; additionally host/turn authorization where required.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room does not exist.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST body exceeds 8192 bytes.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+          "409": {
+            "description": "Missing or stale integer room version. Chat intentionally does not require version.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [
@@ -871,7 +721,9 @@
               }
             }
           }
-        }
+        },
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     },
     "/api/rooms/{id}/chat": {
@@ -890,74 +742,59 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Missing, expired or unknown room session.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST Origin host mismatch; additionally host/turn authorization where required.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room does not exist.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST body exceeds 8192 bytes.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [
@@ -984,7 +821,9 @@
               }
             }
           }
-        }
+        },
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     },
     "/api/rooms/{id}/leave": {
@@ -1003,74 +842,70 @@
             }
           },
           "400": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Input/business validation, malformed Origin/JSON, or unexpected exception mapped by handler to 400. This catch-all is current implementation behavior, not an endorsed server-error policy.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "401": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Missing, expired or unknown room session.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "403": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST Origin host mismatch; additionally host/turn authorization where required.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "404": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "Room does not exist.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
-          },
-          "409": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
           "413": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+            "description": "POST body exceeds 8192 bytes.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           },
-          "503": {
-            "description": "Validation/session/permission/version/limit failure as applicable",
+          "409": {
+            "description": "Missing or stale integer room version. Chat intentionally does not require version.",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
               }
-            }
+            },
+            "x-evidence": "Static reachable branches in scripts/rooms.cjs:16-61; not all responses dynamically exercised in this review."
           }
         },
         "security": [
@@ -1097,7 +932,9 @@
               }
             }
           }
-        }
+        },
+        "x-implementation-baseline": "v0.6.4 / 236a3933ecef",
+        "x-contract-status": "Observed implementation contract; declared codes are reachable branches, not execution-pass assertions."
       }
     }
   },

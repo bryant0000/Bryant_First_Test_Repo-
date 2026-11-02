@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-02",
+  "reviewer": "AI项目管理综合审查",
+  "final_pass": true,
+  "scope": "两份报告全部7页最终渲染直接目检；表格、段落、标题和控制信息可读，无裁切重叠",
+  "documents": [
+    {
+      "file": "00-阅读入口与复核/交付依据与阶段复核报告.pdf",
+      "pages": 3,
+      "viewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "sha256": "314e47c5bd82f4027a4115b712fd414d2659b1d13758cd5ec70ee59d57e2e9c7",
+      "passed": true
+    },
+    {
+      "file": "10-专家审核与修订/综合审核与修订报告.pdf",
+      "pages": 4,
+      "viewed_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "sha256": "0b03125b576d12be6da53a7d83f000e9703e33ee88f651a9e3d025d156d61c2b",
+      "passed": true
+    }
+  ],
+  "product_release_approved": false
+}
