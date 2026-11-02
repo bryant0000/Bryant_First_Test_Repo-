@@ -1,4 +1,4 @@
-# 现金流 v0.6.4 测试版
+# 现金流 v0.6.5 测试版
 
 中文网页实现，支持同屏轮流和不同浏览器联机。当前依据官网经典在线版的公开机械数据及实际游戏观察完善规则，并采用其公开棋盘、纸张和图标资源对齐视觉；尚未通过完整内容、交互和页面一致性验收。最新核对范围见 [audit/README.md](audit/README.md) 与 [SOURCES.md](SOURCES.md)。
 
@@ -56,5 +56,7 @@ npm run release:check
 开发阶段与对应文档的完整表格、分阶段文件夹见 [开发文档目录](docs/development/README.md)。
 
 ## 原生专业文档交付
+
+本轮v0.6.5差距清单和迭代结果见 [差距分析与迭代目录](docs/professional-delivery/11-v0.6.5差距分析与迭代/原版差距分析与迭代规格.pdf)。旧00/10目录是v0.6.4历史审核，当前规格修订1.2和测试以11目录为准。
 
 优先使用 [专业交付目录](docs/professional-delivery/开始阅读.html)：按阶段提供 DOCX／PDF、XLSX、PPTX、SVG／HTML及OpenAPI／JSON Schema。2026-11-02文档修订1.1包含三个独立AI领域审核、22项问题追踪及同步修订，优先阅读10目录综合审核报告；游戏实现仍为v0.6.4，正式UAT与原版完全一致性未获通过。历史Markdown资料保留作工程备注。

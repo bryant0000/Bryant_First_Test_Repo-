@@ -93,3 +93,34 @@ test('fast-track victories retain their distinct reason through save restoration
 test('observed official Engineer enters fast track with unrounded passive income and replaces prior cash',()=>{
  const s=E.create(6,0,E.REFERENCE_PROFILE);s.cash=13144;addAsset(s,{income:5610});E.check(s);assert.equal(s.pending.kind,'enterFast');E.enterFast(s);assert.deepEqual([s.stage,s.cash,s.fastBase,s.pos,s.charity,s.skip],['fast',561000,561000,42,0,0]);
 });
+
+test('v0.6.5 official-web gold package quote follows observed 600 cash delta; legacy remains 6000',()=>{
+ for(const [profile,expected] of [[E.REFERENCE_PROFILE,600],[undefined,6000]]){
+  const s=E.create(0,0,profile);s.cash=310400;
+  const offer=E.data.small.find(c=>c.key==='gold');const a=addAsset(s,{...offer,id:s.uid++,quantity:1});
+  E.applyMarket(s,{mode:'sell',key:'gold',amount:600});
+  assert.equal(E.quote(s,a).gross,expected);E.sell(s,a.id);
+  assert.equal(s.cash,310400+expected);assert.equal(s.assets.length,0);
+  assert.throws(()=>E.sell(s,a.id),/找不到资产/);
+ }
+});
+test('v0.6.5 direct reference stock purchase rejects out-of-range quantities without mutation',()=>{
+ const s=fresh();s.cash=1000000000;quoteStock(s);const before=JSON.stringify(s);
+ for(const q of [100000,1000000,0,-1,1.5,NaN,Infinity]){
+  assert.throws(()=>E.buy(s,q),/99,999/);assert.equal(JSON.stringify(s),before);
+ }
+ E.buy(s,99999);assert.equal(s.assets[0].quantity,99999);
+});
+test('v0.6.5 legacy stock limit and large existing reference holdings remain compatible',()=>{
+ const legacy=E.create(0);legacy.cash=1000000000;quoteStock(legacy);E.buy(legacy,1000000);
+ assert.equal(legacy.assets[0].quantity,1000000);assert.equal(E.stockBuyLimit(legacy),1000000);
+ const s=fresh();stock(s,150000);quoteStock(s);E.openStock(s,'sell');E.confirmStock(s,150000);
+ assert.equal(s.assets.length,0);assert.equal(s.pending,null);
+});
+test('v0.6.5 restored old gold confirmation cannot silently settle a different amount',()=>{
+ let s=fresh();s.cash=310400;const offer=E.data.small.find(c=>c.key==='gold');const a=addAsset(s,{...offer,id:s.uid++,quantity:1});
+ E.applyMarket(s,{mode:'sell',key:'gold',amount:600});E.openAssetSale(s,a.id);
+ s.pending.gross=6000;s.pending.net=6000;s=JSON.parse(JSON.stringify(s));const before=JSON.stringify(s);
+ assert.throws(()=>E.confirmAssetSale(s),/出售报价已更新/);assert.equal(JSON.stringify(s),before);
+ E.cancelAssetSale(s);E.openAssetSale(s,a.id);assert.equal(s.pending.net,600);E.confirmAssetSale(s);assert.equal(s.cash,311000);assert.equal(s.assets.length,0);
+});

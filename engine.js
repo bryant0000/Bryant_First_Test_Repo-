@@ -67,7 +67,7 @@ function buy(s,quantity=1,rng=Math.random){
  available(s);const e=s.pending;if(!e||!['deal','fastDeal','dream'].includes(e.kind))throw Error('当前没有购买机会');
  if(e.kind==='dream'){if(D.dreams[s.dreamId].position!==s.pos)throw Error('这里不是你选定的梦想');if(s.cash<e.cost)throw Error('现金不足');s.cash-=e.cost;s.won=true;s.winReason='dream';log(s,`实现梦想：${dreams[s.dreamId].name}。`);notice(s,'梦想成真！','你实现了开局选择的梦想，赢得了游戏。');return}
  if(e.kind==='fastDeal'){if(s.fastAssets.some(a=>a.position===s.pos))throw Error('你已购买这个项目');if(s.cash<e.cost)throw Error('现金不足');s.cash-=e.cost;if(isReference(s)&&e.rollmin){const die=1+Math.floor(rng()*6);s.pending={...e,kind:'investmentRoll',paid:e.cost,cost:0,die,position:s.pos};log(s,`风险投资${e.title}已支付 ${e.cost}，等待确认检定结果。`);return}let income=e.income||0,reward=0;if(e.rollmin){const n=1+Math.floor(rng()*6);const success=n>=e.rollmin;if(!success)income=0;if(success)reward=e.reward||0;log(s,`项目检定掷出 ${n}，${success?'成功':'失败'}。`)}s.cash+=reward;s.fastGain+=income;s.fastAssets.push({id:s.uid++,position:s.pos,name:e.title,cost:e.cost,income});log(s,`快车道购买${e.title}，投入 ${e.cost}，新增现金流 ${income}，现金奖励 ${reward}。`);s.pending=null;check(s);return}
- const a=e.offer;if(e.queued&&!a.anyoneBuy)throw Error('该排队报价只允许出售持有证券');let cost;if(a.type==='stock'){if(!Number.isInteger(quantity)||quantity<1||quantity>1000000)throw Error('请输入 1 至 1,000,000 的整数份数');cost=a.price*quantity}else{cost=a.down;quantity=1}if(s.cash<cost){if(isReference(s)){offerLoan(s,cost-s.cash);return}throw Error('现金不足，可以先贷款补足首付或放弃')};
+ const a=e.offer;if(e.queued&&!a.anyoneBuy)throw Error('该排队报价只允许出售持有证券');let cost;if(a.type==='stock'){const limit=stockBuyLimit(s);if(!Number.isInteger(quantity)||quantity<1||quantity>limit)throw Error(`请输入 1 至 ${limit.toLocaleString('en-US')} 的整数份数`);cost=a.price*quantity}else{cost=a.down;quantity=1}if(s.cash<cost){if(isReference(s)){offerLoan(s,cost-s.cash);return}throw Error('现金不足，可以先贷款补足首付或放弃')};
  s.cash-=cost;s.assets.push({id:s.uid++,name:a.name,key:a.key,type:a.type,symbol:a.symbol||null,quantity,units:a.units||1,dividend:a.dividend||0,cost,value:a.type==='stock'?cost:a.value,debt:a.debt||0,income:a.type==='stock'?a.dividend*quantity:a.income});log(s,`买入${a.name}${a.type==='stock'?' '+quantity+' 份':''}，现金投入 ${cost}。`);s.pending=null;check(s);
 }
 function matching(a,c){return c.key==='rental'?a.type==='property':c.key==='8PLEX'?a.key==='PLEX'&&a.units===8:a.key===c.key&&(a.units||1)>=(c.minUnits||1)}
@@ -92,7 +92,7 @@ function applyMarket(s,c,confirmed=false){
 function quote(s,a){
  const e=s.pending;if(e?.kind==='insolvent'){if(isReference(s)&&s.inBankruptcy&&a.type==='stock')return null;const value=isReference(s)?a.cost*.5:Math.round(a.cost*.5);return {gross:value+a.debt,net:value,kind:'清算'}};
  if(e?.kind==='deal'&&e.offer.type==='stock'&&a.symbol===e.offer.symbol)return {gross:e.offer.price*a.quantity,net:e.offer.price*a.quantity,price:e.offer.price,kind:'证券报价'};
- if(e?.kind==='market'&&matching(a,e.card)){const c=e.card;if(c.mode==='brother')return {gross:a.debt,net:0,kind:'亲属赊购'};const gross=c.mode==='selladd'?a.value+c.amount:c.amount*((['PLEX','APTHOUSE'].includes(a.key)||isReference(s)&&a.key==='coin')?a.units:a.key==='gold'?10:1);return {gross,net:gross-a.debt,kind:'市场报价'}}return null;
+ if(e?.kind==='market'&&matching(a,e.card)){const c=e.card;if(c.mode==='brother')return {gross:a.debt,net:0,kind:'亲属赊购'};const gross=c.mode==='selladd'?a.value+c.amount:c.amount*((['PLEX','APTHOUSE'].includes(a.key)||isReference(s)&&a.key==='coin')?a.units:a.key==='gold'&&!isReference(s)?10:1);return {gross,net:gross-a.debt,kind:'市场报价'}}return null;
 }
 function sell(s,id,quantity){available(s);const i=s.assets.findIndex(a=>a.id===id);if(i<0)throw Error('找不到资产');const a=s.assets[i],q=quote(s,a);if(!q)throw Error('需有匹配的市场或证券报价；仅现金危机时允许银行清算');
  if(a.type==='stock'&&quantity!==undefined){if(!Number.isFinite(quantity)||quantity<=0||quantity>a.quantity||quantity*2%1!==0)throw Error('出售份数无效');const fraction=quantity/a.quantity,receipt=q.net*fraction;s.cash+=receipt;a.value*=1-fraction;a.cost*=1-fraction;a.quantity-=quantity;a.income=a.quantity*a.dividend;if(!a.quantity)s.assets.splice(i,1);log(s,`出售${a.name} ${quantity} 份，收入 ${receipt}。`)}else{s.cash+=q.net;s.assets.splice(i,1);log(s,`${q.kind}：出售${a.name}，成交 ${q.gross}，结清贷款 ${a.debt}，净收款 ${q.net}。`)}check(s);
@@ -145,6 +145,7 @@ function openAssetSale(s,id){
 function cancelAssetSale(s){available(s);if(s.pending?.kind!=='assetSale')throw Error('当前没有资产出售确认');s.pending=s.pending.previous}
 function confirmAssetSale(s){
  available(s);const e=s.pending;if(e?.kind!=='assetSale')throw Error('当前没有资产出售确认');
+ const asset=s.assets.find(a=>a.id===e.assetId),current=asset&&quote({...s,pending:e.previous},asset);if(current&&(current.gross!==e.gross||current.net!==e.net||asset.debt!==e.debt))throw Error('出售报价已更新，请返回市场卡并重新选择资产后确认');
  s.pending=e.previous;try{sell(s,e.assetId)}catch(error){s.pending=e;throw error}
  if(e.previous.kind==='market'&&s.pending?.kind==='market'&&(e.previous.card.mode==='brother'||!s.assets.some(a=>matching(a,e.previous.card)))){s.pending=null;check(s)}
 }
@@ -175,17 +176,18 @@ function changeDebtAmount(s,direction){
 function openBorrowReview(s){available(s);if(!isReference(s)||s.stage!=='rat'||s.inBankruptcy||s.pending)throw Error('当前不能打开银行借款');s.pending={kind:'borrowReview',title:'银行借款',amount:1000,text:'借款以 1,000 为单位，每月支出增加借款的 10%。'}}
 function cancelBorrowReview(s){available(s);if(s.pending?.kind!=='borrowReview')throw Error('当前没有借款表单');s.pending=null}
 function confirmBorrowReview(s,amount){available(s);const e=s.pending;if(e?.kind!=='borrowReview')throw Error('当前没有借款表单');s.pending=null;try{borrow(s,Math.round(amount/1000)*1000)}catch(error){s.pending=e;throw error}}
+function stockBuyLimit(s){return isReference(s)?99999:1000000}
 function stockHeld(s,key){return s.assets.filter(a=>a.type==='stock'&&a.key===key).reduce((n,a)=>n+a.quantity,0)}
 function openStock(s,mode){
  available(s);const e=s.pending;if(!isReference(s)||e?.kind!=='deal'||e.offer.type!=='stock'||!['buy','sell'].includes(mode))throw Error('当前没有证券报价');
  const held=stockHeld(s,e.offer.key);if(mode==='buy'&&e.queued&&!e.offer.anyoneBuy)throw Error('该排队报价只允许出售持有证券');if(mode==='sell'&&!held)throw Error('没有可出售的证券');
  s.pending={kind:'stockTrade',title:e.title,offer:e.offer,mode,quantity:mode==='buy'?1:held,previous:e,text:mode==='buy'?'选择购买份数，再提交买入。':'选择出售份数，再提交卖出。'};
 }
-function stockQuantity(s,quantity){const e=s.pending;if(e?.kind!=='stockTrade')throw Error('当前没有证券交易');if(!Number.isInteger(quantity))throw Error('份数必须为整数');e.quantity=Math.max(1,Math.min(quantity,e.mode==='buy'?99999:stockHeld(s,e.offer.key)))}
+function stockQuantity(s,quantity){const e=s.pending;if(e?.kind!=='stockTrade')throw Error('当前没有证券交易');if(!Number.isInteger(quantity))throw Error('份数必须为整数');e.quantity=Math.max(1,Math.min(quantity,e.mode==='buy'?stockBuyLimit(s):stockHeld(s,e.offer.key)))}
 function cancelStock(s){available(s);if(s.pending?.kind!=='stockTrade')throw Error('当前没有证券交易');s.pending=s.pending.previous}
 function confirmStock(s,quantity){
  available(s);const e=s.pending;if(!isReference(s)||e?.kind!=='stockTrade')throw Error('当前没有证券交易');
- const max=e.mode==='buy'?99999:stockHeld(s,e.offer.key);if(!Number.isInteger(quantity)||quantity<1||quantity>max)throw Error(`请输入 1 至 ${max} 的整数份数`);e.quantity=quantity;
+ const max=e.mode==='buy'?stockBuyLimit(s):stockHeld(s,e.offer.key);if(!Number.isInteger(quantity)||quantity<1||quantity>max)throw Error(`请输入 1 至 ${max} 的整数份数`);e.quantity=quantity;
  if(e.mode==='buy'){s.pending=e.previous;try{buy(s,quantity);if(s.pending?.kind==='loanOffer')s.pending.previous=e}catch(error){s.pending=e;throw error}return}
  const lots=s.assets.filter(a=>a.type==='stock'&&a.key===e.offer.key).sort((a,b)=>a.cost/a.quantity-b.cost/b.quantity);let remaining=quantity;
  for(const a of lots){const count=Math.min(remaining,a.quantity),ratio=(a.quantity-count)/a.quantity;a.cost*=ratio;a.value*=ratio;a.quantity-=count;a.income=a.quantity*a.dividend;remaining-=count;if(!remaining)break}
@@ -199,5 +201,5 @@ function resolveInvestment(s){
  log(s,`风险投资${e.title}掷出 ${e.die}，${success?'成功':'失败'}；新增现金流 ${income}，现金奖励 ${reward}。`);s.pending=null;check(s);
 }
 function enterFast(s){available(s);if(!isReference(s)||s.pending?.kind!=='enterFast')throw Error('尚未进入快车道确认阶段');s.fastBase=ratTotals(s).passive*100;s.stage='fast';s.cash=s.fastBase;s.pos=42;s.charity=0;s.skip=0;s.pending=null;log(s,`确认进入快车道，现金与基础收入设为 ${s.fastBase}，入场位置 42。`)}
-const api={REFERENCE_COLORS,randomCareer,confirmSkip,changeDebtAmount,openDebtPicker,cancelDebtPicker,REFERENCE_PROFILE,isReference,enterFast,resolveInvestment,acceptSplit,payEvent,acceptLoan,cancelLoan,confirmRelief,completeRecovery,confirmBankruptLoss,confirmChild,openAssetSale,cancelAssetSale,confirmAssetSale,openDebtReview,cancelDebtReview,confirmDebtReview,openBorrowReview,cancelBorrowReview,confirmBorrowReview,stockHeld,openStock,stockQuantity,cancelStock,confirmStock,splitShares,data:D,jobs,track,labels,dreams,create,totals,ratTotals,roll,deal,buy,sell,borrowLimit,borrow,repay,donate,dismiss,check,quote,matching,applyMarket,payDoodad,debtRelief,draw};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.Cashflow=api;
+const api={stockBuyLimit,REFERENCE_COLORS,randomCareer,confirmSkip,changeDebtAmount,openDebtPicker,cancelDebtPicker,REFERENCE_PROFILE,isReference,enterFast,resolveInvestment,acceptSplit,payEvent,acceptLoan,cancelLoan,confirmRelief,completeRecovery,confirmBankruptLoss,confirmChild,openAssetSale,cancelAssetSale,confirmAssetSale,openDebtReview,cancelDebtReview,confirmDebtReview,openBorrowReview,cancelBorrowReview,confirmBorrowReview,stockHeld,openStock,stockQuantity,cancelStock,confirmStock,splitShares,data:D,jobs,track,labels,dreams,create,totals,ratTotals,roll,deal,buy,sell,borrowLimit,borrow,repay,donate,dismiss,check,quote,matching,applyMarket,payDoodad,debtRelief,draw};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.Cashflow=api;
 })(globalThis);

@@ -22,10 +22,12 @@ node scripts/serve.cjs --host 0.0.0.0 --port 3000
 私人联机房间、聊天、存档恢复、专用快车道报表及两种胜利条件。
 
 已知差异：尚未完成全部页面、卡牌文字、美术及特殊分支的一致性核验。
-官网黄金出售存在金额差异，本版按 10 单位 × 600 = 6,000 结算。
+官网兼容模式按既有官网对局实测：10枚金币出售到账600；旧规则模式仍为6,000。
+实体版金额及尚缺原版证据的分支不宣称已核验。
 本包是阶段测试版，不是已验收的完整原版复刻。详见 VERSION.json、audit/README.md。
 
 测试范围和最新结果见 audit/validation-latest.json。
+差距清单和迭代报告：打开 docs/professional-delivery/开始阅读.html，优先阅读11目录。
 包含卡片操作、界面区域截图、双浏览器联机及单文件断网回归。
 单文件已在关闭接口的本地 HTTP 测试中验证开局、存档恢复及掷骰；
 测试环境的浏览器策略禁止 file://，未验证直接双击 HTML 的入口。
@@ -34,7 +36,7 @@ node scripts/serve.cjs --host 0.0.0.0 --port 3000
 manifest={'version':version,'channel':'preview','complete_original_equivalence':False,'features':['offline_same_device','server_authoritative_rooms','persistent_sessions','fast_track_statement','dream_and_cashflow_victories','reference_visual_assets','fixed_card_action_strip','direct_financial_row_selection','original_dice_atlas','full_board_inspection','bounded_amount_fields'],'validation':'audit/validation-latest.json'}
 (out/'VERSION.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 files=[p for p in root.iterdir() if p.is_file() and (p.suffix in {'.js','.cjs','.css','.html','.md'} or p.name in {'package.json','.gitignore','reference-manifest.json'})]
-for folder in ['scripts','audit','assets']:
+for folder in ['scripts','audit','assets','docs/professional-delivery']:
  files.extend(p for p in (root/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
 package=out/f'cashflow-preview-v{version}.zip'
 with zipfile.ZipFile(package,'w',zipfile.ZIP_DEFLATED) as z:

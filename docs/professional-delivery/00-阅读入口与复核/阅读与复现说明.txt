@@ -1,11 +1,8 @@
-Cashflow 开发文档审核修订包
-文档修订1.1 / 2026-11-02；游戏实现仍为v0.6.4。
+Cashflow v0.6.5 游戏开发文档，修订1.2，2026-11-02
 
-先解压，打开 开始阅读.html，优先阅读10目录的综合审核与修订报告.pdf。
-包含完整原生Word、Excel、PDF、既有PPT、图示、HTML设计原型及JSON技术契约；不是游戏安装包。
+打开开始阅读.html，优先11-v0.6.5差距分析与迭代。
+11含当前差距清单、规格、验收步骤、测试报告与源码指纹；02/03 PRD/GDD/UX以及规则/决策/UAT台账已同步修订。00/10是此前v0.6.4审核记录和通用方法，旧SHA只针对当时文件，不能作为当前文件指纹。
 
-三个独立AI审查任务覆盖治理、玩法/体验、技术/质量六类职责，未冒充外部真人签字。22项问题逐项追踪；原文已同步修订。
-本轮单元353通过；原版全等门禁仍BLOCKED。未执行的安全、容量、真file设备和UAT不填通过。
+v0.6.5关闭金币兼容、全层份数上限和过期出售确认三项；其余原版对照与正式UAT仍待办。完整日志在游戏完整包audit/test-logs/v0.6.5。本轮358单元与29浏览器回归通过；file://真双击入口待用户测试。
 
-既有2026-10-27报告与日志保留为历史证据，2026-11-02审核条款以10目录综合报告及专项规格为准。
-本轮复现：review_governance.py、review_game_ux.py、review_tech_quality.py分别生成领域修订；integrate_expert_review.py集成；统一Office导出/工作簿重算后执行check_delivery.py与check_expert_review.py；最后生成文件校验清单及ZIP。生成后应重新渲染并核验。
+复现本轮文档：iteration_065.py，待实际回归后iteration_065.py --test-report；Office导出PDF/重算修改过的工作簿；finalize_iteration_065.py更新入口与清单；check_iteration_065.py复核后打包。旧check_delivery/check_expert_review脚本是v0.6.4历史基线，不能不加区分地用于0.6.5。

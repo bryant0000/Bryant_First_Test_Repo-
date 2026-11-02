@@ -32,3 +32,16 @@ test('a winning purchase persists its reason, freezes further settlement and sti
 });
 
 test('host leaving the waiting screen closes the room for guests',async()=>{const{store,a,b}=await pair();assert.deepEqual(await store.command(a.id,a.token,'leave',{version:2}),{left:true});assert.equal(store.list().length,0);assert.throws(()=>store.read(a.id,b.token),/不存在/)});
+
+test('v0.6.5 authoritative room rejects direct-buy limit bypass and keeps version and balances',async()=>{
+ const {store,a,state}=await started(),E=require('./engine.js');
+ const r=store.find(a.id);r.game.ui=null;r.game.dreamSelection=null;r.game.rolled=true;
+ const p=r.game.players[0];p.cash=1000000000;
+ const offer=E.data.small.find(c=>c.type==='stock'&&c.price===5);
+ p.pending={kind:'deal',title:offer.name,offer};
+ const before=JSON.stringify(store.read(a.id,a.token));
+ await assert.rejects(store.command(a.id,a.token,'action',{version:state.version,action:'buy',args:[100000]}),/99,999/);
+ assert.equal(JSON.stringify(store.read(a.id,a.token)),before);
+ const v=await store.command(a.id,a.token,'action',{version:state.version,action:'buy',args:[99999]});
+ assert.equal(v.game.players[0].assets[0].quantity,99999);
+});

@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-02",
+  "accesses": [
+    {
+      "url": "https://cfclassic.richdad.com/",
+      "status": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "scope": "未读取，不作为原版已验证证据"
+    },
+    {
+      "url": "https://richdad.aiserve.top/",
+      "status": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "scope": "未读取，不作为原版已验证证据"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1qrJBzqE7d/",
+      "status": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+      "scope": "未读取，不作为原版已验证证据"
+    }
+  ],
+  "new_original_runtime_verification": false
+}

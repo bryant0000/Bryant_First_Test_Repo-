@@ -1,0 +1,114 @@
+{
+  "version": "0.6.5",
+  "scope": "官网兼容迭代；不是完整原版验收",
+  "gaps": [
+    {
+      "id": "GAP-01",
+      "kind": "已证实数值差异",
+      "before": "官网历史记录现金310400→311000；v0.6.4金币出售加6000",
+      "evidence": "audit/official-runtime.json additional_runtime_observations.gold_settlement",
+      "status": "已修复（官网兼容模式）",
+      "acceptance": "10枚金币报价、确认和到账均600；旧规则模式保留6000",
+      "owner": "规则/QA；原版当前复访仍待补"
+    },
+    {
+      "id": "GAP-02",
+      "kind": "内部交互与接口不一致",
+      "before": "表单上限99999，直接buy可达1000000",
+      "evidence": "engine.js buy/stockQuantity/confirmStock；GX-07",
+      "status": "已修复（全层同限）",
+      "acceptance": "官网兼容模式统一99999；旧规则保留1000000；超限不改现金/资产/版本",
+      "owner": "前端/后端/QA；不是原站私有API的比较结论"
+    },
+    {
+      "id": "GAP-03",
+      "kind": "旧版本迁移风险",
+      "before": "旧存档金币出售确认可能仍缓存6000",
+      "evidence": "v0.6.4 assetSale gross/net；新结算quote",
+      "status": "已修复（拒绝过期报价）",
+      "acceptance": "确认前复核报价；不符时拒绝并提示返回重选，不追溯修改既有现金",
+      "owner": "规则/存档/QA；旧版已完成交易不重算"
+    },
+    {
+      "id": "GAP-04",
+      "kind": "原版语义未决",
+      "before": "快车道发薪含salary-expenses，报表只显示fastBase+fastGain",
+      "evidence": "DEC-09；engine.js totals；classic-stage.js",
+      "status": "待原版证据／裁决",
+      "acceptance": "对照原站相同职业、资产、负债的入圈与发薪；不凭猜测改算式",
+      "owner": "规则/产品"
+    },
+    {
+      "id": "GAP-05",
+      "kind": "视觉证据不全",
+      "before": "单骰源图与锚点已有依据，多骰及所有卡片下位置未封板",
+      "evidence": "audit/dice-layout-fixtures.json；DEC-05",
+      "status": "待逐页配对核验",
+      "acceptance": "同视口、DPR、缩放和状态录制原站/候选，检查位置、尺寸、遮挡",
+      "owner": "UX/QA"
+    },
+    {
+      "id": "GAP-06",
+      "kind": "卡面与文案未全等",
+      "before": "182机制卡有数据映射，原文/中文翻译/美术未逐张一致",
+      "evidence": "audit/official-card-facts.json；reference-coverage.json",
+      "status": "待完整卡面与来源核验",
+      "acceptance": "逐卡逐字段对照，翻译目标需明确；不得由机制数量推定内容全等",
+      "owner": "策划/美术/本地化"
+    },
+    {
+      "id": "GAP-07",
+      "kind": "比较版本未统一",
+      "before": "实体101规则书、官网在线版、中文参考站不可默认同版",
+      "evidence": "DEC-01/02/04；公开访问本轮均403",
+      "status": "待确定全部参考与资料",
+      "acceptance": "本迭代仅以既有官网兼容profile修确定差异；实体版不宣称通过",
+      "owner": "产品/规则"
+    },
+    {
+      "id": "GAP-08",
+      "kind": "分支运行证据缺口",
+      "before": "梦想胜利、离婚、诉讼、破产/队列及组合未全部原站对照",
+      "evidence": "audit/official-runtime.json；reference-coverage.json",
+      "status": "待运行核验",
+      "acceptance": "49项正式运行画面覆盖门禁仍0/49；已有历史观察不等于逐项封板",
+      "owner": "规则/QA"
+    },
+    {
+      "id": "GAP-09",
+      "kind": "财务与显示验证缺口",
+      "before": "极值与报表有自动化，缺全职业全状态的原版逐页批准",
+      "evidence": "DEC-03；UX视觉矩阵；v0.6.4用户截图",
+      "status": "部分回归通过，原版一致性未通过",
+      "acceptance": "测字体/长金额/表格/抽屉/快车道；自动化通过不替代原版对照",
+      "owner": "前端/UX/QA"
+    },
+    {
+      "id": "GAP-10",
+      "kind": "入口与设备证据缺口",
+      "before": "当前环境限制file导航，不能声称真双击入口已自动验证",
+      "evidence": "DEC-06；浏览器HTTP离线回归",
+      "status": "HTTP离线路径通过；真实file待用户测试",
+      "acceptance": "解压后Chrome/Edge双击index及offline，记录系统、缩放、字体、SHA",
+      "owner": "QA/实际用户"
+    },
+    {
+      "id": "GAP-11",
+      "kind": "联机质量缺口",
+      "before": "自建房间协议/持久化/代理信任/限流TTL与原站服务不同",
+      "evidence": "TQ-02/03/04；scripts/rooms.cjs",
+      "status": "本轮未实施安全运维加固",
+      "acceptance": "按技术矩阵故障注入与安全整改；对局功能测试不是上线安全证明",
+      "owner": "后端/安全/运维"
+    },
+    {
+      "id": "GAP-12",
+      "kind": "最终验收缺口",
+      "before": "规则决定、容量/恢复/可访问性目标、最终UAT仍未签署",
+      "evidence": "DEC-07/08；08UAT；10审核追踪",
+      "status": "仍阻断完整原版等同声明",
+      "acceptance": "冻结候选版本与SHA，完成遗留核验后签收；不降低release门禁",
+      "owner": "产品/QA/用户"
+    }
+  ]
+}

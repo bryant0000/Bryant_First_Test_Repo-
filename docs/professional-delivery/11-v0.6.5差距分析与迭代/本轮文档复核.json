@@ -1,0 +1,99 @@
+{
+  "version": "0.6.5",
+  "date": "2026-11-02",
+  "passed": true,
+  "scope": "当前迭代文档/源码/回归证据一致性，不是原版全等或正式UAT",
+  "unit_pass": 358,
+  "browser_pass": 29,
+  "gaps": 12,
+  "fixed": 3,
+  "remaining": 9,
+  "native_files_checked": 37,
+  "pdf_checked": 21,
+  "word_paragraph_cell_coverage": 1342,
+  "counts": {
+    ".html": 2,
+    ".xlsx": 16,
+    ".pdf": 21,
+    ".json": 29,
+    ".docx": 20,
+    ".png": 2,
+    ".svg": 2,
+    ".txt": 1,
+    ".pptx": 1,
+    ".log": 2
+  },
+  "changed_documents_visual_review": [
+    {
+      "file": "02-需求与游戏规则/PRD产品需求规格.pdf",
+      "pages": 5,
+      "viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pdf_sha256": "bc948a06237ea39a9e5e522fc3123e88f9ab91bf47979be33561ca4398d275bf",
+      "docx_sha256": "50f0637762c1c3fecee33dab68cb641b774b7e094dfef6ebcf3cae911d7f8938",
+      "passed": true
+    },
+    {
+      "file": "02-需求与游戏规则/GDD玩法与数值设计.pdf",
+      "pages": 5,
+      "viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "pdf_sha256": "4c1a861161933a93c6b627519c3990b9635135bfae97dff264b9f66d52d36cea",
+      "docx_sha256": "b403674300d866227e621d994a27fb98e0da0f631b06806c0ff536c7bddbf4cf",
+      "passed": true
+    },
+    {
+      "file": "03-交互与视觉设计/交互与视觉设计规格.pdf",
+      "pages": 6,
+      "viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "pdf_sha256": "f4d7abca4b6d29dc878de56f567daaef8cca4f4dafa5c412bde509c8e4763f78",
+      "docx_sha256": "104e8dc7129b6d5b136ab92ef158c518910e7674ac14e2569604601d1470e286",
+      "passed": true
+    },
+    {
+      "file": "11-v0.6.5差距分析与迭代/原版差距分析与迭代规格.pdf",
+      "pages": 4,
+      "viewed_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "pdf_sha256": "c7164dc8f2ec6982a38d03111e14bf28c8163a7fd0ae0337ff13ea2438c75228",
+      "docx_sha256": "cc7d442576c4bcdcd05bb3ef1b28f31ab034e7c1ac60c0f56fc96c065c95f682",
+      "passed": true
+    },
+    {
+      "file": "11-v0.6.5差距分析与迭代/迭代测试报告.pdf",
+      "pages": 2,
+      "viewed_pages": [
+        1,
+        2
+      ],
+      "pdf_sha256": "4d0573c8991692b698691aca41f1d822128786e264fcd233b676d8ba8ad481d4",
+      "docx_sha256": "7a66af1d4c619973cee20655a66e83862afb33b836b3e114743e126f2f1e14b3",
+      "passed": true
+    }
+  ],
+  "visual_review": "本轮修改/新增5份Word导出PDF共22页直接逐页目检；修正近空白尾页、版本脚注和拆分小表；未改的旧文档沿用前轮目检记录",
+  "historical_audit_boundary": "00/10的v0.6.4源码/文档SHA保留历史，不套用于修订后文件",
+  "full_original_equivalence": false,
+  "file_protocol_test": "未执行，需用户实际双击验收"
+}

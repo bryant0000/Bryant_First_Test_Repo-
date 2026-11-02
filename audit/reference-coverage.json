@@ -610,7 +610,7 @@
     {
       "id": "canonical_physical_rulebook",
       "status": "unverified",
-      "detail": "Official homepage now returns 200, old rule URL 404; Scribd classic/2020 entries return 200 but full document pages have not been observed. Physical photos examined belonged to Wealth Flow and were excluded."
+      "detail": "Canonical physical CASHFLOW 101 rulebook and complete card faces remain unverified. Historical entry observations do not establish physical edition parity; current 2026-11-02 reference probes were refused by the network proxy (403)."
     },
     {
       "id": "live_reference_interactions",
@@ -625,7 +625,7 @@
     {
       "id": "all_content_equivalence",
       "status": "incomplete",
-      "detail": "All 182 deck mechanical records plus 41 dream/investment records projected independently from publisher data. Purchase/payment cases tested; Full prose/art remain unverified. Gold settlement discrepancy confirmed by normal live play; canonical behavior decision pending. 8PLEX typo only source-observed."
+      "detail": "All 182 deck mechanical records plus 41 dream/investment records projected independently from publisher data. Purchase/payment cases tested; Full prose/art remain unverified. v0.6.5 official-web gold settlement follows historical observed 600; physical-card target and current runtime re-observation remain unverified. 8PLEX typo only source-observed."
     },
     {
       "id": "candidate_ui_integration",
@@ -655,5 +655,14 @@
     ]
   },
   "latest_source_search": "source-search.json",
-  "official_runtime_evidence": "official-runtime.json"
+  "official_runtime_evidence": "official-runtime.json",
+  "latest_iteration": {
+    "version": "0.6.5",
+    "date": "2026-11-02",
+    "gold_reference_total": 600,
+    "reference_stock_buy_limit": 99999,
+    "stale_sale_confirmation": "reject and reselect",
+    "full_equivalence": false,
+    "evidence": "audit/validation-v0.6.5.json"
+  }
 }
