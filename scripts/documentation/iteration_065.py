@@ -32,7 +32,7 @@ def make_docs():
  d.add_heading('已实施的规则与兼容性变更',1)
  table(d,['事项','v0.6.4','v0.6.5'],[['金币官网兼容','10×600=6000','一个10枚金币资产包卖出总到账600；legacy仍6000'],['证券买入','直接buy允许1000000；表单99999','共享stockBuyLimit；参考模式全部99999，旧模式1000000'],['旧存档出售确认','缓存报价可能与新版实际结算不同','复核gross/net/debt；不符拒绝，提示返回重选；现金和资产保持不变'],['存档与版本','Game v3 / classic-research-v3','结构不变；不重算历史现金，重新确认未来交易']],[1.4,2.35,2.95])
  d.add_paragraph('不修改尚未查清的快车道发薪口径，不据猜测补原版卡面，也不将通过本地自动化标成原版完全一致。新的stockBuyLimit为规则函数，不是新增HTTP端点。相关接口形状和存档结构无需更改。')
- 
+
  for para in d.paragraphs:
   nxt=para._p.getnext()
   if nxt is not None and nxt.tag.endswith('}tbl'):para.paragraph_format.keep_with_next=True
