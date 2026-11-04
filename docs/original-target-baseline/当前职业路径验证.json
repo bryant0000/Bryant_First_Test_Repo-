@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-04",
+  "game_version": "0.6.5",
+  "passed": true,
+  "source": "Pinned public careers.json, SHA matches historical official resource record; not a new live publisher observation",
+  "field_checks": 180,
+  "careers": [
+    {
+      "id": 0,
+      "career": "Teacher (K-12)",
+      "name": "教师",
+      "starting_cash": 400,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 1,
+      "career": "Nurse",
+      "name": "护士",
+      "starting_cash": 480,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 2,
+      "career": "Police Officer",
+      "name": "警察",
+      "starting_cash": 520,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 3,
+      "career": "Mechanic",
+      "name": "机械师",
+      "starting_cash": 670,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 4,
+      "career": "Truck Driver",
+      "name": "卡车司机",
+      "starting_cash": 750,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 5,
+      "career": "Secretary",
+      "name": "秘书",
+      "starting_cash": 710,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 6,
+      "career": "Engineer",
+      "name": "工程师",
+      "starting_cash": 400,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 7,
+      "career": "Lawyer",
+      "name": "律师",
+      "starting_cash": 400,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 8,
+      "career": "Doctor (MD)",
+      "name": "医生",
+      "starting_cash": 400,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 9,
+      "career": "Airline Pilot",
+      "name": "航空驾驶员",
+      "starting_cash": 400,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 10,
+      "career": "Business Manager",
+      "name": "企业经理",
+      "starting_cash": 400,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    },
+    {
+      "id": 11,
+      "career": "Janitor",
+      "name": "清洁工",
+      "starting_cash": 560,
+      "assigned": true,
+      "dream_change_preserves_career": true,
+      "statement_displays_career": true,
+      "reload_preserves_career": true
+    }
+  ],
+  "scope": "Our own local browser entry with deterministic test RNG; proves 12 careers are implemented and retained, not whether original offers a career selector",
+  "original_career_selection_confirmed_today": false
+}

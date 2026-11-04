@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-04",
+  "game_version": "0.6.5 unchanged",
+  "scope": "本轮公开镜像读取及历史官网SHA校验；不等于原站当前页面或流程核验",
+  "resources": [
+    {
+      "path": "careers.json",
+      "url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/careers.json",
+      "status": 200,
+      "bytes": 6269,
+      "sha256": "9a0277206b6ccfcacac5e5f08512bdadd409df9a45aef6819384d1e3bf4a5743",
+      "source_kind": "固定版本公开镜像；不是本轮官网运行观察",
+      "matches_historical_official_resource_hash": true
+    },
+    {
+      "path": "templates/game_screen.json",
+      "url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/game_screen.json",
+      "status": 200,
+      "bytes": 21604,
+      "sha256": "1d57d6b54d069fe1954389734bc5e784ec45a4b6997a26503d7256ae50afd555",
+      "source_kind": "固定版本公开镜像；不是本轮官网运行观察",
+      "matches_historical_official_resource_hash": true
+    },
+    {
+      "path": "templates/card_template.json",
+      "url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/card_template.json",
+      "status": 200,
+      "bytes": 9439,
+      "sha256": "b1e1cc5f6e1e7be27a26ad08bf33df41fa8ffb9417ddb00f323a417176bcd601",
+      "source_kind": "固定版本公开镜像；不是本轮官网运行观察",
+      "matches_historical_official_resource_hash": true
+    }
+  ],
+  "direct_access": [
+    {
+      "url": "https://cfclassic.richdad.com/",
+      "status": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://cfclassic.richdad.com/cashflowjs/cashflow.js?v=1.0.0(0.0.10)",
+      "status": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://richdad.aiserve.top/",
+      "status": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/cashflow.js",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://api.github.com/repos/dadish/cashflow/git/trees/2edcdbc15785ac2141f3d1fe544b14e0de2775b4?recursive=1",
+      "status": "unavailable",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+PASS local career 0 Teacher (K-12)
+PASS local career 1 Nurse
+PASS local career 2 Police Officer
+PASS local career 3 Mechanic
+PASS local career 4 Truck Driver
+PASS local career 5 Secretary
+PASS local career 6 Engineer
+PASS local career 7 Lawyer
+PASS local career 8 Doctor (MD)
+PASS local career 9 Airline Pilot
+PASS local career 10 Business Manager
+PASS local career 11 Janitor
+PASS 180 original numeric field comparisons and 12 real local-browser career/dream/statement/reload paths.

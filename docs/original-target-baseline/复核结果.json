@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-04",
+  "passed": true,
+  "scope": "原版功能资料/候选职业及文档复核，不是原版全等验收",
+  "career_numeric_field_matches": 180,
+  "candidate_career_browser_paths": 12,
+  "source_template_fields": 636,
+  "page_target_slots": 49,
+  "historical_rule_leads": 44,
+  "mirror_hashes_match_historical_official": 3,
+  "report_pages_visually_reviewed": [
+    1,
+    2
+  ],
+  "pdf_sha256": "765d5199125bd55aef2831c797645fc23d72066b3b4febcd5aa8a34e9450b29f",
+  "runtime_fingerprints_unchanged": 12,
+  "original_career_selection_verified_today": false
+}
