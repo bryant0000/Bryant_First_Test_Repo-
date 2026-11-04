@@ -301,3 +301,6 @@ body.native-scene-ready.classic-shell.classic-title-open main{background-color:#
 #toggle-board-view{display:none}
 .reference-ui .stage-tools #toggle-board-view{display:block;position:absolute;left:850px;top:55px;width:150px;height:28px;margin:0;padding:0;border:1px solid #a48a68;border-radius:3px;background:#fff2d4;color:#775478;font:700 14px/26px Helvetica,Arial,sans-serif;pointer-events:auto}
 .classic-board-view #statement-edge-tab,.classic-board-view #classic-footer{visibility:hidden}
+
+/* Native text uses the same canvas rasterization as the archived official splash; retain DOM for fallback. */
+.native-scene-ready #classic-title .classic-title-continue{visibility:hidden}

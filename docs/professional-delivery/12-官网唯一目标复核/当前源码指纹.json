@@ -1,0 +1,22 @@
+{
+  "version": "0.6.6",
+  "date": "2026-11-04",
+  "files": {
+    "package.json": "04065c2e40863de476a57e37d7e1ca88cff32f898fadbcae42529dbffa2a4cd0",
+    "index.html": "11cd21d2f2dd06ed678a016b07f52b3ea8de84999c347c54cf0b9c7b04d03af9",
+    "engine.js": "ad237a5f29903d42309808338b0f1839ca087a1a7df6dbfb38d1108a774e7c59",
+    "app.js": "3c8d7e60c68c9278e6116683a034dc520b77656513c82aef7e2f01358ed7ef12",
+    "table.js": "b79887e981ee67ceec153c6eaf7ee2472ad3ac5be0681cf0feabc28d303b0f19",
+    "reference-ui.js": "3f1bb2d77153d9f14589074590a8940395304e726e4bb91ba859ac6cca1abeee",
+    "classic-stage.js": "43e53c2ee8116b08301fc1a1a6f807d18172563ecdf39cb4853938fb8d16d161",
+    "classic-stage.css": "8b469c8379cbcbfe24f8cb52af3303313f8a6d7ae89b449bac9be12f53389bf0",
+    "scene-canvas.js": "0ff6bf108a158b3c35f4ab5ac5922d6524e6d6741e29ce638e3de70a323402db",
+    "local-rooms.js": "8fdf14db5d97e1ddc72925c24c73c84e7ee743a97bc61e4a6b146c8939f1e6a8",
+    "online.js": "c585df85c648b39bc7240b13cfa2bfbc2d00b2a45298f4cd7668262454164d72",
+    "scripts/rooms.cjs": "395218acb0140a0517e17ed9c8e9978ba016e57d68c91470b161f740f1c617c1",
+    "reference-layout-data.js": "c3be12b3079fd0599fd7ade5b342203db03181ea4a30640b5a9dad33fafe5604",
+    "scripts/reference-acceptance.cjs": "9d072aa32dbf92e1c2a4de3a3527ed5d45402ee872a55c5dc5bbac1a27fb9acf",
+    "scripts/online-smoke.cjs": "44f5745f5dbb9687f2872a9d6c86649c868e489981b14ef313b39da8af5c9a86"
+  },
+  "history": "00/10/11为v0.6.4/0.6.5历史审核；旧SHA仅描述当时文件。"
+}

@@ -1,66 +1,67 @@
 {
   "date": "2026-11-04",
+  "version": "0.6.6 / 文档1.3",
   "excluded_self": "文件校验清单.json",
   "files": [
     {
       "path": "原版功能资料/careers.json",
-      "sha256": "9a0277206b6ccfcacac5e5f08512bdadd409df9a45aef6819384d1e3bf4a5743",
-      "bytes": 6269
+      "bytes": 6269,
+      "sha256": "9a0277206b6ccfcacac5e5f08512bdadd409df9a45aef6819384d1e3bf4a5743"
     },
     {
       "path": "原版功能资料/templates__card_template.json",
-      "sha256": "b1e1cc5f6e1e7be27a26ad08bf33df41fa8ffb9417ddb00f323a417176bcd601",
-      "bytes": 9439
+      "bytes": 9439,
+      "sha256": "b1e1cc5f6e1e7be27a26ad08bf33df41fa8ffb9417ddb00f323a417176bcd601"
     },
     {
       "path": "原版功能资料/templates__game_screen.json",
-      "sha256": "1d57d6b54d069fe1954389734bc5e784ec45a4b6997a26503d7256ae50afd555",
-      "bytes": 21604
+      "bytes": 21604,
+      "sha256": "1d57d6b54d069fe1954389734bc5e784ec45a4b6997a26503d7256ae50afd555"
     },
     {
       "path": "原版来源与证据等级.json",
-      "sha256": "1f88c83fc14ff0b69733b2d2127178a508c9546b4756f0d9a0f2f4c0a6f09d93",
-      "bytes": 2586
+      "bytes": 2586,
+      "sha256": "1f88c83fc14ff0b69733b2d2127178a508c9546b4756f0d9a0f2f4c0a6f09d93"
     },
     {
       "path": "原版目标与实现追溯.xlsx",
-      "sha256": "1e6280d3b3959f9b3a5409d51213081bf077d6883cbd31774fef9b78d8ea107f",
-      "bytes": 42144
+      "bytes": 42255,
+      "sha256": "d370cd79434df340190e689019ec663b9b3c8d6c22b9ca4e0947ccbaddc447d4"
     },
     {
       "path": "原版目标识别与职业流程核验.docx",
-      "sha256": "7142e4c54d45f995bb92a078de3591c41244d7fb8339e5935593c4a077c49575",
-      "bytes": 40786
+      "bytes": 40629,
+      "sha256": "d0591c024054b7bbb552a5a87c83051f1ac3a578610a512ca13c302e499ac8bf"
     },
     {
       "path": "原版目标识别与职业流程核验.pdf",
-      "sha256": "765d5199125bd55aef2831c797645fc23d72066b3b4febcd5aa8a34e9450b29f",
-      "bytes": 243117
+      "bytes": 233438,
+      "sha256": "d499ec85da3fbc4e4ef777d68538ef24d7917d17b41535a8d958a3f6d5a94c30"
     },
     {
       "path": "复核结果.json",
-      "sha256": "93ff323f84ea5524c441eb2a933a9f6ca1e9e469675de3af3a0c9271c84b1466",
-      "bytes": 583
+      "bytes": 583,
+      "sha256": "93ff323f84ea5524c441eb2a933a9f6ca1e9e469675de3af3a0c9271c84b1466"
     },
     {
       "path": "开始阅读.html",
-      "sha256": "dc0d3da8c527377cd641c4778c618718853ce6c0ae1ea43d3be0ae496651752a",
-      "bytes": 1908
+      "bytes": 1908,
+      "sha256": "dc0d3da8c527377cd641c4778c618718853ce6c0ae1ea43d3be0ae496651752a"
     },
     {
       "path": "当前职业路径验证.json",
-      "sha256": "bbd4569674272aa2dd07481f10490775716db04895635f4d7a6081a7d54f9b41",
-      "bytes": 3592
+      "bytes": 3592,
+      "sha256": "bbd4569674272aa2dd07481f10490775716db04895635f4d7a6081a7d54f9b41"
     },
     {
       "path": "职业浏览器验证.log",
-      "sha256": "e8f24db8ac190eea2d410e5894abca5f64a59727178d3ef9195de1eaafa436be",
-      "bytes": 484
+      "bytes": 484,
+      "sha256": "e8f24db8ac190eea2d410e5894abca5f64a59727178d3ef9195de1eaafa436be"
     },
     {
       "path": "阅读说明.txt",
-      "sha256": "335a1ad85cc992ac982a26f2177082d25a6f0266f7803cfcc1dbfdd10b5eb444",
-      "bytes": 431
+      "bytes": 431,
+      "sha256": "335a1ad85cc992ac982a26f2177082d25a6f0266f7803cfcc1dbfdd10b5eb444"
     }
   ]
 }

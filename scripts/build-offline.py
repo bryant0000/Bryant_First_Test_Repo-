@@ -5,6 +5,9 @@ parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path);optio
 root=Path(__file__).resolve().parent.parent
 version=json.loads((root/'package.json').read_text())['version']
 html=(root/'index.html').read_text().replace('<html lang="zh-CN">','<html lang="zh-CN" data-standalone="true">')
+declared_version=re.search(r'<meta name="cashflow-build-version" content="([^"]+)">',html)
+if not declared_version or declared_version.group(1)!=version:
+ raise ValueError('index.html build-version metadata must match package.json before packaging')
 css=(root/'style.css').read_text()+'\n'+(root/'classic-stage.css').read_text()
 html=html.replace('<link rel="stylesheet" href="classic-stage.css">','')
 font=root/'assets/reference/GrantAvenue-Regular.otf'

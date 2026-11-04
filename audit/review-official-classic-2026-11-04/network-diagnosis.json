@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-04",
+  "required_origin": "https://cfclassic.richdad.com/",
+  "saved_configuration_contains_domain": true,
+  "turn_network_permission_granted": true,
+  "attempts": [
+    {
+      "channel": "normal standard proxy",
+      "result": "CONNECT 403"
+    },
+    {
+      "channel": "standard proxy after supported network permission grant",
+      "result": "CONNECT 403"
+    },
+    {
+      "channel": "authorized execution channel",
+      "result": "CONNECT 403"
+    }
+  ],
+  "live_runtime_configuration_status": "not exposed by available tools; saved configuration does not prove applied runtime state",
+  "official_credentials_requested": false,
+  "duplicate_domain_requested": false,
+  "external_prerequisite": "A running environment whose supported egress proxy can actually reach the already-authorized official domain. No claim that the site itself returned a login failure."
+}

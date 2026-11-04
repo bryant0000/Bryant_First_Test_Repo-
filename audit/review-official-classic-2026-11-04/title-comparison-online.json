@@ -1,0 +1,19 @@
+{
+  "version": "0.6.6",
+  "mode": "online",
+  "passed": true,
+  "reference_sha256": "239c27af3d3a6ef0e5c4f59f98aa885219f7d46dd5cb5ee734431e894ce71acd",
+  "region": {
+    "x": 756,
+    "y": 750,
+    "width": 388,
+    "height": 43
+  },
+  "metric": {
+    "maximum_channel_error": 1,
+    "channels_over_one": 0,
+    "total_channels": 66736
+  },
+  "scope": "Archived official screenshot, not a fresh live observation or full-screen equivalence",
+  "whole_screen_accepted": false
+}

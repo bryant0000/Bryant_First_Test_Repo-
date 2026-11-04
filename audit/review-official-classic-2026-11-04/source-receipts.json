@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-04",
+  "archive_commit": "2edcdbc15785ac2141f3d1fe544b14e0de2775b4",
+  "scope": "independent archive retrieval; historical hash checks do not prove current runtime parity",
+  "resources": [
+    {
+      "resource": "careers.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/careers.json",
+      "bytes": 6269,
+      "sha256": "9a0277206b6ccfcacac5e5f08512bdadd409df9a45aef6819384d1e3bf4a5743",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "smalldeal.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/smalldeal.json",
+      "bytes": 26147,
+      "sha256": "ca0ef5ad221b2dd818ddd287bb0f36edb1045aa01d522e04466ae070a6e4f367",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "bigdeal.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/bigdeal.json",
+      "bytes": 18886,
+      "sha256": "35ef74361029e558b0efa7a4bf634c12a0af6fc7c42cf06367f9c9c095e9ea36",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "market.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/market.json",
+      "bytes": 21436,
+      "sha256": "6889122bd83a29a6563c0169baa92414b0609a5f420b7377764bba6f9d4efb29",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "doodads.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/doodads.json",
+      "bytes": 4879,
+      "sha256": "286120fa95bee018b3bea9748d593af14e67d609b8ea93e3737dbff3edf9446c",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "fasttrack.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/fasttrack.json",
+      "bytes": 12169,
+      "sha256": "a0a96e95c484c61f3215455e8d74364aebacc447cd2a716bf2b745e9d0548998",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "vocab_en_us.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/vocab_en_us.json",
+      "bytes": 18986,
+      "sha256": "e8d0d6210919d0b257f8ae2cf815dcd55b69341b455006f9d0b68554b8295bca",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "templates/game_screen.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/game_screen.json",
+      "bytes": 21604,
+      "sha256": "1d57d6b54d069fe1954389734bc5e784ec45a4b6997a26503d7256ae50afd555",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "templates/card_template.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/card_template.json",
+      "bytes": 9439,
+      "sha256": "b1e1cc5f6e1e7be27a26ad08bf33df41fa8ffb9417ddb00f323a417176bcd601",
+      "historical_official_hash_match": true,
+      "evidence_level": "historically matched official static",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "templates/dream_selector_screen.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/dream_selector_screen.json",
+      "bytes": 5973,
+      "sha256": "3f35a760f77c7125ecb0fa98ddd37c4c8320966ec37088df9d1d624ebf398c58",
+      "historical_official_hash_match": false,
+      "evidence_level": "unverified mirror only",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "templates/party_setup_screen.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/party_setup_screen.json",
+      "bytes": 19452,
+      "sha256": "1bfd55a8cbd6e750a81d7e0d60a07c454c3341d67b43dd77506d2d11857a80af",
+      "historical_official_hash_match": false,
+      "evidence_level": "unverified mirror only",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "templates/statement_sheet_template.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/statement_sheet_template.json",
+      "bytes": 30155,
+      "sha256": "a16e6bab2ec35cb87dcfd38e02a99db4706dd90d82215e4ed0bd7ec16297b89a",
+      "historical_official_hash_match": false,
+      "evidence_level": "unverified mirror only",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "templates/lobby_screen.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/lobby_screen.json",
+      "bytes": 3609,
+      "sha256": "a7e3c8f1128d53d0102999a60078af0e80ac22c7a5942dc61aabc2cccc1b38dd",
+      "historical_official_hash_match": false,
+      "evidence_level": "unverified mirror only",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "templates/title_screen.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/title_screen.json",
+      "bytes": 604,
+      "sha256": "755f3335bd158f1abdcc97357429399336206ba1266e772f0b8e6313c4b63fc2",
+      "historical_official_hash_match": false,
+      "evidence_level": "unverified mirror only",
+      "current_official_runtime": false
+    },
+    {
+      "resource": "templates/player_header.json",
+      "archive_url": "https://raw.githubusercontent.com/dadish/cashflow/2edcdbc15785ac2141f3d1fe544b14e0de2775b4/src/assets/data/templates/player_header.json",
+      "bytes": 1886,
+      "sha256": "face1df624e8fa2040bedfa2d29ccda115d8e64d295c9f3c23c3e1c45044b3e6",
+      "historical_official_hash_match": false,
+      "evidence_level": "unverified mirror only",
+      "current_official_runtime": false
+    }
+  ]
+}

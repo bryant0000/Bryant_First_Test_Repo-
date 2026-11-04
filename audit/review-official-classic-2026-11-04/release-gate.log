@@ -1,0 +1,24 @@
+
+> cashflow-classic-web@0.6.6 release:check
+> node scripts/check-release.cjs
+
+Primary target: https://cfclassic.richdad.com/
+Reference rules with unit evidence: 44
+Reference runtime screens verified: 0/49
+Source/design/implementation/comparison chains verified: 0/335
+AUXILIARY: canonical_physical_rulebook — Canonical physical CASHFLOW 101 rulebook and complete card faces remain unverified. Historical entry observations do not establish physical edition parity; current 2026-11-02 reference probes were refused by the network proxy (403).
+AUXILIARY: bilibili_reference_video — Page returned HTML; metadata endpoint returned 412; video and complete subtitles not observed.
+BLOCKED: official_snapshot — versioned official snapshot has not been captured
+BLOCKED: rule:start_position — original target/design/comparison not signed off
+BLOCKED: rule:fast_entry_confirmation — original target/design/comparison not signed off
+BLOCKED: rule:fast_cash_and_position — original target/design/comparison not signed off
+BLOCKED: rule:default_fast_dice — original target/design/comparison not signed off
+BLOCKED: rule:reverse_split — original target/design/comparison not signed off
+BLOCKED: rule:divorce_cash — original target/design/comparison not signed off
+BLOCKED: rule:tv_financing — original target/design/comparison not signed off
+BLOCKED: rule:boat_financing — original target/design/comparison not signed off
+BLOCKED: rule:brother_sale — original target/design/comparison not signed off
+BLOCKED: rule:debt_halves — original target/design/comparison not signed off
+BLOCKED: rule:dream_inflation — original target/design/comparison not signed off
+Other blocked checks: 328
+NOT READY FOR ORIGINAL-EQUIVALENCE RELEASE. No download package should be presented as fully equivalent.

@@ -18,7 +18,7 @@ for n in ['careers.json','templates__game_screen.json','templates__card_template
 fields={'salary':'salary','tax':'taxes','homePayment':'mortgagePayment','schoolPayment':'schoolLoanPayment','carPayment':'carLoanPayment','creditPayment':'creditCardPayment','retailPayment':'retailPayment','other':'otherExpenses','savings':'savings','childCost':'childPerExpense','homeDebt':'mortgageLiability','schoolDebt':'schoolLoanLiability','carDebt':'carLoanLiability','creditDebt':'creditCardLiability','retailDebt':'retailDebtLiability'}
 w=Workbook();w.remove(w.active)
 sheet(w,'目标与证据门禁',['ID','目标／要求','原版依据','当前差异／状态','实施条件'],[
- ['BASE-01','先固定原版版本，再设计及实现','官网经典版、中文站、实体101分别建基线','主对照暂按此前官网经典版；可选职业页面待用户定位','不跨版本拼接规则，不以现代码倒推原版'],
+ ['BASE-01','先固定原版版本，再设计及实现','官网经典版、中文站、实体101分别建基线','唯一主对照官网经典版已确认；职业交互待原站核验','不跨版本拼接规则，不以现代码倒推原版'],
  ['CAREER-01','核实分配还是自选、何时确定及能否改选','历史pickCareer锚点记为12职业随机，可重复；本轮原始JS未取得','当前入房随机分配；当前没有原版自选职业的新证据','取得原站实际流程/源码快照或实体规则页再改交互'],
  ['CAREER-02','职业字段逐项按原版资料建立','本轮career源资料15数值字段×12职业','按英文title映射；不能按数组下标当相同职业ID','源数据对齐不等于职业选择页面一致'],
  ['UI-01','页面几何、字体、素材和交互分别验收','game_screen v84/card_template v41功能模板','原坐标可追溯，运行缩放与中文字体另核实','原站/候选同状态、同视口截图成对测量'],
@@ -62,7 +62,7 @@ for sec in d.sections:
   for run in p.runs:run.text=run.text.replace('文档修订 1.1','目标核验稿').replace('2026-11-02','2026-11-04')
 d.add_heading('Cashflow 原版目标识别与职业流程核验',0)
 d.add_paragraph('这份资料将原版目标与当前实现分开记录。最终目标仍是规则、职业、玩法、页面和操作与选定原版一致；设计文档不是对当前代码的说明书。本轮先核实“不能选择职业”是否属于原版差异，没有依据时不向原版模式增加自选职业。')
-table(d,['控制项','当前结论'],[['日期/版本','2026-11-04；候选游戏仍v0.6.5，本轮未改运行时代码'],['对照对象','暂按此前官网经典网页版；中文站和实体101分别留证，主目标确认仍待用户回应'],['职业交互','历史证据登记pickCareer随机分配12职业且可重复；当前也随机分配，首次回合可选梦想。尚无本轮原版可自选职业的证据'],['访问限制','官网入口与JS、中文站本轮被代理403拒绝；不宣称已重新登录或实玩'],['新取得资料','固定版本公开镜像的careers、game_screen、card_template三资料，SHA均匹配仓库历史官网资源记录']],[1.5,5.2])
+table(d,['控制项','当前结论'],[['日期/版本','2026-11-04；候选游戏仍v0.6.5，本轮未改运行时代码'],['对照对象','唯一主目标已确认为官网经典版；中文站和实体仅辅助。官网当前版本快照待采集'],['职业交互','历史证据登记pickCareer随机分配12职业且可重复；当前也随机分配，首次回合可选梦想。尚无本轮原版可自选职业的证据'],['访问限制','官网入口与JS、中文站本轮被代理403拒绝；不宣称已重新登录或实玩'],['新取得资料','固定版本公开镜像的careers、game_screen、card_template三资料，SHA均匹配仓库历史官网资源记录']],[1.5,5.2])
 d.add_heading('职业问题调查结论',1)
 d.add_paragraph('当前不能主动选职业并不表示没有实现职业。已将原版职业功能资料独立保存，按英文title对应本地ID逐项核对15个数值字段。原版资料的职业数组顺序与本地ID顺序不同，因此不能用相同数组下标判断相同角色。未经迁移设计也不应重排旧存档中的职业ID。')
 d.add_paragraph('候选验证采用自己的本地浏览器和确定性测试随机数，依次走12个职业的标题、建房、开始、切换梦想、财务表及刷新恢复路径。此项证明候选的职业数据与保持逻辑，不能反过来证明原版是否提供职业选择器。原站当前职业分配触发时机、是否有不同模式可改选，仍需对应页面或规则依据。')
@@ -73,7 +73,7 @@ for title,work,owner,gate in steps:
  d.add_heading(title,2);d.add_paragraph(work+'。责任：'+owner+'。'+gate+'。')
 d.add_heading('本轮交付与仍待解决的事项',1)
 d.add_paragraph('Excel包含原版职业字段、原版模板目标、49页证据缺口、44条规则线索和设计到实施门禁。原始功能资料及来源哈希随包保存。原版截图或规则未齐的格子保持未知；不会用“当前实现如此”填成“原版要求如此”。')
-d.add_paragraph('尚未解决最终原版等同目标。需定位用户所指可选职业的版次/页面，补充该流程证据后，再决定修正交互还是继续保留随机职业规则。其余视觉与特殊规则继续按逐项目标表核验，不据本轮数据匹配或自动化通过宣布全等。')
+d.add_paragraph('尚未解决最终原版等同目标。需在已确定的官网经典版核实职业分配和可否自选的实际页面，补充该流程证据后，再决定修正交互还是继续保留随机职业规则。其余视觉与特殊规则继续按逐项目标表核验，不据本轮数据匹配或自动化通过宣布全等。')
 d.save(OUT/'原版目标识别与职业流程核验.docx')
 (OUT/'阅读说明.txt').write_text('先打开开始阅读.html。职业来源与页面功能模板是本轮重新取得的固定版本公开镜像，SHA匹配历史官网资源记录；不等于本轮原站实玩。\n游戏仍v0.6.5，未因职业投诉擅改随机/自选规则。先固定原版目标，再调整设计、代码和双侧验收。\nExcel为可编辑目标台账，DOCX/PDF为核验报告，JSON保存功能事实与来源。未知目标保持未知。\n')
 links=''.join(f'<li><a href="{urllib.parse.quote(str(p.relative_to(OUT)),safe="/")}">{html.escape(str(p.relative_to(OUT)))}</a></li>' for p in sorted(OUT.rglob('*')) if p.is_file())

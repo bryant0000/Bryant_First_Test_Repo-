@@ -1,8 +1,8 @@
-Cashflow v0.6.5 游戏开发文档，修订1.2，2026-11-02
+Cashflow v0.6.6 游戏开发文档，修订1.3，2026-11-04
 
-打开开始阅读.html，优先11-v0.6.5差距分析与迭代。
-11含当前差距清单、规格、验收步骤、测试报告与源码指纹；02/03 PRD/GDD/UX以及规则/决策/UAT台账已同步修订。00/10是此前v0.6.4审核记录和通用方法，旧SHA只针对当时文件，不能作为当前文件指纹。
+打开开始阅读.html，优先12-官网唯一目标复核。
+12含当前差距清单、规格、验收步骤、测试报告与源码指纹；02/03 PRD/GDD/UX以及规则/决策/UAT台账已同步修订。00/10/11是此前v0.6.4/0.6.5审核记录和通用方法，旧SHA只针对当时文件，不能作为当前文件指纹。
 
-v0.6.5关闭金币兼容、全层份数上限和过期出售确认三项；其余原版对照与正式UAT仍待办。完整日志在游戏完整包audit/test-logs/v0.6.5。本轮358单元与29浏览器回归通过；file://真双击入口待用户测试。
+v0.6.6修复标题原文与画布位置、过期版本标识，并加强原版证据门禁；其余原版对照与正式UAT仍待办。完整日志在游戏完整包audit/test-logs/v0.6.6。本轮370单元与31浏览器回归通过；file://真双击入口待用户测试。
 
-复现本轮文档：iteration_065.py，待实际回归后iteration_065.py --test-report；Office导出PDF/重算修改过的工作簿；finalize_iteration_065.py更新入口与清单；check_iteration_065.py复核后打包。旧check_delivery/check_expert_review脚本是v0.6.4历史基线，不能不加区分地用于0.6.5。
+复现本轮文档：review_official_classic.py，待实际回归后更新validation-latest.json；Office导出PDF/重算修改过的工作簿；finalize_official_review.py更新入口与清单；当前文档与测试证据复核后打包。旧check_delivery/check_expert_review脚本是v0.6.4历史基线，不能不加区分地用于0.6.6。

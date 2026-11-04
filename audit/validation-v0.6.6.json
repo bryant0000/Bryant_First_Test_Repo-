@@ -1,0 +1,346 @@
+{
+  "checked_at_utc": "2026-11-04T14:55:42.046508+00:00",
+  "delivery_version": "0.6.6-preview",
+  "unit_tests": {
+    "command": "npm test (unpacked candidate)",
+    "passed": 370,
+    "failed": 0,
+    "log": "audit/test-logs/v0.6.6/unit.log"
+  },
+  "browser_checks": [
+    {
+      "command": "node scripts/reference-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/01-online-reference-ui-smoke.log",
+      "log_sha256": "8f575a73f68858aacdd57c9ecd4ad153cadc1e56c9276fe786de529c8391d324"
+    },
+    {
+      "command": "node scripts/interaction-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/02-online-interaction-smoke.log",
+      "log_sha256": "77842f0a59285b0a277bcce2cb1dc9029941667a122a5ff12e17183ca38e58b6"
+    },
+    {
+      "command": "node scripts/online-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/online-shared-queue-corrected.log",
+      "log_sha256": "736c4efec2a89ebea180f8cfdffdf27f03a27d227b2d5ab10054732ce3854a12",
+      "retry_history": {
+        "first_attempt_log": "audit/test-logs/v0.6.6/03-online-online-smoke.log",
+        "result": "failed",
+        "cause": "Test skipped legitimate queued shared card before guest borrow; test flow corrected, financial assertion retained."
+      }
+    },
+    {
+      "command": "node scripts/classic-layout-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/04-online-classic-layout-smoke.log",
+      "log_sha256": "cc1db1e1db967e6d58159aa60ab1c8d1404b398db2ba1a2720c3fa9ea6eaad73"
+    },
+    {
+      "command": "node scripts/classic-visual-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/05-online-classic-visual-smoke.log",
+      "log_sha256": "50807412a7d42103660b23f114fe89ed02a709a3e80bd4b5cdd9ca3b87afd694"
+    },
+    {
+      "command": "node scripts/card-contract-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/06-online-card-contract-smoke.log",
+      "log_sha256": "df8d4c439784730dce4320ca6be27eef9215b406e35cf52df8f0eb40fd878c90"
+    },
+    {
+      "command": "node scripts/terminal-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/07-online-terminal-ui-smoke.log",
+      "log_sha256": "fa93224564a3074ebb9868ca87d63b81e6c79cde6f80dc01e4289546a164ce94"
+    },
+    {
+      "command": "node scripts/classic-sound-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/08-online-classic-sound-smoke.log",
+      "log_sha256": "1c3f7b87b6bfc7ac9550ec2cb01f640cba2db8c638dba15c7cdec72f77215ed9"
+    },
+    {
+      "command": "node scripts/entry-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/09-online-entry-ui-smoke.log",
+      "log_sha256": "a45995378af87c9b0587a28627af70259a8304fd89289465910dcc7c7fa1d719"
+    },
+    {
+      "command": "node scripts/entry-art-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/10-online-entry-art-smoke.log",
+      "log_sha256": "9c6864357eeb68f04d58a592fcc50ab3e0aaac6fea500661b78703e9623bfbe6"
+    },
+    {
+      "command": "node scripts/observer-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/11-online-observer-ui-smoke.log",
+      "log_sha256": "f9dce6397968b90cfcb16e617ef5fb7eee644b0403fae0d5b9b0341b2c60111e"
+    },
+    {
+      "command": "node scripts/display-bugs-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/12-online-display-bugs-smoke.log",
+      "log_sha256": "30a797004b813ff8873ebe7b30aa78d27ba91e454c699fef15ce9cbd5e942af3"
+    },
+    {
+      "command": "node scripts/attachment-regressions-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/13-online-attachment-regressions-smoke.log",
+      "log_sha256": "a2ed58d406464714ae1befaf5f1d2cc489087bbff6a3262227f71b83e035a18f"
+    },
+    {
+      "command": "node scripts/standalone-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/14-offline-standalone-smoke.log",
+      "log_sha256": "4abb716f817838701b08bf451c3ba2536a176e171cc68cddc95a78ce367daf4d"
+    },
+    {
+      "command": "node scripts/classic-layout-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html",
+        "CASHFLOW_EMBEDDED_ONLY": "1"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/15-offline-classic-layout-smoke.log",
+      "log_sha256": "cc1db1e1db967e6d58159aa60ab1c8d1404b398db2ba1a2720c3fa9ea6eaad73"
+    },
+    {
+      "command": "node scripts/classic-visual-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/16-offline-classic-visual-smoke.log",
+      "log_sha256": "50807412a7d42103660b23f114fe89ed02a709a3e80bd4b5cdd9ca3b87afd694"
+    },
+    {
+      "command": "node scripts/card-contract-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/17-offline-card-contract-smoke.log",
+      "log_sha256": "df8d4c439784730dce4320ca6be27eef9215b406e35cf52df8f0eb40fd878c90"
+    },
+    {
+      "command": "node scripts/terminal-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/18-offline-terminal-ui-smoke.log",
+      "log_sha256": "fa93224564a3074ebb9868ca87d63b81e6c79cde6f80dc01e4289546a164ce94"
+    },
+    {
+      "command": "node scripts/classic-sound-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/19-offline-classic-sound-smoke.log",
+      "log_sha256": "1c3f7b87b6bfc7ac9550ec2cb01f640cba2db8c638dba15c7cdec72f77215ed9"
+    },
+    {
+      "command": "node scripts/entry-ui-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html",
+        "CASHFLOW_LOCAL_ONLY": "1"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/20-offline-entry-ui-smoke.log",
+      "log_sha256": "5a0a1d5b5e5d3fac02b7f29cc77fcec9f609a19c7cdbd038adddf5d3b74eac72"
+    },
+    {
+      "command": "node scripts/entry-art-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/21-offline-entry-art-smoke.log",
+      "log_sha256": "9c6864357eeb68f04d58a592fcc50ab3e0aaac6fea500661b78703e9623bfbe6"
+    },
+    {
+      "command": "node scripts/display-bugs-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/22-offline-display-bugs-smoke.log",
+      "log_sha256": "30a797004b813ff8873ebe7b30aa78d27ba91e454c699fef15ce9cbd5e942af3"
+    },
+    {
+      "command": "node scripts/attachment-regressions-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/23-offline-attachment-regressions-smoke.log",
+      "log_sha256": "a2ed58d406464714ae1befaf5f1d2cc489087bbff6a3262227f71b83e035a18f"
+    },
+    {
+      "command": "node scripts/standalone-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/index.html?offline=1"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/24-index-local-standalone-smoke.log",
+      "log_sha256": "4abb716f817838701b08bf451c3ba2536a176e171cc68cddc95a78ce367daf4d"
+    },
+    {
+      "command": "node scripts/display-bugs-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/index.html?offline=1"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/25-index-local-display-bugs-smoke.log",
+      "log_sha256": "30a797004b813ff8873ebe7b30aa78d27ba91e454c699fef15ce9cbd5e942af3"
+    },
+    {
+      "command": "node scripts/attachment-regressions-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/index.html?offline=1"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/26-index-local-attachment-regressions-smoke.log",
+      "log_sha256": "a2ed58d406464714ae1befaf5f1d2cc489087bbff6a3262227f71b83e035a18f"
+    },
+    {
+      "command": "node scripts/display-bugs-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307",
+        "CASHFLOW_FAIL_FONT": "1"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/27-font-denied.log",
+      "log_sha256": "30a797004b813ff8873ebe7b30aa78d27ba91e454c699fef15ce9cbd5e942af3"
+    },
+    {
+      "command": "node scripts/iteration-065-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/28-online-iteration-065-smoke.log",
+      "log_sha256": "632ac1b3340172d78e3f9eb28f7b94a4f47557e6a1e1bbadc5b334b43f7fd2e6"
+    },
+    {
+      "command": "node scripts/iteration-065-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/29-offline-iteration-065-smoke.log",
+      "log_sha256": "632ac1b3340172d78e3f9eb28f7b94a4f47557e6a1e1bbadc5b334b43f7fd2e6"
+    },
+    {
+      "command": "node scripts/official-title-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307",
+        "CASHFLOW_TITLE_MODE": "online"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/30-new-title-online.log",
+      "log_sha256": "55a47e65c2946feee56f295049e03b28daf984d34ce485b93d7194a1994f895f"
+    },
+    {
+      "command": "node scripts/official-title-smoke.cjs",
+      "environment": {
+        "CASHFLOW_TEST_URL": "http://127.0.0.1:3307/cashflow-offline.html",
+        "CASHFLOW_TITLE_MODE": "offline"
+      },
+      "status": "passed",
+      "exit_code": 0,
+      "log": "audit/test-logs/v0.6.6/31-new-title-offline.log",
+      "log_sha256": "a1c7df462e3adb2042628db870ee9a472d9749e324f57d7a9a482483df339646"
+    }
+  ],
+  "scope": "Unpacked candidate regression plus archived official title region. Not full official equivalence; file:// not verified.",
+  "tested_files": {
+    "engine.js": "ad237a5f29903d42309808338b0f1839ca087a1a7df6dbfb38d1108a774e7c59",
+    "app.js": "3c8d7e60c68c9278e6116683a034dc520b77656513c82aef7e2f01358ed7ef12",
+    "classic-stage.js": "43e53c2ee8116b08301fc1a1a6f807d18172563ecdf39cb4853938fb8d16d161",
+    "classic-stage.css": "8b469c8379cbcbfe24f8cb52af3303313f8a6d7ae89b449bac9be12f53389bf0",
+    "scene-canvas.js": "0ff6bf108a158b3c35f4ab5ac5922d6524e6d6741e29ce638e3de70a323402db",
+    "reference-layout-data.js": "c3be12b3079fd0599fd7ade5b342203db03181ea4a30640b5a9dad33fafe5604",
+    "package.json": "04065c2e40863de476a57e37d7e1ca88cff32f898fadbcae42529dbffa2a4cd0",
+    "scripts/build-offline.py": "025c4cd9762d9e3e3a4401839a45ea0731656aed94b005b2e8554b09db9e53fd",
+    "scripts/reference-acceptance.cjs": "9d072aa32dbf92e1c2a4de3a3527ed5d45402ee872a55c5dc5bbac1a27fb9acf",
+    "scripts/online-smoke.cjs": "44f5745f5dbb9687f2872a9d6c86649c868e489981b14ef313b39da8af5c9a86"
+  },
+  "complete_original_equivalence": false
+}

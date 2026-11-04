@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-02",
-  "version": "0.6.5 / 文档1.2",
+  "date": "2026-11-04",
+  "version": "0.6.6 / 文档1.3",
   "excluded_self": "00-阅读入口与复核/文件校验清单.json",
   "files": [
     {
@@ -20,8 +20,8 @@
     },
     {
       "path": "00-阅读入口与复核/交付物清单.xlsx",
-      "bytes": 33027,
-      "sha256": "9cad30e6c08c4efe619d92038e09b815684183b82d62aa143614baf0657149d0"
+      "bytes": 33391,
+      "sha256": "a57633448f50c886d988b89a32075c9d5895cd4b009c0d8bea5fdb53ba48ddc4"
     },
     {
       "path": "00-阅读入口与复核/公开研究来源.json",
@@ -245,13 +245,13 @@
     },
     {
       "path": "00-阅读入口与复核/阅读与复现说明.txt",
-      "bytes": 972,
-      "sha256": "b170b76d4265694682fd371b50c03f56506bc8bc9701b94ab7620526d8f34bc9"
+      "bytes": 1011,
+      "sha256": "0c067240ed29cbec09177d21086e4385fd9c130e2f90e7212e904de366dec095"
     },
     {
       "path": "00-阅读入口与复核/阅读入口与原型复核.json",
       "bytes": 281,
-      "sha256": "ff54d944d8f34159585681b9fd4a4d27d29d1a823a23344c5ded85bee6ac96e4"
+      "sha256": "d82a0fd273cd76102de920a92c01f297131943a3b17edb935ae645d3d16f378c"
     },
     {
       "path": "01-立项与治理/治理职责与风险台账.xlsx",
@@ -275,48 +275,48 @@
     },
     {
       "path": "01-立项与治理/项目章程与治理.docx",
-      "bytes": 42718,
-      "sha256": "d2bb97324fe7bf7bf11d75237843d67d7c09c320e11cbae2da5f5deaf3f9a37f"
+      "bytes": 43387,
+      "sha256": "7505b0c279c5956ee6b0bf6f7f33ac4d96a8c9bfa3f29f9396886d25297bc920"
     },
     {
       "path": "01-立项与治理/项目章程与治理.pdf",
-      "bytes": 369729,
-      "sha256": "769a0813e015e8db5e9a0b421d290582d32b623f010ca5573d8bec037fd73ed0"
+      "bytes": 401462,
+      "sha256": "04a38870b0f78f59dcc284dca71defb836dec7a6a6734dc7010e7095f881fabe"
     },
     {
       "path": "02-需求与游戏规则/GDD玩法与数值设计.docx",
-      "bytes": 44027,
-      "sha256": "b403674300d866227e621d994a27fb98e0da0f631b06806c0ff536c7bddbf4cf"
+      "bytes": 44608,
+      "sha256": "50c828df3e03a8a3efdbcbb8b836cc63d33ddc1b9a0bca75641e32ae2bd22e54"
     },
     {
       "path": "02-需求与游戏规则/GDD玩法与数值设计.pdf",
-      "bytes": 440651,
-      "sha256": "4c1a861161933a93c6b627519c3990b9635135bfae97dff264b9f66d52d36cea"
+      "bytes": 475911,
+      "sha256": "5443c082ace3e10d4034ff4b4000c939ec90429cc248a0c38795975ffd4eda22"
     },
     {
       "path": "02-需求与游戏规则/PRD产品需求规格.docx",
-      "bytes": 43712,
-      "sha256": "50f0637762c1c3fecee33dab68cb641b774b7e094dfef6ebcf3cae911d7f8938"
+      "bytes": 44298,
+      "sha256": "f9af8f3c6dc28e1423512db611bc00a4872a9ad183318c602563f6884a13c4b0"
     },
     {
       "path": "02-需求与游戏规则/PRD产品需求规格.pdf",
-      "bytes": 418753,
-      "sha256": "bc948a06237ea39a9e5e522fc3123e88f9ab91bf47979be33561ca4398d275bf"
+      "bytes": 451834,
+      "sha256": "f92216c96d74693ebea68b45b6235ce4b3720f8f161704a0eba8e2f5b254bd17"
     },
     {
       "path": "02-需求与游戏规则/需求规则与数值主表.xlsx",
-      "bytes": 71393,
-      "sha256": "b3b077908c6a1f72ebfa6e815647f07d2dd4d4c43d34bf9cabdf10b46aa178ba"
+      "bytes": 71460,
+      "sha256": "ebd257e181b8dfb0092e6344d273d9489e460973def6323a1cc007fe100197fd"
     },
     {
       "path": "03-交互与视觉设计/交互与视觉设计规格.docx",
-      "bytes": 2139445,
-      "sha256": "104e8dc7129b6d5b136ab92ef158c518910e7674ac14e2569604601d1470e286"
+      "bytes": 2140495,
+      "sha256": "6f05367f033bbdec7f0aa2ed99fb9869dee6d4647c3a134b891d40fc995d93c9"
     },
     {
       "path": "03-交互与视觉设计/交互与视觉设计规格.pdf",
-      "bytes": 763248,
-      "sha256": "f4d7abca4b6d29dc878de56f567daaef8cca4f4dafa5c412bde509c8e4763f78"
+      "bytes": 823506,
+      "sha256": "7581b896a4c93e8daee896e049facc996f2e8a0b59516bdabdb982671bebe322"
     },
     {
       "path": "03-交互与视觉设计/交互设计原型.html",
@@ -410,13 +410,13 @@
     },
     {
       "path": "06-测试与质量保证/测试设计与质量报告.docx",
-      "bytes": 41742,
-      "sha256": "bb1fe862579c3bed08bcc2386cd8942f538f65175bda8cc33c60c589008cc1a8"
+      "bytes": 42426,
+      "sha256": "44cb0ac8e99190a8562f49530cc3e3c28d626afd75349196cf03ac0e0d6b7449"
     },
     {
       "path": "06-测试与质量保证/测试设计与质量报告.pdf",
-      "bytes": 319140,
-      "sha256": "9ef77656fbbde7a79f09f05f9f54b32bb3ff70cd81064922adba17afd3639a93"
+      "bytes": 357761,
+      "sha256": "0e2de053e13309c06f194a19bf89a56b40a88ddb5ea018ef4162c318bf891525"
     },
     {
       "path": "07-发布与运维/发布与回退检查表.xlsx",
@@ -435,18 +435,18 @@
     },
     {
       "path": "08-用户验收/UAT与最终验收方案.docx",
-      "bytes": 41545,
-      "sha256": "ba8881d90b5785095ecaa2e32906b0467176ccaed1a3b35451e178b15bcc7ba3"
+      "bytes": 42215,
+      "sha256": "e2a2c32d68ed88d2a881db7b0ea71be5b02f7697ad29a448690340eb20d280ed"
     },
     {
       "path": "08-用户验收/UAT与最终验收方案.pdf",
-      "bytes": 302244,
-      "sha256": "d2535573800ae917586cf392af4defcc908b56f8d36790557f279909ac65fb88"
+      "bytes": 346637,
+      "sha256": "c2cec9ba1af6847090f5c1a2fa762e349f18c63774dbbe33e01c4cfa2b9aefb7"
     },
     {
       "path": "08-用户验收/UAT签收与遗留事项.xlsx",
-      "bytes": 15821,
-      "sha256": "cb2fb1359c7a411938b795ed0e59c36a0cdc191601c7829f6729f43170210c6f"
+      "bytes": 19269,
+      "sha256": "44f90d3c7125d9bebc01ec190b04bbbdfa95368b87c8d55c730a1bfcc01a2481"
     },
     {
       "path": "09-维护与变更/缺陷变更与维护规范.docx",
@@ -460,8 +460,8 @@
     },
     {
       "path": "09-维护与变更/问题变更与决策台账.xlsx",
-      "bytes": 12588,
-      "sha256": "7dd530d498624ab72404bc6ea5ebe479ca48bebd8e576b728560e692d75b6579"
+      "bytes": 15636,
+      "sha256": "3f9a962de7adedd5c5228a2b2e051cd6bf2e22ac847b3289f86e448cb9fc6cbc"
     },
     {
       "path": "10-专家审核与修订/技术安全与恢复补充规格.docx",
@@ -654,9 +654,34 @@
       "sha256": "4d0573c8991692b698691aca41f1d822128786e264fcd233b676d8ba8ad481d4"
     },
     {
+      "path": "12-官网唯一目标复核/官网唯一目标复核与修订报告.docx",
+      "bytes": 42142,
+      "sha256": "81f0af30405bab8f9c84314c005afaa629d6bb11dc5b325d2c249f99962570da"
+    },
+    {
+      "path": "12-官网唯一目标复核/官网唯一目标复核与修订报告.pdf",
+      "bytes": 306990,
+      "sha256": "bae699cea8a1ddc40c179a5e1bda548641e087467c84a9d584098e64b9cf0b36"
+    },
+    {
+      "path": "12-官网唯一目标复核/官网目标与复核整改.xlsx",
+      "bytes": 30388,
+      "sha256": "157e2f2e8e348d8b1a5495ea2eed053d9f47d4bbec5f69c32fca12b7a479a3f9"
+    },
+    {
+      "path": "12-官网唯一目标复核/当前源码指纹.json",
+      "bytes": 1519,
+      "sha256": "25ade63b580baab4013522e576de4861caa540e9a6ca5cb4c03d395086a15768"
+    },
+    {
+      "path": "12-官网唯一目标复核/本轮文档复核.json",
+      "bytes": 1875,
+      "sha256": "4134886c3cc612e78f6dd9eca8eecf13c4885509cc86355e4a71af88d68fafbf"
+    },
+    {
       "path": "开始阅读.html",
-      "bytes": 23695,
-      "sha256": "a0707447eb0538eed6bd13811f054fa1867224e2c3108efa47852dab4d42d409"
+      "bytes": 25159,
+      "sha256": "be068561513b55ca9bc694ecfc6d21b58175b02256b2f7c93e514caa66a08796"
     }
   ]
 }

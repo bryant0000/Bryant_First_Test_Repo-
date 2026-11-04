@@ -7,3 +7,6 @@ ClassicLayout.tools={mute:{x:935.95,y:10},menu:{x:974.15,y:10}};
 
 // Single-die anchor and bounds are from game_screen v84. Multiple dice share this center.
 ClassicLayout.dice={x:483.3,y:436.2,width:64,height:59,gap:12};
+
+/* Splash text geometry from the source template; runtime glyphs verified against the archived official capture. */
+ClassicLayout.splash={clickText:{x:630.4,y:727.45,width:390.95,height:34,size:26}};

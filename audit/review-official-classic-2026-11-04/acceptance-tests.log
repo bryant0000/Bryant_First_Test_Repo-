@@ -1,0 +1,20 @@
+✔ complete source/spec/implementation/comparison chain passes without relying on unit_verified flags (3.4846ms)
+✔ status flags alone cannot promote unknown original targets to a release (0.937183ms)
+✔ official-like third-party origins and a changed primary target are rejected (0.880411ms)
+✔ stale implementation or evidence hashes invalidate a previous passing comparison (1.159182ms)
+✔ unrelated test results and missing target design cannot satisfy an original comparison (2.367765ms)
+✔ matching viewport/language and real PNG artifacts are required for screen evidence (1.451285ms)
+✔ a third-party static template cannot stand in for an official runtime screen (1.675156ms)
+✔ omitting required cases, a missing snapshot or formal non-authorization keeps the gate blocked (0.474019ms)
+✔ auxiliary books/videos are reported separately while primary web blockers remain mandatory (1.250973ms)
+✔ repository-relative artifact checks reject path traversal outside the review root (1.603406ms)
+✔ matching but invalid metadata or PNG dimensions cannot satisfy screen acceptance (1.972123ms)
+✔ evidence from different official snapshots cannot be combined into one accepted version (0.961126ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 94.836795

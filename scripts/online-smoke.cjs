@@ -30,7 +30,11 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
  assert.equal(await host.evaluate(()=>state.pending),null);await click(host,'#end-turn');await guest.waitForFunction(()=>game?.active===1&&game.ui?.introIndex===1);
  assert.equal(await host.locator('[data-ui="accept-dream"]').isVisible(),false);await host.keyboard.press('r');assert.equal(await host.evaluate(()=>game.rolled),false);
  await click(guest,'[data-ui="accept-dream"]');assert.equal(await guest.evaluate(()=>state.name),'来宾');
- await click(guest,'#turn-borrow');await guest.locator('#borrow-review-amount').fill('1000');await click(guest,'[data-action="confirm-borrow"]');assert.equal(await guest.evaluate(()=>state.cash),guestCash+1000);
+ // A stock/market card drawn by the host can legitimately queue a response before the guest's first roll.
+ for(let i=0;i<12;i++){const pending=await guest.evaluate(()=>state.pending&&({kind:state.pending.kind,queued:!!state.pending.queued}));if(!pending)break;assert.equal(pending.queued,true,'only a shared queued card may precede this borrow');const action={deal:'dismiss',stockSplit:'acceptSplit',notice:'dismiss',payment:'payEvent',marketMust:'payEvent',loanOffer:'acceptLoan',debtHalved:'confirmRelief'}[pending.kind];assert.ok(action,'Unexpected queued card: '+pending.kind);await click(guest,`[data-action="${action}"]`)}
+ assert.equal(await guest.evaluate(()=>state.pending),null);
+ const guestBorrowCash=await guest.evaluate(()=>state.cash);
+ await click(guest,'#turn-borrow');await guest.locator('#borrow-review-amount').fill('1000');await click(guest,'[data-action="confirm-borrow"]');assert.equal(await guest.evaluate(()=>state.cash),guestBorrowCash+1000);
  assert.equal(await guest.evaluate(()=>document.documentElement.scrollWidth>innerWidth),true);await click(guest,'#ui-exit');await click(guest,'#confirm-yes');await host.waitForFunction(()=>game?.active===0&&game.players[1].inactive);
  assert.equal(await host.evaluate(()=>state.bankrupt),false);assert.equal(await guest.evaluate(()=>OnlineGame.active),false);
  await click(host,'#ui-exit');await click(host,'#confirm-yes');assert.equal(await host.evaluate(()=>OnlineGame.active),false);

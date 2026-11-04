@@ -1,5 +1,5 @@
 {
-  "target": "CASHFLOW 101; official classic web runtime and richdad.aiserve.top",
+  "target": "https://cfclassic.richdad.com/ official classic web version only",
   "release_allowed": false,
   "candidate_profile": "reference-web-2026-10-23",
   "published_profile_unchanged": true,
@@ -610,27 +610,32 @@
     {
       "id": "canonical_physical_rulebook",
       "status": "unverified",
-      "detail": "Canonical physical CASHFLOW 101 rulebook and complete card faces remain unverified. Historical entry observations do not establish physical edition parity; current 2026-11-02 reference probes were refused by the network proxy (403)."
+      "detail": "Canonical physical CASHFLOW 101 rulebook and complete card faces remain unverified. Historical entry observations do not establish physical edition parity; current 2026-11-02 reference probes were refused by the network proxy (403).",
+      "scope": "auxiliary"
     },
     {
       "id": "live_reference_interactions",
       "status": "partially_observed",
-      "detail": "Cash-flow victory, tax and complete bankruptcy/loss path now observed through normal private rooms. Dream victory, divorce, lawsuit and every layout variant remain outside completed live comparison."
+      "detail": "Cash-flow victory, tax and complete bankruptcy/loss path now observed through normal private rooms. Dream victory, divorce, lawsuit and every layout variant remain outside completed live comparison.",
+      "scope": "primary"
     },
     {
       "id": "bilibili_reference_video",
       "status": "unverified",
-      "detail": "Page returned HTML; metadata endpoint returned 412; video and complete subtitles not observed."
+      "detail": "Page returned HTML; metadata endpoint returned 412; video and complete subtitles not observed.",
+      "scope": "auxiliary"
     },
     {
       "id": "all_content_equivalence",
       "status": "incomplete",
-      "detail": "All 182 deck mechanical records plus 41 dream/investment records projected independently from publisher data. Purchase/payment cases tested; Full prose/art remain unverified. v0.6.5 official-web gold settlement follows historical observed 600; physical-card target and current runtime re-observation remain unverified. 8PLEX typo only source-observed."
+      "detail": "All official web card text/art, rules, visual states and interactive branches must match the selected official snapshot. Numeric fixtures alone are insufficient; current snapshot remains unavailable.",
+      "scope": "primary"
     },
     {
       "id": "candidate_ui_integration",
       "status": "partial",
-      "detail": "Source-led core cards and desktop layout, authoritative two-browser rooms, persistence, off-turn chat, presence and temporary network failure recovery tested. Full UI/art/text equality and all original branches remain incomplete."
+      "detail": "Source-led core cards and desktop layout, authoritative two-browser rooms, persistence, off-turn chat, presence and temporary network failure recovery tested. Full UI/art/text equality and all original branches remain incomplete.",
+      "scope": "primary"
     }
   ],
   "development_new_game_profile": "reference-web-2026-10-23",
@@ -664,5 +669,6 @@
     "stale_sale_confirmation": "reject and reselect",
     "full_equivalence": false,
     "evidence": "audit/validation-v0.6.5.json"
-  }
+  },
+  "primary_target_manifest": "audit/official-classic-target.json"
 }

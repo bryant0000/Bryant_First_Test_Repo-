@@ -1,0 +1,25 @@
+{
+  "original_version_visible": "1.0.0(0.0.8)",
+  "original_is_historical_not_new_live": true,
+  "candidate_before_game_version": "0.6.5",
+  "candidate_before_visible_version": "v0.6.4",
+  "candidate_after_game_version": "0.6.6",
+  "region": [
+    756,
+    750,
+    1144,
+    793
+  ],
+  "before": {
+    "maximum_channel_error": 251,
+    "pixels_over_one_channel_level": 4782,
+    "pixels": 16684
+  },
+  "after": {
+    "maximum_channel_error": 1,
+    "pixels_over_one_channel_level": 0,
+    "pixels": 16684
+  },
+  "only_caption_region_accepted": true,
+  "whole_screen_accepted": false
+}

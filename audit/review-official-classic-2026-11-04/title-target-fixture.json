@@ -1,0 +1,23 @@
+{
+  "origin": "https://cfclassic.richdad.com/",
+  "reference_file": "audit/reference-captures/title.png",
+  "reference_sha256": "239c27af3d3a6ef0e5c4f59f98aa885219f7d46dd5cb5ee734431e894ce71acd",
+  "visible_reference_version": "1.0.0(0.0.8)",
+  "evidence_scope": "Archived official screenshot, not a fresh live observation or full-screen equivalence",
+  "caption": "Click Anywhere to Continue",
+  "vocab_source_sha256": "e8d0d6210919d0b257f8ae2cf815dcd55b69341b455006f9d0b68554b8295bca",
+  "vocab_path": "vocab.clickanywhere.copy",
+  "viewport": {
+    "width": 1280,
+    "height": 960,
+    "deviceScaleFactor": 1
+  },
+  "region": {
+    "x": 756,
+    "y": 750,
+    "width": 388,
+    "height": 43
+  },
+  "maximum_channel_error": 1,
+  "tolerance_reason": "Same one-level alpha rasterization tolerance as existing independent title-art fixtures; no text masks or ignored pixels within this region. The truthful own-build version outside this region is not certified as identical."
+}
